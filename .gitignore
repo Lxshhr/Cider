@@ -1,0 +1,38 @@
+# Folders
+.vscode/
+coremods/
+crash-reports/
+logs/
+mods/
+saves/
+screenshots/
+server-resource-packs/
+shaderpacks/
+modernfix/
+patchouli_books/
+local/
+resourcepacks/
+texturepacks/
+cache/
+XaeroWaypoints*/
+
+# Configs
+config/embeddium-fingerprint.json
+config/fml.toml
+config/forge-client.toml
+
+kubejs/probe/
+kubejs/README.txt
+
+# Files
+pakku.jar
+options.txt
+icon.png
+knownkeys.txt
+patchouli_data.json
+rhino.local.properties
+usercache.json
+usernamecache.json
+modlist.txt
+emi.json
+githelper.txt
