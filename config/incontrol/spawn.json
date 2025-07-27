@@ -1,1 +1,14 @@
-[]
+[
+    {
+        "mob": "minecraft:creeper",
+        "result": "deny"
+    },
+    {
+        "mob": "minecraft:enderman",
+        "result": "deny"
+    }, 
+    {
+        "mob": "minecraft:slime",
+        "result": "deny"
+    }
+]
