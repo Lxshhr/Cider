@@ -1,5 +1,5 @@
 const registerGeneralRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
-    global.vanillaDiabled.forEach(item => {
+    global.vanillaDisabled.forEach(item => {
         event.remove({output: item})
     })
     global.extraSupplementariesDisabled.forEach(item => {

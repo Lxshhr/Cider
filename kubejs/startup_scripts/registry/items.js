@@ -73,14 +73,17 @@ const registerItems = (/** @type {Registry.Item} */ event) => {
     createOreItems('bauxite')
 
     event.create('cfc:powder/borax')
+        .tag('forge:dusts')
     event.create('cfc:powder/chromite')
+        .tag('forge:dusts')
     event.create('cfc:powder/cryolite')
+        .tag('forge:dusts')
     event.create('cfc:powder/cinnabar')
         .tag('tfc:gem_powders')
         .tag('tfc:glassworking_powders')
         .tag('forge:dusts')
     event.create('cfc:gem/cinnabar')
-        .tag('#forge:gems')
+        .tag('forge:gems')
 
     function createMetalItems(material) {
         let types = ['ingot', 'double_ingot', 'sheet', 'double_sheet', 'rod']

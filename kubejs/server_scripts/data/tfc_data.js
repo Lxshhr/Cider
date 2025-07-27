@@ -62,9 +62,9 @@ const registerHeats = (/** @type {Internal.TFCDataEventJS} */ event) => {
     event.itemHeat('cfc:iron_frame', 5.714, null, null)
     event.itemHeat('cfc:aluminium_frame', 5.714, null, null)
 
-    event.itemHeat('cfc:unfinished_clock', 5.714, null)
-    event.itemHeat('cfc:unfinished_thermometer', 5.714, null)
-    event.itemHeat('cfc:unfinished_spyglass', 5.714, null)
+    event.itemHeat('cfc:unfinished_clock', 5.714, null, null)
+    event.itemHeat('cfc:unfinished_thermometer', 5.714, null, null)
+    event.itemHeat('cfc:unfinished_spyglass', 5.714, null, null)
 
     for(let metal in tMetalData) {
         let [forge, weld] = tMetalData[metal] 

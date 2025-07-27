@@ -1,9 +1,9 @@
 const registerGeneralItemTags = (/** @type {Internal.TagEventJS} */ event) => {
-    event.add('c:hidden_from_recipe_viewers', global.vanillaDisabled)
-    event.add('c:hidden_from_recipe_viewers', global.disabledItems)
-
+    console.log('Tags Loaded')
+   
     global.vanillaDisabled.forEach(item => {
         event.removeAllTagsFrom(item)
+        event.add('c:hidden_from_recipe_viewers', item)
     })
     global.extraSupplementariesDisabled.forEach(item => {
         event.removeAllTagsFrom(`supplementaries:${item}`)
@@ -11,6 +11,7 @@ const registerGeneralItemTags = (/** @type {Internal.TagEventJS} */ event) => {
     })
     global.disabledItems.forEach(item => {
         event.removeAllTagsFrom(item)
+        event.add('c:hidden_from_recipe_viewers', item)
     })
 }
 

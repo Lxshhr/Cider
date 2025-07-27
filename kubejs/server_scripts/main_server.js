@@ -21,6 +21,6 @@ TFCEvents.data(event => {
     registerHeats(event)
     registerSizes(event)
     registerLampFuels(event)
-    registerPanningData(event)
+    // registerPanningData(event)
     registerSluiceData(event)
 })

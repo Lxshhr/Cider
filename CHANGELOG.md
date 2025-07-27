@@ -5,6 +5,7 @@
 
 ## [0.0.2] - 27-07-2025
 ### Changes
+- Setup Default Configs
 - New Items, Blocks & Fluids
 - New Glassblowing Powders
 - Basic TFC Data Setup

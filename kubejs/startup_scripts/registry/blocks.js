@@ -1,27 +1,10 @@
 const registerBlocks = (/** @type {Registry.Block} */ event) => {
     // Ground Cover
     event.create('cfc:coal_chunk', 'tfc:ground_cover')
-        .groundCoverModelShape('cfc:models/block/ground_cover/coal_chunk')
+        .groundCoverModelShape('cfc:block/ground_cover/coal_chunk')
 
     event.create('cfc:lignite_chunk', 'tfc:ground_cover')
-        .groundCoverModelShape('cfc:models/block/ground_cover/lignite_chunk')
-
-    // Misc
-    event.create('cfc:solidified_resin', 'cardinal')
-        .model('cfc:models/block/resin')
-        .box(0, 0, 0, 1, 16, 16)
-        .hardness(0.3)
-        .fullBlock(false)
-        .opaque(false)
-        .renderType('cutout')
-    
-    event.create('cfc:solidified_rubber', 'cardinal')
-        .model('cfc:models/block/rubber')
-        .box(0, 0, 0, 1, 16, 16)
-        .hardness(0.3)
-        .fullBlock(false)
-        .opaque(false)
-        .renderType('cutout')
+        .groundCoverModelShape('cfc:block/ground_cover/lignite_chunk')
 
     // Parity
     global.afcWoodTypes.forEach(wood => {
@@ -43,7 +26,7 @@ const registerBlocks = (/** @type {Registry.Block} */ event) => {
     function createOreBlocks(oreName) {
         event.create(`cfc:ore/small_${oreName}`, 'tfc:ground_cover')
             .ore()
-            .model(`cfc:block/model/ground_cover/small_${oreName}`)
+            .model(`cfc:block/ground_cover/small_${oreName}`)
             .hardness(0.05)
             .fullBlock(false)
             .opaque(false)

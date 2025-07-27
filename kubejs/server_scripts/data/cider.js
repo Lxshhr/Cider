@@ -22,10 +22,6 @@ const registerSluiceData = (/** @type {Internal.TFCDataEventJS} */ event) =>{
         event.sluicing(`tfc:rock/gravel/${rock}`, `cfc:panning/deposits/gravel_${rock}`, `cfc:panning/deposits/gravel_${rock}`)
     })
     sandColors.forEach(sand => {
-        event.panning(`tfc:sand/${sand}`, `cfc:panning/deposits/sand_${sand}`, [
-            `cfc:item/pan/native_copper/${sand}_full`,
-            `cfc:item/pan/native_copper/${sand}_half`,
-            `cfc:item/pan/native_copper/result`,
-        ], `cfc:panning/deposits/sand_${sand}`)
+        event.sluicing(`tfc:sand/${sand}`, `cfc:panning/deposits/sand_${sand}`, `cfc:panning/deposits/sand_${sand}`)
     })
 }
