@@ -59,12 +59,11 @@ const registerHeats = (/** @type {Internal.TFCDataEventJS} */ event) => {
         event.itemHeat(item, heatCap, null, null)
     }
 
-    event.itemHeat('cfc:iron_frame', 5.714, null, null)
-    event.itemHeat('cfc:aluminium_frame', 5.714, null, null)
+    event.itemHeat('cfc:metal/iron_frame', 5.714, null, null)
+    event.itemHeat('cfc:metal/aluminium_frame', 5.714, null, null)
 
-    event.itemHeat('cfc:unfinished_clock', 5.714, null, null)
-    event.itemHeat('cfc:unfinished_thermometer', 5.714, null, null)
-    event.itemHeat('cfc:unfinished_spyglass', 5.714, null, null)
+    event.itemHeat('cfc:metal/unfinished_clock', 5.714, null, null)
+    event.itemHeat('cfc:metal/unfinished_spyglass', 5.714, null, null)
 
     for(let metal in tMetalData) {
         let [forge, weld] = tMetalData[metal] 
@@ -76,8 +75,8 @@ const registerHeats = (/** @type {Internal.TFCDataEventJS} */ event) => {
 const registerSizes = (/** @type {Internal.TFCDataEventJS} */event) => {
     event.itemSize('supplementaries:wrench', 'very_large', 'very_heavy')
     
-    event.itemSize('cfc:iron_frame', 'large', 'heavy')
-    event.itemSize('cfc:aluminium_frame', 'large', 'heavy')
+    event.itemSize('cfc:metal/iron_frame', 'large', 'heavy')
+    event.itemSize('cfc:metal/aluminium_frame', 'large', 'heavy')
     event.itemSize('cfc:food/bush_meat', 'small', 'light')
     event.itemSize('cfc:food/cooked_bush_meat', 'small', 'light')
 }
@@ -85,3 +84,8 @@ const registerSizes = (/** @type {Internal.TFCDataEventJS} */event) => {
 const registerLampFuels = (/** @type {Internal.TFCDataEventJS} */event) => {
     event.lampFuel('cfc:seed_oil', '#tfc:lamps', 3600)
 }
+
+const registerFuels = (/** @type {Internal.TFCDataEventJS} */ event) => {
+    event.fuel('cfc:coal_chunk', 1415, 550, 1.0)
+    event.fuel('cfc:lignite_chunk', 1350, 550, 1.0)
+} 

@@ -122,9 +122,9 @@
             ]
         },
         {
-            "pakku_id": "6L1hWbeD4hwcQJVt",
+            "pakku_id": "5jtzAntsZYR9GsYC",
             "pakku_links": [
-                "IVJ6gGQY90ZlbKql"
+                "rjWi4M0UGidHs9sp"
             ],
             "type": "MOD",
             "slug": {
@@ -201,83 +201,6 @@
             ]
         },
         {
-            "pakku_id": "XD3ZQsfy9jLGRO1c",
-            "type": "MOD",
-            "slug": {
-                "curseforge": "astikor-carts-tfc"
-            },
-            "name": {
-                "curseforge": "Astikor Carts TFC"
-            },
-            "id": {
-                "curseforge": "844019"
-            },
-            "files": [
-                {
-                    "type": "curseforge",
-                    "file_name": "TFCAstikorCarts-1.20.1-1.1.8.3.jar",
-                    "mc_versions": [
-                        "1.20.1"
-                    ],
-                    "loaders": [
-                        "neoforge",
-                        "forge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/5797/400/TFCAstikorCarts-1.20.1-1.1.8.3.jar",
-                    "id": "5797400",
-                    "parent_id": "844019",
-                    "hashes": {
-                        "sha1": "1a64a638d83e7b33d1f4c589ac0bc3005ffec34f",
-                        "md5": "892642af7cbd0dddf82c19117c35382d"
-                    },
-                    "required_dependencies": [
-                        "302973",
-                        "916493"
-                    ],
-                    "size": 532048,
-                    "date_published": "2024-10-09T14:37:43.363Z"
-                }
-            ]
-        },
-        {
-            "pakku_id": "C4DjNvQZ92Wqm8cX",
-            "type": "MOD",
-            "slug": {
-                "curseforge": "astikor-carts-redux"
-            },
-            "name": {
-                "curseforge": "AstikorCarts Redux"
-            },
-            "id": {
-                "curseforge": "916493"
-            },
-            "files": [
-                {
-                    "type": "curseforge",
-                    "file_name": "astikorcarts-1.20.1-1.1.8.jar",
-                    "mc_versions": [
-                        "1.20.1",
-                        "1.20"
-                    ],
-                    "loaders": [
-                        "forge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/5574/685/astikorcarts-1.20.1-1.1.8.jar",
-                    "id": "5574685",
-                    "parent_id": "916493",
-                    "hashes": {
-                        "sha1": "49a8ac1c23282fe86420f0b4527e522421f2f692",
-                        "md5": "0165d0921a96ee41880446af6182fffe"
-                    },
-                    "required_dependencies": [],
-                    "size": 231706,
-                    "date_published": "2024-07-28T15:17:23.797Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "21PZTcE5G48uhh2Y",
             "type": "MOD",
             "slug": {
@@ -310,45 +233,6 @@
                     "required_dependencies": [],
                     "size": 50142,
                     "date_published": "2023-08-30T22:16:23.537Z"
-                }
-            ]
-        },
-        {
-            "pakku_id": "4vUsFrqZp1UwKgBC",
-            "type": "MOD",
-            "slug": {
-                "curseforge": "baguettelib"
-            },
-            "name": {
-                "curseforge": "BaguetteLib"
-            },
-            "id": {
-                "curseforge": "1264423"
-            },
-            "files": [
-                {
-                    "type": "curseforge",
-                    "file_name": "baguettelib-1.20.1-Forge-1.0.0.jar",
-                    "mc_versions": [
-                        "1.20.2",
-                        "1.20.3",
-                        "1.20.1",
-                        "1.20.4"
-                    ],
-                    "loaders": [
-                        "forge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/6523/425/baguettelib-1.20.1-Forge-1.0.0.jar",
-                    "id": "6523425",
-                    "parent_id": "1264423",
-                    "hashes": {
-                        "sha1": "bb17d8ed796efce38eb8fcc72ec477f3373e6c9f",
-                        "md5": "f27a8d6a333579d93a9881100d559b56"
-                    },
-                    "required_dependencies": [],
-                    "size": 26550,
-                    "date_published": "2025-05-12T19:47:40.637Z"
                 }
             ]
         },
@@ -393,7 +277,7 @@
             "pakku_id": "gisWYSuHmk0CIyuZ",
             "pakku_links": [
                 "kYOaCp6ePdasQip0",
-                "IVJ6gGQY90ZlbKql"
+                "rjWi4M0UGidHs9sp"
             ],
             "type": "MOD",
             "slug": {
@@ -553,44 +437,6 @@
                     ],
                     "size": 76565,
                     "date_published": "2024-03-04T12:26:25.207Z"
-                }
-            ]
-        },
-        {
-            "pakku_id": "VQqizIrHGPVzWEmh",
-            "type": "MOD",
-            "slug": {
-                "curseforge": "carry-on"
-            },
-            "name": {
-                "curseforge": "Carry On"
-            },
-            "id": {
-                "curseforge": "274259"
-            },
-            "files": [
-                {
-                    "type": "curseforge",
-                    "file_name": "carryon-forge-1.20.1-2.1.2.7.jar",
-                    "mc_versions": [
-                        "1.20.1",
-                        "1.20"
-                    ],
-                    "loaders": [
-                        "neoforge",
-                        "forge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/4882/500/carryon-forge-1.20.1-2.1.2.7.jar",
-                    "id": "4882500",
-                    "parent_id": "274259",
-                    "hashes": {
-                        "sha1": "9999714ca3dd2f2401f0396ca44f3b27c3784c4f",
-                        "md5": "8956b37c2ae11cc5522c8404a262c6b7"
-                    },
-                    "required_dependencies": [],
-                    "size": 439457,
-                    "date_published": "2023-11-19T22:32:08.460Z"
                 }
             ]
         },
@@ -788,42 +634,6 @@
             ]
         },
         {
-            "pakku_id": "7yi65YyBjSHXYTXE",
-            "type": "MOD",
-            "slug": {
-                "curseforge": "cold-sweat"
-            },
-            "name": {
-                "curseforge": "Cold Sweat"
-            },
-            "id": {
-                "curseforge": "506194"
-            },
-            "files": [
-                {
-                    "type": "curseforge",
-                    "file_name": "ColdSweat-2.4-b04a.jar",
-                    "mc_versions": [
-                        "1.20.1"
-                    ],
-                    "loaders": [
-                        "forge"
-                    ],
-                    "release_type": "beta",
-                    "url": "https://edge.forgecdn.net/files/6739/794/ColdSweat-2.4-b04a.jar",
-                    "id": "6739794",
-                    "parent_id": "506194",
-                    "hashes": {
-                        "sha1": "d88a488158d4b756e7c7fc2ac3f43daf535d32e9",
-                        "md5": "1e35d2a8da7e127ec247d0e3bf6ff2f3"
-                    },
-                    "required_dependencies": [],
-                    "size": 2460734,
-                    "date_published": "2025-07-07T04:50:06.017Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "rVKRq0kJNCX7jbZ7",
             "type": "MOD",
             "slug": {
@@ -971,52 +781,6 @@
                     "required_dependencies": [],
                     "size": 245618,
                     "date_published": "2025-06-07T07:02:24.647Z"
-                }
-            ]
-        },
-        {
-            "pakku_id": "lnWEVeRxnVKkeUQZ",
-            "pakku_links": [
-                "kYOaCp6ePdasQip0"
-            ],
-            "type": "MOD",
-            "slug": {
-                "curseforge": "corpse-x-curios-api-compat"
-            },
-            "name": {
-                "curseforge": "Corpse x Curios API Compat"
-            },
-            "id": {
-                "curseforge": "1138130"
-            },
-            "files": [
-                {
-                    "type": "curseforge",
-                    "file_name": "corpsecurioscompat-1.20.x-Forge-3.0.2.jar",
-                    "mc_versions": [
-                        "1.20.2",
-                        "1.20.3",
-                        "1.20.1",
-                        "1.20.4"
-                    ],
-                    "loaders": [
-                        "forge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/6616/671/corpsecurioscompat-1.20.x-Forge-3.0.2.jar",
-                    "id": "6616671",
-                    "parent_id": "1138130",
-                    "hashes": {
-                        "sha1": "946d6cc5055eac39900ff252cd2eb72caf95e4ac",
-                        "md5": "f760be75a5b1c4c22c9327e72cd08a2c"
-                    },
-                    "required_dependencies": [
-                        "309927",
-                        "1264423",
-                        "316582"
-                    ],
-                    "size": 12495,
-                    "date_published": "2025-06-05T08:45:11.493Z"
                 }
             ]
         },
@@ -1359,7 +1123,7 @@
         {
             "pakku_id": "R1nAMqflKiuuvOYp",
             "pakku_links": [
-                "IVJ6gGQY90ZlbKql"
+                "rjWi4M0UGidHs9sp"
             ],
             "type": "MOD",
             "slug": {
@@ -1440,7 +1204,7 @@
         {
             "pakku_id": "cHuteHgE5K54rJxR",
             "pakku_links": [
-                "IVJ6gGQY90ZlbKql"
+                "rjWi4M0UGidHs9sp"
             ],
             "type": "MOD",
             "slug": {
@@ -1751,7 +1515,7 @@
         {
             "pakku_id": "7KetrB6ayxrizIU4",
             "pakku_links": [
-                "IVJ6gGQY90ZlbKql"
+                "rjWi4M0UGidHs9sp"
             ],
             "type": "MOD",
             "slug": {
@@ -2318,7 +2082,7 @@
         {
             "pakku_id": "062hCsdDBsZ42y3H",
             "pakku_links": [
-                "IVJ6gGQY90ZlbKql"
+                "rjWi4M0UGidHs9sp"
             ],
             "type": "MOD",
             "slug": {
@@ -2544,7 +2308,7 @@
         {
             "pakku_id": "qw5jZ9TY8pTbVyXf",
             "pakku_links": [
-                "IVJ6gGQY90ZlbKql"
+                "rjWi4M0UGidHs9sp"
             ],
             "type": "MOD",
             "slug": {
@@ -2587,7 +2351,7 @@
         {
             "pakku_id": "Yw1ryDHWFLnZiMNL",
             "pakku_links": [
-                "IVJ6gGQY90ZlbKql"
+                "rjWi4M0UGidHs9sp"
             ],
             "type": "MOD",
             "slug": {
@@ -2897,7 +2661,47 @@
             ]
         },
         {
+            "pakku_id": "p6XRi1VH2e6ucfA4",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "tfc-ambiental-second-edition"
+            },
+            "name": {
+                "curseforge": "TFC Ambiental - Second edition"
+            },
+            "id": {
+                "curseforge": "940350"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "tfcambiental-1.20.1-3.3.1.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "neoforge",
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/5655/440/tfcambiental-1.20.1-3.3.1.jar",
+                    "id": "5655440",
+                    "parent_id": "940350",
+                    "hashes": {
+                        "sha1": "0837547febfc05c18e224fd8b3f9ed4eef8eb9de",
+                        "md5": "f057f8e13adacf35c50ae52cf312ee38"
+                    },
+                    "required_dependencies": [],
+                    "size": 640068,
+                    "date_published": "2024-08-23T09:41:25.543Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "GjV1QYDUlfrsIr4M",
+            "pakku_links": [
+                "rjWi4M0UGidHs9sp"
+            ],
             "type": "MOD",
             "slug": {
                 "curseforge": "tfc-barrels"
@@ -2935,46 +2739,10 @@
             ]
         },
         {
-            "pakku_id": "qoIOziv4qqDppO3N",
-            "type": "MOD",
-            "slug": {
-                "curseforge": "tfc-cold-sweat"
-            },
-            "name": {
-                "curseforge": "TFC Cold Sweat"
-            },
-            "id": {
-                "curseforge": "1130934"
-            },
-            "files": [
-                {
-                    "type": "curseforge",
-                    "file_name": "tfc_coldsweat-1.7.1.jar",
-                    "mc_versions": [
-                        "1.20.1"
-                    ],
-                    "loaders": [
-                        "forge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/6687/45/tfc_coldsweat-1.7.1.jar",
-                    "id": "6687045",
-                    "parent_id": "1130934",
-                    "hashes": {
-                        "sha1": "037fde320cd0d931258fda27ce121455586f92c2",
-                        "md5": "ae435da2c4746843cb5a899e4a35d15d"
-                    },
-                    "required_dependencies": [
-                        "302973",
-                        "506194"
-                    ],
-                    "size": 109290,
-                    "date_published": "2025-06-23T13:42:42.100Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "avyQWrrfHPLYXaGI",
+            "pakku_links": [
+                "rjWi4M0UGidHs9sp"
+            ],
             "type": "MOD",
             "slug": {
                 "curseforge": "tfc-grooming-station"
@@ -3013,6 +2781,9 @@
         },
         {
             "pakku_id": "qsiJN0DSdsJgsUQL",
+            "pakku_links": [
+                "rjWi4M0UGidHs9sp"
+            ],
             "type": "MOD",
             "slug": {
                 "curseforge": "tfc-hot-or-not"
@@ -3052,6 +2823,9 @@
         },
         {
             "pakku_id": "dVratraGbgpSezmh",
+            "pakku_links": [
+                "rjWi4M0UGidHs9sp"
+            ],
             "type": "MOD",
             "slug": {
                 "curseforge": "tfc-improved-badlands"
@@ -3126,24 +2900,24 @@
             ]
         },
         {
-            "pakku_id": "9TL7W96J2VQeTMKE",
+            "pakku_id": "OtKyacgxF0sehlBa",
             "pakku_links": [
-                "qoIOziv4qqDppO3N"
+                "rjWi4M0UGidHs9sp"
             ],
             "type": "MOD",
             "slug": {
-                "curseforge": "tfc-textile-cold-sweat-edition"
+                "curseforge": "tfc-textile"
             },
             "name": {
-                "curseforge": "TFC Textile"
+                "curseforge": "TFC Textile (Legacy)"
             },
             "id": {
-                "curseforge": "1131271"
+                "curseforge": "1085858"
             },
             "files": [
                 {
                     "type": "curseforge",
-                    "file_name": "textile-2.2.2b.jar",
+                    "file_name": "tfc_textile-1.0.5.jar",
                     "mc_versions": [
                         "1.20.1"
                     ],
@@ -3151,20 +2925,20 @@
                         "forge"
                     ],
                     "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/6686/885/textile-2.2.2b.jar",
-                    "id": "6686885",
-                    "parent_id": "1131271",
+                    "url": "https://edge.forgecdn.net/files/5761/738/tfc_textile-1.0.5.jar",
+                    "id": "5761738",
+                    "parent_id": "1085858",
                     "hashes": {
-                        "sha1": "3ed6159d0a52bd3cb90cd6f3c001996aef9b705a",
-                        "md5": "55dcb531c9346df0125e63d54bdd9aa1"
+                        "sha1": "0f68aff31c58bcfd12306218766d24022d6e78db",
+                        "md5": "c4c9325e6e844d7285b0bf58707531bd"
                     },
                     "required_dependencies": [
-                        "506194",
-                        "1130934",
+                        "309927",
+                        "940350",
                         "302973"
                     ],
-                    "size": 394552,
-                    "date_published": "2025-06-23T13:08:02.960Z"
+                    "size": 198232,
+                    "date_published": "2024-09-27T14:03:11.930Z"
                 }
             ]
         },
@@ -3244,6 +3018,9 @@
         },
         {
             "pakku_id": "kdgEGHnLTEBjlp5z",
+            "pakku_links": [
+                "rjWi4M0UGidHs9sp"
+            ],
             "type": "MOD",
             "slug": {
                 "curseforge": "tfcgenviewer"
@@ -3282,7 +3059,7 @@
             ]
         },
         {
-            "pakku_id": "IVJ6gGQY90ZlbKql",
+            "pakku_id": "rjWi4M0UGidHs9sp",
             "type": "MOD",
             "slug": {
                 "curseforge": "terrafirmacraft"
@@ -3296,7 +3073,7 @@
             "files": [
                 {
                     "type": "curseforge",
-                    "file_name": "TerraFirmaCraft-Forge-1.20.1-3.2.16.jar",
+                    "file_name": "TerraFirmaCraft-Forge-1.20.1-3.2.17.jar",
                     "mc_versions": [
                         "1.20.1"
                     ],
@@ -3305,23 +3082,26 @@
                         "forge"
                     ],
                     "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/6739/107/TerraFirmaCraft-Forge-1.20.1-3.2.16.jar",
-                    "id": "6739107",
+                    "url": "https://edge.forgecdn.net/files/6817/388/TerraFirmaCraft-Forge-1.20.1-3.2.17.jar",
+                    "id": "6817388",
                     "parent_id": "302973",
                     "hashes": {
-                        "sha1": "c87cab744f1e6e17cbe7fa596f3566ac5d904270",
-                        "md5": "ac46fb177d94e9729c0fa4e7c116dedd"
+                        "sha1": "ac6f79557cbbad18894c1c46790c7309368a8bec",
+                        "md5": "133a39929b52eec5e4c7ad88646f2d35"
                     },
                     "required_dependencies": [
                         "306770"
                     ],
-                    "size": 47450381,
-                    "date_published": "2025-07-06T22:20:34.050Z"
+                    "size": 47452131,
+                    "date_published": "2025-07-27T13:14:31.587Z"
                 }
             ]
         },
         {
             "pakku_id": "3BBBGDdu2bdyFfio",
+            "pakku_links": [
+                "rjWi4M0UGidHs9sp"
+            ],
             "type": "MOD",
             "slug": {
                 "curseforge": "tfc-scraping-knives"
@@ -3466,6 +3246,43 @@
                     "required_dependencies": [],
                     "size": 1470125,
                     "date_published": "2024-07-20T11:25:03.767Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "5ZD33Tgdtpd6mEaA",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "xaeros-world-map"
+            },
+            "name": {
+                "curseforge": "Xaero's World Map"
+            },
+            "id": {
+                "curseforge": "317780"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "XaerosWorldMap_1.39.12_Forge_1.20.jar",
+                    "mc_versions": [
+                        "1.20.1",
+                        "1.20"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/6778/91/XaerosWorldMap_1.39.12_Forge_1.20.jar",
+                    "id": "6778091",
+                    "parent_id": "317780",
+                    "hashes": {
+                        "sha1": "3c4005a400ba8270738bbe4c573526749ecf2f8f",
+                        "md5": "002d9a661be7e982db177d7b0fc8d49e"
+                    },
+                    "required_dependencies": [],
+                    "size": 960799,
+                    "date_published": "2025-07-17T08:39:43.103Z"
                 }
             ]
         },

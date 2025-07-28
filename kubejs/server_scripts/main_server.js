@@ -2,6 +2,8 @@
 
 ServerEvents.recipes(event => {
     registerGeneralRecipes(event)
+    registerCiderRecipes(event)
+    registerTFCRecipes(event)
 })
 
 ServerEvents.tags('item', event => {
@@ -21,6 +23,6 @@ TFCEvents.data(event => {
     registerHeats(event)
     registerSizes(event)
     registerLampFuels(event)
-    // registerPanningData(event)
+    registerPanningData(event)
     registerSluiceData(event)
 })

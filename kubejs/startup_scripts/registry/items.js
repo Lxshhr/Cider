@@ -19,29 +19,28 @@ const registerItems = (/** @type {Registry.Item} */ event) => {
     event.create('cfc:cut_linen_cloth')
     event.create('cfc:bound_leather')
 
-    event.create('cfc:iron_frame')
-    event.create('cfc:aluminium_frame')
-
-    event.create('cfc:unfinished_clock')
-    event.create('cfc:unfinished_thermometer')
-    event.create('cfc:unfinished_spyglass')
+    event.create('cfc:metal/iron_frame')
+    event.create('cfc:metal/aluminium_frame')
+    event.create('cfc:metal/unfinished_clock')
+    event.create('cfc:metal/unfinished_spyglass')
+    event.create('cfc:metal/brick_mold')
 
     event.create('cfc:ceramic/unfired_candle_mold')
     event.create('cfc:ceramic/candle_mold')
-    event.create('cfc:metal/brick_mold')
     
-    function createTool(toolName, toolType, toolTag, durability) {
+    function createTool(toolName, toolType, toolTag, durability, tier) {
         event.create(`cfc:${toolName}`, toolType)
             .tag('tfc:usable_on_tool_rack')
             .tag(toolTag)
             .maxDamage(durability)
+            .tier(tier)
         event.create(`cfc:${toolName}_head`)
     }
-    createTool('flint_hoe', 'tfc:hoe', 'tfc:hoes', 48)
-    createTool('flint_axe', 'axe', 'tfc:axes', 48)
-    createTool('flint_shovel', 'shovel', 'tfc:shovels', 48)
-    createTool('flint_hammer', 'tfc:hammer', 'tfc:hammers', 48)
-    createTool('flint_knife', 'tfc:hoe', 'tfc:knives', 48)
+    createTool('flint_hoe', 'tfc:hoe', 'tfc:hoes', 48, 'wood')
+    createTool('flint_axe', 'axe', 'tfc:axes', 48, 'wood')
+    createTool('flint_shovel', 'shovel', 'tfc:shovels', 48, 'wood')
+    createTool('flint_hammer', 'tfc:hammer', 'tfc:hammers', 48, 'wood')
+    createTool('flint_knife', 'tfc:hoe', 'tfc:knives', 48, 'wood')
 
     event.create('measuring_cup', 'tfc:fluid_container')
         .capacity(50)
