@@ -7,20 +7,38 @@ const registerCiderRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
 
     event.shapeless('cfc:plant_string', ['3x tfc:straw']).id('cider:crafting/plant_string')
 
-    event.shapeless('cfc:leather_sheet', ['minecraft:leather', '#tfc:shears']).damageIngredient('#tfc:shears')
-    event.shapeless('tfc:ceramic/unfired_brick', ['minecraft:clay', 'cfc:metal/brick_mold']).damageIngredient('cfc:metal/brick_mold')
+    event.shapeless('cfc:leather_sheet', ['minecraft:leather', '#tfc:shears']).damageIngredient('#tfc:shears').id('cider:crafting/leather_sheet')
+    event.shapeless('tfc:ceramic/unfired_brick', ['2x minecraft:clay', 'cfc:metal/brick_mold']).damageIngredient('cfc:metal/brick_mold').id('cider:crafting/brick')
 
     tfc.heating('cfc:metal/unfinished_clock', 930)
         .resultFluid(Fluid.of('tfc:metal/brass', 200))
+        .id('cider:heating/metal/unfinished_clock')
     tfc.heating('cfc:metal/unfinished_spyglass', 930)
         .resultFluid(Fluid.of('tfc:metal/brass', 200))
+        .id('cider:heating/metal/unfinished_spyglass')
 
     for (let i = 1; i <= 5; i++) {
-        tfc.pot(`${i}x cfc:seed_paste`, Fluid.of('minecraft:water', 200 * i), 2000, 300).fluidOutput(Fluid.of('cfc:seed_oil_water', 200 * i))
-        tfc.pot(`${i}x cfc:animal_fat`, Fluid.of('minecraft:water', 100), 600, 300).fluidOutput(Fluid.of('tfc:tallow', 200 * i))
+        tfc.pot(`${i}x cfc:seed_paste`, Fluid.of('minecraft:water', 200 * i), 2000, 300).fluidOutput(Fluid.of('cfc:seed_oil_water', 200 * i)).id(`cider:pot/seed_oil_water_${i}`)
+        tfc.pot(`${i}x cfc:animal_fat`, Fluid.of('minecraft:water', 100), 600, 300).fluidOutput(Fluid.of('tfc:tallow', 200 * i)).id(`cider:pot/tallow_${i}`)
     }
 
-    tfc.quern('cfc:seed_paste', '#forge:seeds')
+    tfc.quern('cfc:seed_paste', '#forge:seeds').id('cider:quern/seed_paste')
+
+    global.grainTypes.forEach(grain => {
+        for (let i = 1; i <= 4; i++) {
+            firmalife.mixing_bowl()
+                .outputItem(`tfc:food/${grain}_dough`)
+                .itemIngredients([notRotten(`tfc:food/${grain}_flour`).withCount(i)])
+                .fluidIngredient(Fluid.of('minecraft:water', 250 * i))
+                .id(`cider:mixing_bowl/flat_bread_dough/${grain}_${i}`)
+
+            firmalife.mixing_bowl()
+                .outputItem(`firmalife:food/${grain}_dough`)
+                .itemIngredients([notRotten(`tfc:food${grain}_flour`).withCount(i), '#tfc:sweetener'])
+                .fluidIngredient(Fluid.of('firmalife:yeast_starter', 250 * i))
+                .id(`cider:mixing_bowl/bread_dough/${grain}_${i}`)
+        }
+    })
 
     tfc.knapping('cfc:flint_axe_head', 'tfc:rock', [' X   ', 'XXXX ', 'XXXXX', 'XXXX ', ' X   '])
         .outsideSlotRequired(false)
@@ -62,23 +80,23 @@ const registerCiderRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
         .outsideSlotRequired(false)
         .ingredient('minecraft:flint')
         .id('cider:knapping/flint_hammer_head')
-    
-    tfc.knapping('chalk:white_chalk', 'tfc:rock', ['XXX', 'XXX', 'XXX', 'XXX', 'XXX',])
-        .outsideSlotRequired(false)
-        .ingredient('tfc:rock/loose/chalk')
-
-    tfc.knapping('chalk:white_chalk', 'tfc:rock', ['XXX', 'XXX', 'XXX', 'XXX', 'XXX',])
-        .outsideSlotRequired(false)
-        .ingredient('tfc:rock/mossy_loose/chalk')
 
     tfc.knapping('cfc:leather_sheet', 'tfc:leather', ['XX XX', 'XX XX', 'XX XX', 'XX XX', 'XX XX'])
         .outsideSlotRequired(false)
         .ingredient('minecraft:leather')
+        .id('cider:knapping/leather_sheet')
 
     tfc.barrel_instant()
         .inputFluid(TFC.fluidStackIngredient('cfc:seed_oil_water', 250))
         .inputItem('tfc:jute_net')
         .outputFluid(Fluid.of('cfc:seed_oil', 50))
+        .id('cider:barrel/seed_oil_jute_net')
+
+    tfc.barrel_sealed(1000)
+        .inputItem('cfc:dirty_cheese_cloth')
+        .inputFluid(TFC.fluidStackIngredient('minecraft:water', 125))
+        .outputItem('firmalife:cheesecloth')
+        .id('cider:barrel/dirty_cheese_cloth_cleaning')
 
     tfc.anvil('cfc:metal/unfinished_clock', '#forge:sheets/brass', anvilRuleHelper(['bend_any', 'draw_second_last', 'hit_third_last'])).id('cider:anvil/unfinished_clock')
     tfc.anvil('cfc:metal/unfinished_spyglass', '#forge:sheets/brass', anvilRuleHelper(['bend_any', 'punch_second_last', 'draw_third_last'])).id('cider:anvil/unfinished_spyglass')

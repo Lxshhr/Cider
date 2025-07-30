@@ -11,4 +11,6 @@ const registerGeneralRecipes = (/** @type {Internal.RecipesEventJS} */ event) =>
     global.disabledFluids.forEach(fluid => {
         event.remove({output: fluid})
     })
+
+    event.shapeless('4x labels:label', ['minecraft:paper', '#tfc:knives']).damageIngredient('#tfc:knives').id('labels:label')
 }

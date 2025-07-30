@@ -1,17 +1,72 @@
 const registerTFCRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
     let tfc = event.recipes.tfc
 
-    let tMetalData = {
-        'copper': 1080,
-        'bismuth_bronze': 985, 
-        'black_bronze': 1070, 
-        'bronze': 950, 
-        'wrought_iron' : 1535, 
-        'steel': 1540, 
-        'black_steel': 1540, 
-        'red_steel': 1540,
-        'blue_steel': 1485,
-    }
+    event.remove({id: 'tfc:leather_knapping/boots'})
+    event.remove({id: 'tfc:leather_knapping/chestplate'})
+    event.remove({id: 'tfc:leather_knapping/helmet'})
+    event.remove({id: 'tfc:leather_knapping/leggings'})
+    event.remove({id: 'tfc:leather_knapping/leather_horse_armor'})
+    event.remove({id: /^tfc:crafting\/wood\/.*_stairs/})
+    event.remove({id: /^tfc:crafting\/wood\/.*_slabs/})
+    event.remove({id: 'tfc:heating/torch_from_stick'})
+    event.remove({id: 'tfc:heating/torch_from_stick_bunch'})
+
+    event.remove({id: /tfc:crafting\/dough\/.*/})
+
+    event.remove({id: 'tfc:fire_clay_knapping/brick'})
+
+    event.shaped('tfc:dead_torch', [' S ', ' T '], {S: 'tfc:straw', T:'minecraft:stick'}).id('cider:crafting/dead_torch')
+    event.shapeless('tfc:thatch', ['9x tfc:straw']).id('tfc:crafting/thatch').id('cider:crafting/thatch')
+    event.shaped('tfc:bloomery', ['XYX', 'Y Y', 'XYX'], {X: '#forge:sheets/any_bronze', Y: '#forge:double_sheets/any_bronze'}).id('tfc:crafting/bloomery')
+    event.shaped('minecraft:clock', [' L ', 'MCM'], {L: 'tfc:lens', M: 'tfc:brass_mechanisms', C: 'cfc:unfinished_clock'}).id('tfc:crafting/vanilla/clock')
+    event.shaped('minecraft:white_bed', ['CCC', 'LLL', 'L L'], {C: '#tfc:high_quality_cloth', L: '#tfc:lumber'}).id('cider:crafting/white_bed')
+
+    hides.forEach(([size, amount, output]) => {
+        tfc.barrel_sealed(14000 * output)
+            .inputs(`tfc:${size}_raw_hide`, TFC.fluidStackIngredient('tfc:limewater', amount))
+            .outputItem(`tfc:${size}_soaked_hide`)
+            .id(`tfc:barrel/${size}_soaked_hide`)
+        tfc.barrel_sealed(10000 * output)
+            .inputs(`tfc:${size}_scraped_hide`, TFC.fluidStackIngredient('minecraft:water', amount))
+            .outputItem(`tfc:${size}_prepared_hide`)
+            .id(`tfc:barrel/${size}_prepared_hide`)
+        tfc.barrel_sealed(16000 * output)
+            .inputs(`tfc:${size}_prepared_hide`, TFC.fluidStackIngredient('tfc:tannin', amount))
+            .outputItem(`${output}x minecraft:leather`)
+            .id(`tfc:barrel/${size}_leather`)
+    })
+
+    tfc.heating('tfc:dead_torch', 60)
+        .resultItem('tfc:torch')
+        .id('cider:heating/torch')
+
+    // tfc.knapping('tfc:ceramic/unfired_crucible', 'tfcfire_:clay', ['X   X', 'X   X' , 'X   X', 'X   X', 'XXXXX'])
+    //     .ingredient('tfc:fire_clay')
+    //     .id('tfc:fire_clay_knapping/crucible')
+
+    // tfc.knapping('tfc:ceramic/unfired_large_vessel', 'tfc:clay', [' XXX ', 'XXXXX', 'XXXXX', 'XXXXX', ' XXX '])
+    //     .ingredient('10x minecraft:clay_ball')
+    //     .id('tfc:clay_knapping/large_vessel')
+
+    // tfc.knapping('tfc:ceramic/unfired_pot', 'tfc:clay', ['X   X', 'X   X', 'X   X', 'XXXXX', ' XXX '])
+    //     .ingredient('6x minecraft:clay_ball')
+    //     .id('tfc:clay_knapping/pot')
+
+    // tfc.knapping('tfc:ceramic/unfired_bell_mold', 'tfc:clay', ['XXXXX', 'XX XX', 'X   X', 'X   X', 'X   X'])
+    //     .ingredient('8x minecraft:clay_ball')
+    //     .id('tfc:clay_knapping/bell_mold')
+    
+    // tfc.knapping('tfc:ceramic/unfired_blowpipe', 'tfc:clay', [' X X ', ' X X ', ' XXX ', ' XXX ', ' XXX '])
+    //     .ingredient('6x minecraft:clay_ball')
+    //     .id('tfc:clay_knapping/blowpipe')
+    
+    // tfc.knapping('tfc:ceramic/unfired_brick', 'tfc:clay', ['XXXXX', '     ', 'XXXXX', '     ', 'XXXXX'])
+    //     .ingredient('6x minecraft:clay_ball')
+    //     .id('tfc:clay_knapping/brick')
+    
+    // tfc.knapping('2x tfc:ceramic/unfired_flower_pot', 'tfc:clay', [' X X ', ' XXX ', '     ', 'X  X ', ' XXX '])
+    //     .ingredient('minecraft:clay_ball')
+    //     .id('tfc:clay_knapping/flower_pot')
 
     for (let [metal, heat] of Object.entries(tMetalData)) {
         tfc.anvil(`tfc:metal/fish_hook/${metal}`, `#forge:ingots/${metal}`, anvilRuleHelper(['draw_not_last', 'bend_any', 'hit_any'])).id(`tfc:anvil/${metal}_fish_hook`)
@@ -20,4 +75,11 @@ const registerTFCRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
         tfc.heating(`tfc:metal/fish_hook/${metal}`, heat).resultFluid(Fluid.of(`tfc:metal/${metal}`, 100)).id(`tfc:heating/metal/${metal}_fish_hook`)
         tfc.heating(`tfc:metal/chain/${metal}`, heat).resultFluid(Fluid.of(`tfc:metal/${metal}`, 10)).id(`tfc:heating/metal/${metal}_chain`)
     }
+
+    tfc.bloomery(
+        'tfc:raw_iron_bloom', 
+        '2x tfc:ore/bituminous_coal',
+        Fluid.of('tfc:metal/cast_iron', 100), 
+        15000
+    ).id('cider:bloomery/iron_bloom_from_coal')
 }

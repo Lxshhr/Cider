@@ -11,7 +11,8 @@
 - Recipe additions
 - Tag Changes
 - Basic TFC Data Setup
-- Player Event Setup
+- Player Events
+- Block Events
 
 ### MODS
 ### Removed
@@ -23,11 +24,14 @@
 - ColdSweat
 - TFC Coldsweat
 - TFC textile (cold sweat)
+- JEI
+- Placebo
 
 ### Added
 - Ambiental - Second Edition
 - Textile (legacy)
 - Xaero's World Map
+- TMRV
 
 ### Updated
 - Terrafirmacraft - 3.2.16 -> 3.2.17

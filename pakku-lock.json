@@ -123,9 +123,6 @@
         },
         {
             "pakku_id": "5jtzAntsZYR9GsYC",
-            "pakku_links": [
-                "rjWi4M0UGidHs9sp"
-            ],
             "type": "MOD",
             "slug": {
                 "curseforge": "arborfirmacraft"
@@ -1435,42 +1432,6 @@
             ]
         },
         {
-            "pakku_id": "FP5TuDCiaHiElf5R",
-            "type": "MOD",
-            "slug": {
-                "curseforge": "jei"
-            },
-            "name": {
-                "curseforge": "Just Enough Items (JEI)"
-            },
-            "id": {
-                "curseforge": "238222"
-            },
-            "files": [
-                {
-                    "type": "curseforge",
-                    "file_name": "jei-1.20.1-forge-15.20.0.112.jar",
-                    "mc_versions": [
-                        "1.20.1"
-                    ],
-                    "loaders": [
-                        "forge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/6600/311/jei-1.20.1-forge-15.20.0.112.jar",
-                    "id": "6600311",
-                    "parent_id": "238222",
-                    "hashes": {
-                        "sha1": "f12b3781af6337794ae6e010420a97585360ea2f",
-                        "md5": "c899d5b549ace1e9fa46700c778c3809"
-                    },
-                    "required_dependencies": [],
-                    "size": 1385600,
-                    "date_published": "2025-05-31T05:20:27.750Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "r9e9546kH9NJe3I7",
             "pakku_links": [
                 "qH8Cp06GRFfOpHgL"
@@ -2002,43 +1963,6 @@
                     "required_dependencies": [],
                     "size": 642711,
                     "date_published": "2025-02-06T16:09:52.160Z"
-                }
-            ]
-        },
-        {
-            "pakku_id": "vJokYT61nWjEysRS",
-            "type": "MOD",
-            "slug": {
-                "curseforge": "placebo"
-            },
-            "name": {
-                "curseforge": "Placebo"
-            },
-            "id": {
-                "curseforge": "283644"
-            },
-            "files": [
-                {
-                    "type": "curseforge",
-                    "file_name": "Placebo-1.20.1-8.6.3.jar",
-                    "mc_versions": [
-                        "1.20.1"
-                    ],
-                    "loaders": [
-                        "neoforge",
-                        "forge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/6274/231/Placebo-1.20.1-8.6.3.jar",
-                    "id": "6274231",
-                    "parent_id": "283644",
-                    "hashes": {
-                        "sha1": "e85f53de2e582a79ce25ff1df1e7b5b5fc08440f",
-                        "md5": "13133ab9989e8474931cd7a86bd19cc5"
-                    },
-                    "required_dependencies": [],
-                    "size": 282474,
-                    "date_published": "2025-03-07T09:06:06.367Z"
                 }
             ]
         },
@@ -3135,6 +3059,44 @@
                     ],
                     "size": 177967,
                     "date_published": "2025-01-28T09:39:35.493Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "VeNNpA5Iz7kbEaI5",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "tmrv"
+            },
+            "name": {
+                "curseforge": "TooManyRecipeViewers (TMRV)"
+            },
+            "id": {
+                "curseforge": "1194921"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "toomanyrecipeviewers-0.6.0+mc.20.1.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/6717/421/toomanyrecipeviewers-0.6.0+mc.20.1.jar",
+                    "id": "6717421",
+                    "parent_id": "1194921",
+                    "hashes": {
+                        "sha1": "eee260744f076b13d528bdf630e20002710c4f62",
+                        "md5": "bffbfccf42c650c0e5ed5a5fb54c9d6f"
+                    },
+                    "required_dependencies": [
+                        "580555"
+                    ],
+                    "size": 1215388,
+                    "date_published": "2025-07-01T16:44:52.167Z"
                 }
             ]
         },

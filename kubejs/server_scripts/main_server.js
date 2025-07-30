@@ -1,9 +1,13 @@
 // priority: 0
 
 ServerEvents.recipes(event => {
-    registerGeneralRecipes(event)
+    registerAddonRecipes(event)
     registerCiderRecipes(event)
+    registerFirmacivRecipes(event)
+    registerFirmalifeRecipes(event)
+    registerGeneralRecipes(event)
     registerTFCRecipes(event)
+    registerVanillaRecipes(event)
 })
 
 ServerEvents.tags('item', event => {
