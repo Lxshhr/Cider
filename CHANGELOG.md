@@ -8,7 +8,7 @@
 - Setup Default Configs
 - New Items, Blocks & Fluids
 - New Glassblowing Powders
-- Recipe additions
+- Recipe additions & changes
 - Tag Changes
 - Basic TFC Data Setup
 - Player Events
@@ -21,17 +21,24 @@
 - Carry On
 - Corpse Curios Compat
 - Baguette Lib
-- ColdSweat
-- TFC Coldsweat
-- TFC textile (cold sweat)
 - JEI
 - Placebo
+- Cold sweat
+- Textile coldsweat
+- TFC Cold sweat
 
 ### Added
-- Ambiental - Second Edition
-- Textile (legacy)
 - Xaero's World Map
 - TMRV
+- Ambiental
+- Textile legacy
 
 ### Updated
-- Terrafirmacraft - 3.2.16 -> 3.2.17
+- Terrafirmacraft
+- Balm
+- Amendments
+- Firmalife
+- Kubejs TFC
+- Modernfix
+- Moonlight
+- TMRV

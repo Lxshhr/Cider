@@ -1,7 +1,7 @@
 const registerCiderRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
     let tfc = event.recipes.tfc
     let firmalife = event.recipes.firmalife
-    
+
     tfc.heating(notRotten('cfc:food/bush_meat'), 300)
         .resultItem('cfc:food/cooked_bush_meat')
 
@@ -18,23 +18,23 @@ const registerCiderRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
         .id('cider:heating/metal/unfinished_spyglass')
 
     for (let i = 1; i <= 5; i++) {
-        tfc.pot(`${i}x cfc:seed_paste`, Fluid.of('minecraft:water', 200 * i), 2000, 300).fluidOutput(Fluid.of('cfc:seed_oil_water', 200 * i)).id(`cider:pot/seed_oil_water_${i}`)
-        tfc.pot(`${i}x cfc:animal_fat`, Fluid.of('minecraft:water', 100), 600, 300).fluidOutput(Fluid.of('tfc:tallow', 200 * i)).id(`cider:pot/tallow_${i}`)
+        tfc.pot(toArray('cfc:seed_paste', i), Fluid.of('minecraft:water', 200 * i), 2000, 300).fluidOutput(Fluid.of('cfc:seed_oil_water', 200 * i)).id(`cider:pot/seed_oil_water_${i}`)
+        tfc.pot(toArray('cfc:animal_fat', i), Fluid.of('minecraft:water', 100), 600, 300).fluidOutput(Fluid.of('tfc:tallow', 200 * i)).id(`cider:pot/tallow_${i}`)
     }
 
     tfc.quern('cfc:seed_paste', '#forge:seeds').id('cider:quern/seed_paste')
 
     global.grainTypes.forEach(grain => {
-        for (let i = 1; i <= 4; i++) {
+        for (let i = 1; i < 5; i++) {
             firmalife.mixing_bowl()
                 .outputItem(`tfc:food/${grain}_dough`)
-                .itemIngredients([notRotten(`tfc:food/${grain}_flour`).withCount(i)])
+                .itemIngredients(toArrayNotRotten(`tfc:food/${grain}_flour`, i))
                 .fluidIngredient(Fluid.of('minecraft:water', 250 * i))
                 .id(`cider:mixing_bowl/flat_bread_dough/${grain}_${i}`)
 
             firmalife.mixing_bowl()
                 .outputItem(`firmalife:food/${grain}_dough`)
-                .itemIngredients([notRotten(`tfc:food${grain}_flour`).withCount(i), '#tfc:sweetener'])
+                .itemIngredients(toArrayExtraIngredient(`tfc:food/${grain}_flour`, i, '#tfc:sweetener'))
                 .fluidIngredient(Fluid.of('firmalife:yeast_starter', 250 * i))
                 .id(`cider:mixing_bowl/bread_dough/${grain}_${i}`)
         }
@@ -106,6 +106,15 @@ const registerCiderRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
     
     tfc.casting('cfc:metal/ingot/alumina', 'tfc:ceramic/ingot_mold', Fluid.of('cfc:alumina', 100), 0.10).id('cider:casting/alumina_ingot')
     tfc.casting('cfc:metal/ingot/aluminium', 'tfc:ceramic/ingot_mold', Fluid.of('cfc:aluminium', 100), 0.10).id('cider:casting/aluminium_ingot')
-    tfc.casting('cfc:metal/ingot/alumina', "tfc:ceramic/fire_ingot_mold", Fluid.of('cfc:alumina', 100), 0.01).id('cider:casting/alumina_fire_ingot')
+    tfc.casting('cfc:metal/ingot/alumina', 'tfc:ceramic/fire_ingot_mold', Fluid.of('cfc:alumina', 100), 0.01).id('cider:casting/alumina_fire_ingot')
     tfc.casting('cfc:metal/ingot/aluminium', 'tfc:ceramic/fire_ingot_mold', Fluid.of('cfc:aluminium', 100), 0.01).id('cider:casting/aluminium_fire_ingot')
+
+    for (metal of ('lead', 'alumina', 'aluminium')) {
+        tfc.casting(`cfc:metal/ingot/${metal}`, 'tfc:ceramic/ingot_mold', Fluid.of('cfc:metal', 100), 0.10).id(`cider:casting/${metal}_ingot`)
+        tfc.casting(`cfc:metal/ingot/${metal}`, 'tfc:ceramic/fire_ingot_mold', Fluid.of('cfc:metal', 100), 0.01).id(`cider:casting/${metal}_fire_ingot`)
+        tfc.welding(`cfc:metal/double_ingot/${metal}`, `cfc:metal/ingot/${metal}`, `cfc:metal/ingot/${metal}`).tier(2)
+        tfc.welding(`cfc:metal/double_sheet/${metal}`, `cfc:metal/sheet/${metal}`, `cfc:metal/sheet/${metal}`).tier(2)
+        tfc.anvil(`cfc:metal/sheet/${metal}`, `cfc:metal/double_ingot/${metal}`, ['hit_any', 'hit_any', 'hit_any']).tier(2)
+        tfc.anvil(`2x cfc:metal/rod/${metal}`, `cfc:metal/ingot/${metal}`, ['hit_any', 'hit_any', 'hit_any']).tier(2)
+    }
 }

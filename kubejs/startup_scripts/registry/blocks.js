@@ -57,6 +57,7 @@ const registerBlocks = (/** @type {Registry.Block} */ event) => {
         })
     }
     createOreBlocks('bauxite')
+    createOreBlocks('lead')
 
     function createMetalBlocks(material) {
         event.create(`cfc:metal/block/${material}`)
@@ -77,8 +78,9 @@ const registerBlocks = (/** @type {Registry.Block} */ event) => {
     }
     createMetalBlocks('aluminium')
     createMetalBlocks('alumina')
+    createMetalBlocks('lead')
 
-    function createGemBlocks(gemType) {
+    function createGemOreBlocks(gemType) {
         global.tfcRockTypes.forEach(rockType => {
             event.create(`cfc:ore/${gemType}/${rockType}`)
                 .stoneSoundType()
@@ -97,6 +99,31 @@ const registerBlocks = (/** @type {Registry.Block} */ event) => {
                 .requiresTool(true)
         })
     }
-    createGemBlocks('quartz')
-    createGemBlocks('clear_quartz')
+    createGemOreBlocks('quartz')
+    createGemOreBlocks('clear_quartz')
+
+    function createDoubleCrop(crop, nutrient, stage1, stage2, seed, product) {
+        event.create(`cfc:${crop}`, 'tfc:double_crop')
+            .soundType('crop')
+            .nutrient(nutrient)
+            .stages(stage1)
+            .doubleStages(stage2)
+            .hardness(0.6)
+            .seedItem(seed)
+            .productItem(product)
+            .deadBlock(dead => {
+                dead.hardness(0.2)
+                dead.soundType('crop')
+            })
+
+        event.create(`cfc:wild_${crop}`, 'tfc:wild_crop')
+            .type('double')
+            .soundType('crop')
+            .seeds(seed)
+            .food(product)
+            .hardness(0.5)
+            .tagBoth('tfc:wild_crops')
+            .tagItem('c:hidden_from_recipe_viewers')
+    }
+    createDoubleCrop('flax', 'nitrogen', 4, 2, 'cfc:seeds/flax', 'cfc:flax_fiber')
 }

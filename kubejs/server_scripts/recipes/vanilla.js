@@ -16,6 +16,7 @@ const registerVanillaRecipes = (/** @type {Internal.RecipesEventJS} */ event) =>
     event.shaped('minecraft:saddle', ['LFL', 'SN '], {L: 'cfc:leather_sheet', F: 'minecraft:leather', S: '#forge:string', N: 'tfc:bone_needle'}).damageIngredient('tfc:bone_needle').id('cider:crafting/saddle')
 
     event.shaped('minecraft:white_banner', [' S ', ' S ', ' T '], {S: '#tfc:cut_high_quality_cloth', T: '#forge:rods/wooden'})
+    event.shaped('minecraft:cartography_table', ['SS', 'TT'], {S: 'minecraft:paper', T: '#minecraft:planks'})
 
     tfc.chisel('minecraft:brick_slab', 'minecraft:bricks', 'slab').extraDrop('minecraft:brick_slab').id('cider:chisel/brick_slab')
     tfc.chisel('minecraft:brick_stairs', 'minecraft:bricks', 'stair').id('cider:chisel/brick_stairs')

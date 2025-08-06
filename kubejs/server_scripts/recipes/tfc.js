@@ -12,6 +12,7 @@ const registerTFCRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
     event.remove({id: 'tfc:heating/torch_from_stick_bunch'})
 
     event.remove({id: /tfc:crafting\/dough\/.*/})
+    event.remove({id: /tfc:crafting\/vanilla\/color.*_bed/})
 
     event.remove({id: 'tfc:fire_clay_knapping/brick'})
 
@@ -39,34 +40,6 @@ const registerTFCRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
     tfc.heating('tfc:dead_torch', 60)
         .resultItem('tfc:torch')
         .id('cider:heating/torch')
-
-    // tfc.knapping('tfc:ceramic/unfired_crucible', 'tfcfire_:clay', ['X   X', 'X   X' , 'X   X', 'X   X', 'XXXXX'])
-    //     .ingredient('tfc:fire_clay')
-    //     .id('tfc:fire_clay_knapping/crucible')
-
-    // tfc.knapping('tfc:ceramic/unfired_large_vessel', 'tfc:clay', [' XXX ', 'XXXXX', 'XXXXX', 'XXXXX', ' XXX '])
-    //     .ingredient('10x minecraft:clay_ball')
-    //     .id('tfc:clay_knapping/large_vessel')
-
-    // tfc.knapping('tfc:ceramic/unfired_pot', 'tfc:clay', ['X   X', 'X   X', 'X   X', 'XXXXX', ' XXX '])
-    //     .ingredient('6x minecraft:clay_ball')
-    //     .id('tfc:clay_knapping/pot')
-
-    // tfc.knapping('tfc:ceramic/unfired_bell_mold', 'tfc:clay', ['XXXXX', 'XX XX', 'X   X', 'X   X', 'X   X'])
-    //     .ingredient('8x minecraft:clay_ball')
-    //     .id('tfc:clay_knapping/bell_mold')
-    
-    // tfc.knapping('tfc:ceramic/unfired_blowpipe', 'tfc:clay', [' X X ', ' X X ', ' XXX ', ' XXX ', ' XXX '])
-    //     .ingredient('6x minecraft:clay_ball')
-    //     .id('tfc:clay_knapping/blowpipe')
-    
-    // tfc.knapping('tfc:ceramic/unfired_brick', 'tfc:clay', ['XXXXX', '     ', 'XXXXX', '     ', 'XXXXX'])
-    //     .ingredient('6x minecraft:clay_ball')
-    //     .id('tfc:clay_knapping/brick')
-    
-    // tfc.knapping('2x tfc:ceramic/unfired_flower_pot', 'tfc:clay', [' X X ', ' XXX ', '     ', 'X  X ', ' XXX '])
-    //     .ingredient('minecraft:clay_ball')
-    //     .id('tfc:clay_knapping/flower_pot')
 
     for (let [metal, heat] of Object.entries(tMetalData)) {
         tfc.anvil(`tfc:metal/fish_hook/${metal}`, `#forge:ingots/${metal}`, anvilRuleHelper(['draw_not_last', 'bend_any', 'hit_any'])).id(`tfc:anvil/${metal}_fish_hook`)

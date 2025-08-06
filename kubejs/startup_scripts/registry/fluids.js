@@ -8,5 +8,6 @@ const registerFluids = (/** @type {Registry.Fluid} */ event) => {
     event.create('cfc:resin').thickTexture(0xFF991C).bucketColor(0xFF991C).noBlock()
 
     event.create('cfc:aluminium').thickTexture(0x848789).bucketColor(0x848789).noBlock()
-    event.create("cfc:alumina").thickTexture(0xeff4f8).thinTexture(0xeff4f8).noBlock()
+    event.create("cfc:alumina").thickTexture(0xEFF4F8).thinTexture(0xEFF4F8).noBlock()
+    event.create("cfc:lead").thickTexture(0x5C6274).thinTexture(0x5C6274).noBlock()
 }

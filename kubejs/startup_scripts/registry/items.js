@@ -1,5 +1,7 @@
 const registerItems = (/** @type {Registry.Item} */ event) => {
     event.createCustom('cfc:flint_and_pyrite', () => new $FlintAndSteelItem(new $ItemProperties().defaultDurability(48).durability(48)))
+        .tag('tfc:starts_fires_with_durability')
+        .tag('tfc:usable_on_tool_rack')
 
     event.create('cfc:food/bush_meat')
     event.create('cfc:food/cooked_bush_meat')
@@ -12,10 +14,14 @@ const registerItems = (/** @type {Registry.Item} */ event) => {
     event.create('cfc:thatch_canvas')
     event.create('cfc:ash_finish')
 
+    event.create('cfc:seeds/linen')
+    event.create('cfc:cloth/linen')
+    event.create('cfc:flax_fiber')
+    event.create('cfc:flax').maxStackSize(32)
+
     event.create('cfc:cut_silk_cloth')
     event.create('cfc:cut_wool_cloth')
     event.create('cfc:cut_burlap_cloth')
-    event.create('cfc:cut_cotton_cloth')
     event.create('cfc:cut_linen_cloth')
     event.create('cfc:bound_leather')
 
@@ -42,9 +48,10 @@ const registerItems = (/** @type {Registry.Item} */ event) => {
     createTool('flint_hammer', 'tfc:hammer', 'tfc:hammers', 48, 'wood')
     createTool('flint_knife', 'tfc:hoe', 'tfc:knives', 48, 'wood')
 
-    event.create('measuring_cup', 'tfc:fluid_container')
+    event.create('cfc:measuring_cup', 'tfc:fluid_container')
         .capacity(50)
         .fluidTagAccept('cfc:measureable_fluid')
+        .tag('tfc:usable_on_tool_rack')
     event.create('cfc:ceramic/unfired_rod_mold')
         .tag('tfc:unfired_molds')
     event.create('cfc:ceramic/rod_mold', 'tfc:mold')
@@ -57,6 +64,18 @@ const registerItems = (/** @type {Registry.Item} */ event) => {
         .capacity(50)
         .fluidTagAccept('tfc:usable_in_ingot_mold')
         .tag('tfc:fired_molds')
+    event.create('cfc:ceramic/unfired_spindle_head_mold')
+        .tag('tfc:unfired_molds')
+    event.create('cfc:ceramic/spindle_head_mold', 'tfc:mold')
+        .capacity(100)
+        .fluidTagAccept('tfc:spindle_head_usable')
+        .tag('tfc:fired_molds')
+
+    event.create(`cfc:metal/spindle_head/brass`)
+    event.create(`cfc:metal/spindle/brass`)
+        .maxDamage(920)
+        .tag('forge:spindles')
+        .tag('tfc:usable_on_tool_rack')
 
     function createOreItems(oreType) {
         event.create(`cfc:powder/${oreType}`)
@@ -70,6 +89,7 @@ const registerItems = (/** @type {Registry.Item} */ event) => {
         })
     }
     createOreItems('bauxite')
+    createOreItems('lead')
 
     event.create('cfc:powder/borax')
         .tag('forge:dusts')
@@ -107,14 +127,7 @@ const registerItems = (/** @type {Registry.Item} */ event) => {
     }
     createMetalItems('aluminium')
     createMetalItems('alumina')
-
-    for(let [metal, durability] of Object.entries(MMetalDurability)) {
-        event.create(`cfc:metal/spindle_head/${metal}`)
-        event.create(`cfc:metal/spindle${metal}`)
-            .maxDamage(durability)
-            .tag('forge:spindles')
-            .tag('tfc:usable_on_tool_rack')
-    }
+    createMetalItems('lead')
 
     function createNewGemItems(material) {
         event.create(`cfc:ore/${material}`)

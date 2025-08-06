@@ -25,3 +25,8 @@ let furTypes = [
     'sabertooth', 
     'tiger'
 ]
+let clothType = {
+    'silk' : 'tfc:silk_cloth',
+    'wool': 'tfc:wool_cloth', 
+    'burlap': 'tfc:burlap_cloth',
+}

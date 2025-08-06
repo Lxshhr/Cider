@@ -1,6 +1,6 @@
 function anvilRuleHelper(rules) {
     if (rules.length == 1 || rules.length > 3) return rules
-    let newRules = Array(3).fill(null)
+    let newRules = new Array(3).fill(null)
     let fallback = []
     let notLastCount = 0
     let firstRules = {
@@ -22,7 +22,7 @@ function anvilRuleHelper(rules) {
             fallback.push(rule)
         }
     }
-    if (notLastCount >= 3) return rules
+    if (notLastCount > 2 ) return rules
     
     for (let rule of fallback) {
         let iRule = rule.substring(rule.indexOf('_') + 1)
@@ -39,4 +39,30 @@ function anvilRuleHelper(rules) {
 
 function notRotten(ingredient) {
     return TFC.ingredient.notRotten(ingredient)
+}
+
+function toArray(ingredient, count) {
+    if (count == 1) return ingredient
+    let ingredientArray = []
+    for (let i = 0; i < count; i++) {
+        ingredientArray.push(ingredient)
+    }
+    return ingredientArray;
+}
+function toArrayNotRotten(ingredient, count) {
+    if (count == 1) return ingredient
+    let ingredientArray = []
+    for (let i = 0; i < count; i++) {
+        ingredientArray.push(notRotten(ingredient))
+    }
+    return ingredientArray;
+}
+function toArrayExtraIngredient(ingredient, count, extraIngredient) {
+    if (count == 1) return [ingredient, extraIngredient]
+    let ingredientArray = []
+    for (let i = 0; i < count; i++) {
+        ingredientArray.push(notRotten(ingredient))
+    }
+    ingredientArray.push(extraIngredient)
+    return ingredientArray;
 }

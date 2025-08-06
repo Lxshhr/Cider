@@ -1,7 +1,10 @@
 {
     "name": "Cider",
     "version": "0.0.1",
+    "description": "A slightly harder vanilla TFC modpack",
+    "author": "Lxshh/Acey",
     "overrides": [
+        "config",
         "config"
     ]
 }

@@ -175,14 +175,20 @@ global.disabledItems = [
     'firmalife:tirage_mixture',
     'firmalife:seed_ball',
     /tfc:ceramic\/(:?saw|chisel|scythe).*_mold/,
+    /tfc:wood\/(?:sewing).*/,
+    /afc:wood\/(?:sewing).*/,
     /tfcscraping:ceramic\/.*/,
     /tfc:food\/.*(:?bear).*/,
-    /tfchotornot:.*\/(:?bismuth|zinc|gold|silver|sterling_silver)/,
+    /cold_sweat:(:?holgin|goar|chameleon|soul).*/,
+    /tfchotornot:.*\/(:?zinc|gold|silver|sterling_silver|tin|rose_gold|nickel)/,
+    'tfchotornot:tongs/bismuth',
+    'tfchotornot:tong_part/bismuth',
     /rnr:.*(:?pouring|wet|cracked|trodden).*/,
     /^precisionprospecting:ceramic\/.*/,
-    /supplementaries:.*(:?lumisene|candle|sconce|lamp|flint|feather|sugar|fodder).*/,
+    /supplementaries:.*(:?lumisene|candle|sconce|lamp|flint|feather|sugar|fodder|gold|netherite|fine).*/,
     /supplementaries:.*(:?lapis|stone|gravel|daub|timber|flax).*/,
-    /supplementaries:(:?sign_post).*/
+    /supplementaries:(:?sign_post).*/,
+    /alekiroofs:(:?oak|spruce|jungle|birch|mangrove|acacia|cherry|warped|crimson|bamboo|dark)_.*/
 ]
 global.extraSupplementariesDisabled = [
     'soap_block', 'fire_pit', 'lunch_basket', 'quiver', 'speaker_block',
@@ -190,7 +196,7 @@ global.extraSupplementariesDisabled = [
     'bamboo_spikes_tipped', 'enderman_head', 'cog_block', 'crank',
     'cannon', 'faucet', 'relayer', 'display', 'bellows', 'dispener_minecart',
     'redstone_illuminator', 'slice_map', 'bomb_blue', 'cannon_ball',
-    'pancake', 'candy', 'ash_brick', 'ash'
+    'pancake', 'candy', 'ash_brick', 'ash',
 ]
 global.disabledFluids = [
     'afc:birch_sap_concentrate',
@@ -283,4 +289,5 @@ global.vanillaDisabled = [
     'minecraft:pitcher_pod',
     'minecraft:sea_pickle',
     'minecraft:frog_spawn',
+    /minecraft:bamboo_(;?planks|mosaic|stairs|slab|fence|door|trapdoor).*/
 ]
