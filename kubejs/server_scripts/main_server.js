@@ -8,7 +8,6 @@ ServerEvents.recipes(event => {
     registerGeneralRecipes(event)
     registerTFCRecipes(event)
     registerVanillaRecipes(event)
-    registerColdsweatRecipes(event)
     registerSupplementariesRecipes(event)
 })
 

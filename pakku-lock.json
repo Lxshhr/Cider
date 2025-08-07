@@ -122,10 +122,7 @@
             ]
         },
         {
-            "pakku_id": "KQF6DaBfZbPhl8sv",
-            "pakku_links": [
-                "QBNv3eUj4qxtuyX9"
-            ],
+            "pakku_id": "Ro26jSdJHaZSwdyA",
             "type": "MOD",
             "slug": {
                 "curseforge": "arborfirmacraft"
@@ -2582,43 +2579,6 @@
             ]
         },
         {
-            "pakku_id": "JmTtuduqUtuuCOvD",
-            "type": "MOD",
-            "slug": {
-                "curseforge": "tfc-ambiental-second-edition"
-            },
-            "name": {
-                "curseforge": "TFC Ambiental - Second edition"
-            },
-            "id": {
-                "curseforge": "940350"
-            },
-            "files": [
-                {
-                    "type": "curseforge",
-                    "file_name": "tfcambiental-1.20.1-3.3.1.jar",
-                    "mc_versions": [
-                        "1.20.1"
-                    ],
-                    "loaders": [
-                        "neoforge",
-                        "forge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/5655/440/tfcambiental-1.20.1-3.3.1.jar",
-                    "id": "5655440",
-                    "parent_id": "940350",
-                    "hashes": {
-                        "sha1": "0837547febfc05c18e224fd8b3f9ed4eef8eb9de",
-                        "md5": "f057f8e13adacf35c50ae52cf312ee38"
-                    },
-                    "required_dependencies": [],
-                    "size": 640068,
-                    "date_published": "2024-08-23T09:41:25.543Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "QSxdhFYQN0XeHxIx",
             "type": "MOD",
             "slug": {
@@ -2805,46 +2765,6 @@
                     "required_dependencies": [],
                     "size": 6997,
                     "date_published": "2025-02-07T19:27:13.010Z"
-                }
-            ]
-        },
-        {
-            "pakku_id": "802qAHal5XPie7t7",
-            "type": "MOD",
-            "slug": {
-                "curseforge": "tfc-textile"
-            },
-            "name": {
-                "curseforge": "TFC Textile (Legacy)"
-            },
-            "id": {
-                "curseforge": "1085858"
-            },
-            "files": [
-                {
-                    "type": "curseforge",
-                    "file_name": "tfc_textile-1.0.5.jar",
-                    "mc_versions": [
-                        "1.20.1"
-                    ],
-                    "loaders": [
-                        "forge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/5761/738/tfc_textile-1.0.5.jar",
-                    "id": "5761738",
-                    "parent_id": "1085858",
-                    "hashes": {
-                        "sha1": "0f68aff31c58bcfd12306218766d24022d6e78db",
-                        "md5": "c4c9325e6e844d7285b0bf58707531bd"
-                    },
-                    "required_dependencies": [
-                        "309927",
-                        "940350",
-                        "302973"
-                    ],
-                    "size": 198232,
-                    "date_published": "2024-09-27T14:03:11.930Z"
                 }
             ]
         },

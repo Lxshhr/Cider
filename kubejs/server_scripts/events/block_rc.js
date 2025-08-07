@@ -3,6 +3,8 @@ BlockEvents.rightClicked(event => {
     const {block, player} = event
     const mainHandItem = player.getMainHandItem()
     
+    if (block != 'tfc:wall_torch' || block != 'tfc:torch') return
+
     if (block == 'tfc:wall_torch' || block == 'tfc:torch') {
         if (mainHandItem.hasTag('forge:rods/wooden')) event.cancel()
             if (mainHandItem == 'tfc:dead_torch') {

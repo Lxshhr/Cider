@@ -7,29 +7,29 @@ const registerItems = (/** @type {Registry.Item} */ event) => {
     event.create('cfc:food/cooked_bush_meat')
 
     event.create('cfc:animal_fat')
-    event.create('cfc:seed_paste')
+    event.create('cfc:seed_paste') 
     event.create('cfc:plant_string')
-    event.create('cfc:leather_sheet')
     event.create('cfc:dirty_cheese_cloth')
     event.create('cfc:thatch_canvas')
     event.create('cfc:ash_finish')
-
-    event.create('cfc:seeds/linen')
-    event.create('cfc:cloth/linen')
-    event.create('cfc:flax_fiber')
-    event.create('cfc:flax').maxStackSize(32)
 
     event.create('cfc:cut_silk_cloth')
     event.create('cfc:cut_wool_cloth')
     event.create('cfc:cut_burlap_cloth')
     event.create('cfc:cut_linen_cloth')
     event.create('cfc:bound_leather')
+    event.create('cfc:leather_sheet')
+    
+    event.create('cfc:cloth/linen')
+    event.create('cfc:flax_fiber')
+    event.create('cfc:flax').maxStackSize(32)
 
     event.create('cfc:metal/iron_frame')
     event.create('cfc:metal/aluminium_frame')
     event.create('cfc:metal/unfinished_clock')
     event.create('cfc:metal/unfinished_spyglass')
     event.create('cfc:metal/brick_mold')
+        .maxDamage(320)
 
     event.create('cfc:ceramic/unfired_candle_mold')
     event.create('cfc:ceramic/candle_mold')
@@ -47,11 +47,13 @@ const registerItems = (/** @type {Registry.Item} */ event) => {
     createTool('flint_shovel', 'shovel', 'tfc:shovels', 48, 'wood')
     createTool('flint_hammer', 'tfc:hammer', 'tfc:hammers', 48, 'wood')
     createTool('flint_knife', 'tfc:hoe', 'tfc:knives', 48, 'wood')
+    createTool('flint_javelin', 'tfc:javelin', 'tfc:javelins', 48, 'wood')
 
     event.create('cfc:measuring_cup', 'tfc:fluid_container')
         .capacity(50)
         .fluidTagAccept('cfc:measureable_fluid')
         .tag('tfc:usable_on_tool_rack')
+    
     event.create('cfc:ceramic/unfired_rod_mold')
         .tag('tfc:unfired_molds')
     event.create('cfc:ceramic/rod_mold', 'tfc:mold')
@@ -95,6 +97,7 @@ const registerItems = (/** @type {Registry.Item} */ event) => {
         .tag('forge:dusts')
     event.create('cfc:powder/chromite')
         .tag('forge:dusts')
+        .tag('tfc:gem_powders')
     event.create('cfc:powder/cryolite')
         .tag('forge:dusts')
     event.create('cfc:powder/cinnabar')

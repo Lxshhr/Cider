@@ -102,24 +102,24 @@ const registerBlocks = (/** @type {Registry.Block} */ event) => {
     createGemOreBlocks('quartz')
     createGemOreBlocks('clear_quartz')
 
-    function createDoubleCrop(crop, nutrient, stage1, stage2, seed, product) {
+    function createDoubleCrop(crop, nutrient, stage1, stage2, product) {
         event.create(`cfc:${crop}`, 'tfc:double_crop')
             .soundType('crop')
             .nutrient(nutrient)
             .stages(stage1)
             .doubleStages(stage2)
             .hardness(0.6)
-            .seedItem(seed)
-            .productItem(product)
+            .seedItem(seed => {seed.texture(`cfc:item/seeds/${crop}`)})
+            .existingProductItem(product)
             .deadBlock(dead => {
-                dead.hardness(0.2)
+                dead.hardness(0.35)
                 dead.soundType('crop')
             })
 
         event.create(`cfc:wild_${crop}`, 'tfc:wild_crop')
             .type('double')
             .soundType('crop')
-            .seeds(seed)
+            .seeds(`cfc:seeds/${crop}`)
             .food(product)
             .hardness(0.5)
             .tagBoth('tfc:wild_crops')

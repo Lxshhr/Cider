@@ -104,14 +104,9 @@ const registerCiderRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
     tfc.anvil('cfc:metal/iron_frame', '#forge:double_sheets/wrought_iron', anvilRuleHelper(['hit_last', 'hit_second_last', 'punch_third_last'])).id('cider:anvil/iron_frame')
     tfc.anvil('cfc:metal/aluminium_frame', '#forge:sheets/aluminium', anvilRuleHelper(['hit_last', 'hit_second_last', 'punch_third_last'])).id('cider:anvil/aluminium_frame')
     
-    tfc.casting('cfc:metal/ingot/alumina', 'tfc:ceramic/ingot_mold', Fluid.of('cfc:alumina', 100), 0.10).id('cider:casting/alumina_ingot')
-    tfc.casting('cfc:metal/ingot/aluminium', 'tfc:ceramic/ingot_mold', Fluid.of('cfc:aluminium', 100), 0.10).id('cider:casting/aluminium_ingot')
-    tfc.casting('cfc:metal/ingot/alumina', 'tfc:ceramic/fire_ingot_mold', Fluid.of('cfc:alumina', 100), 0.01).id('cider:casting/alumina_fire_ingot')
-    tfc.casting('cfc:metal/ingot/aluminium', 'tfc:ceramic/fire_ingot_mold', Fluid.of('cfc:aluminium', 100), 0.01).id('cider:casting/aluminium_fire_ingot')
-
-    for (metal of ('lead', 'alumina', 'aluminium')) {
-        tfc.casting(`cfc:metal/ingot/${metal}`, 'tfc:ceramic/ingot_mold', Fluid.of('cfc:metal', 100), 0.10).id(`cider:casting/${metal}_ingot`)
-        tfc.casting(`cfc:metal/ingot/${metal}`, 'tfc:ceramic/fire_ingot_mold', Fluid.of('cfc:metal', 100), 0.01).id(`cider:casting/${metal}_fire_ingot`)
+    for (const metal of ['lead', 'alumina', 'aluminium']) {
+        tfc.casting(`cfc:metal/ingot/${metal}`, 'tfc:ceramic/ingot_mold', Fluid.of(`cfc:${metal}`, 100), 0.10).id(`cider:casting/${metal}_ingot`)
+        tfc.casting(`cfc:metal/ingot/${metal}`, 'tfc:ceramic/fire_ingot_mold', Fluid.of(`cfc:${metal}`, 100), 0.01).id(`cider:casting/${metal}_fire_ingot`)
         tfc.welding(`cfc:metal/double_ingot/${metal}`, `cfc:metal/ingot/${metal}`, `cfc:metal/ingot/${metal}`).tier(2)
         tfc.welding(`cfc:metal/double_sheet/${metal}`, `cfc:metal/sheet/${metal}`, `cfc:metal/sheet/${metal}`).tier(2)
         tfc.anvil(`cfc:metal/sheet/${metal}`, `cfc:metal/double_ingot/${metal}`, ['hit_any', 'hit_any', 'hit_any']).tier(2)

@@ -42,3 +42,13 @@
 - Modernfix
 - Moonlight
 - TMRV
+
+## [0.0.3] - 07/08/2025
+### Changes
+- Recipe Changes
+- New Fluid, Items & Blocks
+
+### MODS
+### Removed
+- Ambiental Second Edition
+- Tfc Textile Legacy
