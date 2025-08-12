@@ -12,11 +12,12 @@ ServerEvents.recipes(event => {
 })
 
 ServerEvents.tags('item', event => {
-    registerGeneralItemTags(event)
+    registerCiderItemTags(event)
+
 })
 
 ServerEvents.tags('fluid', event => {
-    registerGeneralFluidTags(event)
+    registerCiderFluidTags(event)
 })
 
 ServerEvents.blockLootTables(event => {

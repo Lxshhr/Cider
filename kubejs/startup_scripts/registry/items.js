@@ -20,7 +20,7 @@ const registerItems = (/** @type {Registry.Item} */ event) => {
     event.create('cfc:bound_leather')
     event.create('cfc:leather_sheet')
     
-    event.create('cfc:cloth/linen')
+    event.create('cfc:linen_cloth')
     event.create('cfc:flax_fiber')
     event.create('cfc:flax').maxStackSize(32)
 
@@ -38,6 +38,7 @@ const registerItems = (/** @type {Registry.Item} */ event) => {
         event.create(`cfc:${toolName}`, toolType)
             .tag('tfc:usable_on_tool_rack')
             .tag(toolTag)
+            .tag('cfc:flint_tools')
             .maxDamage(durability)
             .tier(tier)
         event.create(`cfc:${toolName}_head`)
@@ -49,9 +50,14 @@ const registerItems = (/** @type {Registry.Item} */ event) => {
     createTool('flint_knife', 'tfc:hoe', 'tfc:knives', 48, 'wood')
     createTool('flint_javelin', 'tfc:javelin', 'tfc:javelins', 48, 'wood')
 
-    event.create('cfc:measuring_cup', 'tfc:fluid_container')
+    event.create('cfc:small_measuring_cup', 'tfc:fluid_container')
         .capacity(50)
-        .fluidTagAccept('cfc:measureable_fluid')
+        .fluidTagAccept('cfc:usable_in_wooden_bucket')
+        .tag('tfc:usable_on_tool_rack')
+
+    event.create('cfc:large_measuring_cup', 'tfc:fluid_container')
+        .capacity(250)
+        .fluidTagAccept('cfc:usable_in_wooden_bucket')
         .tag('tfc:usable_on_tool_rack')
     
     event.create('cfc:ceramic/unfired_rod_mold')

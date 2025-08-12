@@ -11,22 +11,206 @@ let tMetalData = {
 }
 
 let hides = [['small', 300, 1], ['medium', 600, 2], ['large', 900, 3]]
+// let furTypes = [
+//     'black_bear',
+//     'caribou', 
+//     'cougar',
+//     'crocodile', 
+//     'direwolf', 
+//     'grizzly_bear',
+//     'lion', 
+//     'panther', 
+//     'polar_bear', 
+//     'sabertooth', 
+//     'tiger'
+// ]
+// let clothType = {
+//     'silk' : 'tfc:silk_cloth',
+//     'wool': 'tfc:wool_cloth', 
+//     'burlap': 'tfc:burlap_cloth',
+// }
 
-let furTypes = [
-    'black_bear',
-    'caribou', 
-    'cougar',
-    'crocodile', 
-    'direwolf', 
-    'grizzly_bear',
-    'lion', 
-    'panther', 
-    'polar_bear', 
-    'sabertooth', 
-    'tiger'
-]
-let clothType = {
-    'silk' : 'tfc:silk_cloth',
-    'wool': 'tfc:wool_cloth', 
-    'burlap': 'tfc:burlap_cloth',
+let ciderMetals = {
+    'lead': 327.5,
+    'alumina': 1535,
+    'aluminium': 660 
 }
+
+let ciderMetalData = {
+    'aluminium' : [396, 528],
+    'alumina': [921, 1228],
+    'lead': [196.5, 262]
+}
+let metalItems = {
+    ingot: 2.857,
+    double_ingot: 5.714,
+    sheet: 5.714,
+    double_sheet: 11.428,
+    rod: 1.428,
+}
+let tMetalExtraData = {
+    'copper': [648, 864],
+    'bismuth_bronze': [591, 788],
+    'black_bronze': [642, 856],
+    'bronze': [570, 760],
+    'wrought_iron': [921, 1228],
+    'steel': [924, 1232],
+    'black_steel': [891, 1188],
+    'red_steel': [924, 1232],
+    'blue_steel': [924, 1232],
+}
+
+let powderData = {
+    'tfc:powder/bismuthinite': 2.857,
+    'tfc:powder/cassiterite': 2.857,
+    'tfc:powder/garnierite': 0.833,
+    'tfc:powder/hematite': 1.143,
+    'tfc:powder/limonite' : 1.143,
+    'tfc:powder/magnetite' : 1.143,
+    'tfc:powder/malachite' : 1.143,
+    'tfc:powder/native_copper' : 1.143,
+    'tfc:powder/native_gold' : 0.667,
+    'tfc:powder/native_silver' : 0.833,
+    'tfc:powder/sphalerite' : 1.905,
+    'tfc:powder/tetrahidrite' : 1.143,
+    'cfc:powder/bauxite' : 1.143,
+    'cfc:powder/chromite' : 1.143,
+    'cfc:powder/lead' : 2.857,
+}
+
+let oreData = {
+    'small': 10, 
+    'poor': 15, 
+    'normal': 25, 
+    'rich': 35
+}
+
+const disabledItems = [
+    /astikorcarts:.*/,
+    /afc:(?:birch|maple)_sugar/,
+    'afc:rubber_bar',
+    /afc:bucket\/.*/,
+    /tfc:wood\/boat.*/,
+    /afc:wood\/boat.*/,
+    /firmalife:(?:cinnamon)/,
+    /firmaciv:.*(barometer|sextant|nav_clock)/,
+    'firmaciv:sextant',
+    'firmalife:tirage_mixture',
+    'firmalife:seed_ball',
+    /tfc:ceramic\/(:?saw|chisel|scythe).*_mold/,
+    /tfc:wood\/(?:sewing).*/,
+    /afc:wood\/(?:sewing).*/,
+    /tfcscraping:ceramic\/.*/,
+    /tfc:food\/.*(:?bear).*/,
+    /cold_sweat:(:?holgin|goar|chameleon|soul).*/,
+    /tfchotornot:.*\/(:?zinc|gold|silver|sterling_silver|tin|rose_gold|nickel)/,
+    'tfchotornot:tongs/bismuth',
+    'tfchotornot:tong_part/bismuth',
+    /rnr:.*(:?pouring|wet|cracked|trodden).*/,
+    /^precisionprospecting:ceramic\/.*/,
+    /supplementaries:.*(:?lumisene|candle|sconce|lamp|flint|feather|sugar|fodder|gold|netherite|fine).*/,
+    /supplementaries:.*(:?lapis|stone|gravel|daub|timber|flax).*/,
+    /supplementaries:(:?sign_post).*/,
+    /alekiroofs:(:?oak|spruce|jungle|birch|mangrove|acacia|cherry|warped|crimson|bamboo|dark)_.*/
+]
+const extraSupplementariesDisabled = [
+    'soap_block', 'fire_pit', 'lunch_basket', 'quiver', 'speaker_block',
+    'goblet', 'altimeter', 'flower_box', 'planter', 'urn', 'jar', 'sack',
+    'bamboo_spikes_tipped', 'enderman_head', 'cog_block', 'crank',
+    'cannon', 'faucet', 'relayer', 'display', 'bellows', 'dispener_minecart',
+    'redstone_illuminator', 'slice_map', 'bomb_blue', 'cannon_ball',
+    'pancake', 'candy', 'ash_brick', 'ash',
+]
+const disabledFluids = [
+    'afc:birch_sap_concentrate',
+    'afc:maple_sap_concentrate',
+    'afc:latex',
+    'firmalife:fruity_fluid', 
+    'rnr:concrete',
+    'supplementaries:lumisene'
+]
+const vanillaDisabled = [
+    /minecraft:.*(?:oak|spruce|birch|dark_oak|cherry|jungle|acacia|mangrove|crimson|warped).*/,
+    /minecraft:.*(?:andesite|cobblestone|granite|deepslate|blackstone|diorite|quartz|basalt|calcite|tuff|amethyst|magma|end|debris|obsidian|soul|prismarine|sand|sandstone|mud|moss|chiseled|polished|infested|smooth|end_stone|purpur|nether|concrete).*/,
+    /minecraft:.*(?:iron|diamond|gold|chainmail|copper|stone|wooden|emerald|lapis|netherite|end|bucket|horn|tipped).*/,
+    /minecraft:.*(bucket|tipped|candle).*/,
+    'minecraft:trident',
+    'minecraft:shears',
+    'minecraft:elytra',
+    'minecraft:turtle_helmet',
+    'minecraft:totem_of_undying',
+    'minecraft:spectral_arrow',
+    /minecraft:redstone.*/,
+    /minecraft:.*(?:_rail|_button|_pressure_plate)/,
+    'minecraft:observer',
+    'minecraft:repeater',
+    'minecraft:comparator',
+    'minecraft:lever',
+    'minecraft:target',
+    'minecraft:torch',
+    'minecraft:hopper',
+    'minecraft:dispenser',
+    'minecraft:dropper',
+    'minecraft:bell',
+    /minecraft:.*(:?chest|anvil|minecart|piston|tnt|furnace).*/,
+    'minecraft:barrel',
+    'minecraft:bookshelf',
+    'minecraft:lecturn',
+    'minecraft:tripwire_hook',
+    /minecraft:.*(?:tulip|bush|flower|daisy|lilac|vine|rose|plant|coral|driplea|azalea).*/,
+    'minecraft:fern',
+    'minecraft:large_fern',
+    'minecraft:dandelion',
+    'minecraft:poppy',
+    'minecraft:blue_orchid',
+    'minecraft:allium',
+    'minecraft:azure_bluet',
+    'minecraft:lily_of_the_valley',
+    'minecraft:pink_petals',
+    'minecraft:sugar_cane',
+    'minecraft:cactus',
+    'minecraft:peony',
+    'minecraft:glow_lichen',
+    'minecraft:hanging_roots',
+    'minecraft:lily_pad',
+    'minecraft:spore_blossom',
+    /minecraft:.*(?:mutton|beef|chicken|pumpkin|beetroot|egg|rabbit|pork|potato|wheat|carrot|melon|kelp|fish|salmon|cod|cookie|bread|cake|stew|berries|cocoa|bee).*/,
+    'minecraft:apple',
+    /minecraft:.*(?:skull|head|sculk|sponge|shulker|lantern|potion|enchant|blaze)/,
+    'minecraft:grindstone',
+    'minecraft:smoker',
+    'minecraft:brewing_stand',
+    'minecraft:campfire',
+    'minecraft:composter',
+    'minecraft:conduit',
+    'minecraft:beacon',
+    'minecraft:spawner',
+    'minecraft:respawn_anchor',
+    'minecraft:decorated_pot',
+    /minecraft:bamboo_.*(?:sign|raft)/,
+    'minecraft:cauldron',
+    'minecraft:hay_block',
+    /minecraft:(honey|slime|coal).*/,
+    'minecraft:fire_charge',
+    'minecraft:glass_bottle',
+    'minecraft:dragon_breath',
+    'minecraft:fermented_spider_eye',
+    'minecraft:ghast_tear',
+    'minecraft:phantom_membrane',
+    'minecraft:experience_bottle',
+    'minecraft:nautilus_shell',
+    'minecraft:echo_shard',
+    'minecraft:disc_fragment_5',
+    'minecraft:heart_of_the_sea',
+    /minecraft:.*(?:podzol|mycelium|dirt|farmland|gravel|grass|shroom|froglight|chorus).*/,
+    'minecraft:chain',
+    'minecraft:spawner',
+    'minecraft:observer',
+    'minecraft:rail',
+    'minecraft:recovery_compass',
+    'minecraft:compass',
+    'minecraft:pitcher_pod',
+    'minecraft:sea_pickle',
+    'minecraft:frog_spawn',
+    /minecraft:bamboo_(;?planks|mosaic|stairs|slab|fence|door|trapdoor).*/
+]

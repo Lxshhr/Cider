@@ -58,11 +58,7 @@ function toArrayNotRotten(ingredient, count) {
     return ingredientArray;
 }
 function toArrayExtraIngredient(ingredient, count, extraIngredient) {
-    if (count == 1) return [ingredient, extraIngredient]
-    let ingredientArray = []
-    for (let i = 0; i < count; i++) {
-        ingredientArray.push(notRotten(ingredient))
-    }
+    let ingredientArray = toArrayNotRotten(ingredient, count)
     ingredientArray.push(extraIngredient)
     return ingredientArray;
 }

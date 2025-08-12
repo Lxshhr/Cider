@@ -1,22 +1,22 @@
 # Folders
-.vscode/
-coremods/
-crash-reports/
-logs/
-mods*/
-saves/
-screenshots/
-server-resource-packs/
-shaderpacks/
-modernfix/
-patchouli_books/
-local/
-resourcepacks/
-texturepacks/
-cache/
-XaeroWaypoints*/
-xaero/
-data/
+/.vscode
+/coremods
+/crash-reports
+/logs
+/mods*
+/saves
+/screenshots
+/server-resource-packs
+/shaderpacks
+/modernfix
+/patchouli_books
+/local
+/resourcepacks
+/texturepacks
+/cache
+/XaeroWaypoints*
+/xaero
+/data
 
 # Configs
 config/embeddium-fingerprint.json

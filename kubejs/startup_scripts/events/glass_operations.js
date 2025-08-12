@@ -4,4 +4,5 @@ TFCEvents.createGlassOperations(event => {
     event.createPowder('cfc:powder/cryolite', 'cryolite')
     event.createPowder('cfc:powder/cinnabar', 'cinnabar')
     event.createPowder('cfc:powder/chromite', 'chromite')
+    event.createPowder('cfc:powder/lead', 'lead')
 })

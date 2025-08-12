@@ -6,10 +6,11 @@ const registerBlocks = (/** @type {Registry.Block} */ event) => {
     event.create('cfc:lignite_chunk', 'tfc:ground_cover')
         .groundCoverModelShape('cfc:block/ground_cover/lignite_chunk')
 
+    event.create('soy_cheese', 'firmalife:cheese_wheel')
+
     // Parity
     global.afcWoodTypes.forEach(wood => {
-        event.create(`cfc:wood/barrel/${wood}`, 'cardinal')
-            .model(`cfc:block/wood/barrel/${wood}`)
+        event.create(`cfc:wood/item_barrel/${wood}`)
             .woodSoundType()
             .tagBlock('minecraft:mineable/axe')
             .mapColor('brown')

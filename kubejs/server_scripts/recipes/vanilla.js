@@ -22,6 +22,13 @@ const registerVanillaRecipes = (/** @type {Internal.RecipesEventJS} */ event) =>
     tfc.chisel('minecraft:brick_stairs', 'minecraft:bricks', 'stair').id('cider:chisel/brick_stairs')
 
     global.dyes.forEach(color => {
-        event.shaped(`minecraft:${color}_carpet`, ['WWS'], {W: `minecraft:${color}_wool`, S: '#tfc:shears'})
+        event.shaped(`4x minecraft:${color}_carpet`, ['WWS'], {W: `minecraft:${color}_wool`, S: '#tfc:shears'})
     })
+
+    tfc.heating('minecraft:clock', 930)
+        .resultFluid(Fluid.of('tfc:metal/brass', 200))
+        .id('minecraft:heating/metal/clock')
+    tfc.heating('minecraft:spyglass', 930)
+        .resultFluid(Fluid.of('tfc:metal/brass', 200))
+        .id('minecraft:heating/metal/spyglass')
 }

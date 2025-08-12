@@ -5,48 +5,6 @@ const registerMetals = (/** @type {Internal.TFCDataEventJS} */event) => {
 }
 
 const registerHeats = (/** @type {Internal.TFCDataEventJS} */ event) => {
-    let ciderMetalData = {
-        'aluminium' : [396, 528],
-        'alumina': [921, 1228],
-        'lead': [261, 327]
-    }
-    let metalItems = {
-		ingot: 2.857,
-		double_ingot: 5.714,
-		sheet: 5.714,
-		double_sheet: 11.428,
-		rod: 1.428,
-	}
-    let tMetalData = {
-        'copper': [648, 864],
-        'bismuth_bronze': [591, 788],
-        'black_bronze': [642, 856],
-        'bronze': [570, 760],
-        'wrought_iron': [921, 1228],
-        'steel': [924, 1232],
-        'black_steel': [891, 1188],
-        'red_steel': [924, 1232],
-        'blue_steel': [924, 1232],
-    }
-
-    let powderData = {
-        'tfc:powder/bismuthinite': 2.857,
-        'tfc:powder/cassiterite': 2.857,
-        'tfc:powder/garnierite': 0.833,
-        'tfc:powder/hematite': 1.143,
-        'tfc:powder/limonite' : 1.143,
-        'tfc:powder/magnetite' : 1.143,
-        'tfc:powder/malachite' : 1.143,
-        'tfc:powder/native_copper' : 1.143,
-        'tfc:powder/native_gold' : 0.667,
-        'tfc:powder/native_silver' : 0.833,
-        'tfc:powder/sphalerite' : 1.905,
-        'tfc:powder/tetrahidrite' : 1.143,
-        'cfc:powder/bauxite' : 1.143,
-        'cfc:powder/chromite' : 1.143,
-        'cfc:powder/lead' : 2.857,
-    }
-
     for(let metal in ciderMetalData) {
         let [forge, weld] = ciderMetalData[metal]
         for (let [item, heatCap] of Object.entries(metalItems)) {

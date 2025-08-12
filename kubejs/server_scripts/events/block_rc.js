@@ -7,10 +7,10 @@ BlockEvents.rightClicked(event => {
 
     if (block == 'tfc:wall_torch' || block == 'tfc:torch') {
         if (mainHandItem.hasTag('forge:rods/wooden')) event.cancel()
-            if (mainHandItem == 'tfc:dead_torch') {
-            let stack = mainHandItem.count
-            player.setMainHandItem(Item.of('tfc:dead_torch').withCount(stack - 1))
-            player.give('tfc:torch')
+        if (mainHandItem == 'tfc:dead_torch') {
+        let stack = mainHandItem.count
+        player.setMainHandItem(Item.of('tfc:dead_torch').withCount(stack - 1))
+        player.give('tfc:torch')
         }
     }
 })
