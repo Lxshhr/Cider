@@ -13,5 +13,6 @@ This modpack is still a work in progress and being developed.
 
 <h2>Credits</h2>
 <b>Reference Code Used</b>
+
 - The [TerraFirmaGreg](https://www.curseforge.com/minecraft/modpacks/terrafirmagreg-modern) Modpack
 - [Golden Horizons](https://www.curseforge.com/minecraft/modpacks/terrafirmagreg-modern) Modpack
