@@ -10,14 +10,20 @@ const registerCiderRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
     event.shapeless('tfc:ceramic/unfired_brick', ['2x minecraft:clay', 'cfc:metal/brick_mold']).damageIngredient('cfc:metal/brick_mold').id('cider:crafting/brick')
     event.shapeless('2x cfc:thatch_canvas', ['tfc:thatch', '#tfc:knives']).damageIngredient('#tfc:knives')
     event.shapeless('16x cfc:ash_finish', ['minecraft:clay_ball', 'tfc:powder/wood_ash', 'minecraft:brick'])
-    
-    event.shaped('cfc:thatch_canvas', ['XX', 'XX'], {X: 'tfc:straw'})
-
     event.shapeless('2x cfc:cut_silk_cloth', ['tfc:silk_cloth', '#tfc:shears']).damageIngredient('#tfc:shears')
     event.shapeless('2x cfc:cut_wool_cloth', ['tfc:wool_cloth', '#tfc:shears']).damageIngredient('#tfc:shears')
     event.shapeless('2x cfc:cut_burlap_cloth', ['tfc:burlap_cloth', '#tfc:shears']).damageIngredient('#tfc:shears')
     event.shapeless('2x cfc:cut_linen_cloth', ['cfc:linen_cloth', '#tfc:shears']).damageIngredient('#tfc:shears')
-    
+    event.shapeless('cfc:small_measuring_cup', ['tfc:lumber', '#tfc:knives']).damageIngredient('#tfc:knives')
+
+    event.shaped('cfc:thatch_canvas', ['XX', 'XX'], {X: 'tfc:straw'})
+    event.shaped('cfc:large_measuring_cup', ['XY', 'X '], {X: '#tfc:lumber', Y: '#tfc:knives'})
+    event.shaped('cfc:flint_hoe', ['HP', 'S '], {H: 'cfc:flint_hoe_head', P: 'cfc:plant_string', S: 'minecraft:stick'})
+    event.shaped('cfc:flint_axe', ['HP', 'S '], {H: 'cfc:flint_axe_head', P: 'cfc:plant_string', S: 'minecraft:stick'})
+    event.shaped('cfc:flint_shovel', ['HP', 'S '], {H: 'cfc:flint_shovel_head', P: 'cfc:plant_string', S: 'minecraft:stick'})
+    event.shaped('cfc:flint_javelin', ['HP', 'S '], {H: 'cfc:flint_javelin_head', P: 'cfc:plant_string', S: 'minecraft:stick'})
+    event.shaped('cfc:flint_hammer', ['HP', 'S '], {H: 'cfc:flint_hammer_head', P: 'cfc:plant_string', S: 'minecraft:stick'})
+    event.shaped('cfc:flint_knife', ['H', 'S'], {H: 'cfc:flint_knife_head', S: 'minecraft:stick'})
     event.shaped('cfc:bound_leather', ['  N', 'SLS', 'S S'], {N: 'tfc:bone_needle', S: '#forge:string', L: 'minecraft:leather'})
 
     tfc.loom('cfc:linen_cloth', 'cfc:flax_fiber', 12, 'cfc:block/linen_cloth')
@@ -27,19 +33,30 @@ const registerCiderRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
         tfc.pot(toArray('cfc:animal_fat', i), Fluid.of('minecraft:water', 100), 600, 300).fluidOutput(Fluid.of('tfc:tallow', 200 * i)).id(`cider:pot/tallow_${i}`)
     }
 
-    tfc.quern('cfc:seed_paste', '#forge:seeds').id('cider:quern/seed_paste')
+    tfc.quern('2x cfc:seed_paste', '#forge:seeds').id('cider:quern/seed_paste')
+    tfc.quern('4x cfc:powder/quartz', 'cfc:gem/quartz').id('cider:quern/quartz_powder_gem')
+    tfc.quern('4x cfc:powder/quartz', 'cfc:ore/quartz').id('cider:quern/quartz_powder_ore')
+    tfc.quern('4x cfc:powder/quartz', 'cfc:gem/clear_quartz').id('cider:quern/quartz_powder_clear_gem')
+    tfc.quern('4x cfc:powder/quartz', 'cfc:ore/clear_quartz').id('cider:quern/quartz_powder_clear_ore')
+    tfc.quern('4x cfc:powder/borax', 'tfc:ore/borax').id('cider:quern/borax_powder')
 
-    global.grainTypes.forEach(grain => {
+    for(let [ore, grade] of Object.entries(oreGrades)) {
+        tfc.quern(`${grade}x cfc:powder/lead`, `cfc:ore/${ore}_lead`)
+        tfc.quern(`${grade}x cfc:powder/bauxite`, `cfc:ore/${ore}_bauxite`)
+        tfc.quern(`${grade}x cfc:powder/chromite`, `firmalife:ore/${ore}_chromite`)
+    }
+
+    global.grainTypes.forEach(grain => {    
         for (let i = 1; i < 5; i++) {
             firmalife.mixing_bowl()
                 .outputItem(`tfc:food/${grain}_dough`)
-                .itemIngredients(toArrayNotRotten(`tfc:food/${grain}_flour`, i))
+                .itemIngredients(toArrayNR(`tfc:food/${grain}_flour`, i))
                 .fluidIngredient(Fluid.of('minecraft:water', 250 * i))
                 .id(`cider:mixing_bowl/flat_bread_dough/${grain}_${i}`)
 
             firmalife.mixing_bowl()
                 .outputItem(`firmalife:food/${grain}_dough`)
-                .itemIngredients(toArrayExtraIngredient(`tfc:food/${grain}_flour`, i, '#tfc:sweetener'))
+                .itemIngredients(toArrayNREI(`tfc:food/${grain}_flour`, i, '#tfc:sweetener'))
                 .fluidIngredient(Fluid.of('firmalife:yeast_starter', 250 * i))
                 .id(`cider:mixing_bowl/bread_dough/${grain}_${i}`)
         }
@@ -90,9 +107,15 @@ const registerCiderRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
         .outsideSlotRequired(false)
         .id('cider:knapping/leather_sheet')
 
-    tfc.knapping('cfc:ceramic/unfired_candle_mold', 'tfc:clay', ['XXXXX', 'XX XX', 'XX XX', 'XX XX', 'XXXXX'])
+    // tfc.knapping('cfc:ceramic/unfired_candle_mold', 'tfc:clay', ['XXXXX', 'XX XX', 'XX XX', 'XX XX', 'XXXXX'])
+    //     .outsideSlotRequired(false)
+    //     .id('cider:clay_knapping/candle_mold')
+    // tfc.knapping('cfc:ceramic/unfired_rod_mold', 'tfc:clay', ['XXXXX', 'XX XX', 'XX XX', 'XX XX', 'XXXXX'])
+    //     .outsideSlotRequired(false)
+    //     .id('cider:clay_knapping/rod_mold')
+    tfc.knapping('cfc:ceramic/unfired_spindle_head_mold', 'tfc:clay', ['XXXXX', 'XX XX', 'X   X', 'XX XX', 'XXXXX'])
         .outsideSlotRequired(false)
-        .id('cider:knapping/candle_mold')
+        .id('cider:clay_knapping/spindle_head_mold')
 
     tfc.barrel_instant()
         .inputFluid(TFC.fluidStackIngredient('cfc:seed_oil_water', 250))
@@ -117,7 +140,8 @@ const registerCiderRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
     tfc.anvil('sns:pack_frame', '#forge:sheets/steel', anvilRuleHelper(['hit_last', 'hit_second_last', 'punch_third_last'])).id('cider:anvil/steel_frame')
     tfc.anvil('cfc:metal/iron_frame', '#forge:double_sheets/wrought_iron', anvilRuleHelper(['hit_last', 'hit_second_last', 'punch_third_last'])).id('cider:anvil/iron_frame')
     tfc.anvil('cfc:metal/aluminium_frame', '#forge:sheets/aluminium', anvilRuleHelper(['hit_last', 'hit_second_last', 'punch_third_last'])).id('cider:anvil/aluminium_frame')
-    
+    tfc.anvil('cfc:metal/spindle_head/brass', '#forge:ingots/brass', anvilRuleHelper(['bend_any', 'hit_last', 'punch_third_last'])).id('cider:anvil/brass_spindle_head')
+
     for (let [metal, mPoint] of Object.entries(metalItems)) {
         tfc.casting(`cfc:metal/ingot/${metal}`, 'tfc:ceramic/ingot_mold', Fluid.of(`cfc:${metal}`, 100), 0.10).id(`cider:casting/${metal}_ingot`)
         tfc.casting(`cfc:metal/ingot/${metal}`, 'tfc:ceramic/fire_ingot_mold', Fluid.of(`cfc:${metal}`, 100), 0.01).id(`cider:casting/${metal}_fire_ingot`)
@@ -135,7 +159,10 @@ const registerCiderRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
         tfc.heating(`cfc:metal/block/${metal}_slab`, mPoint).resultFluid(Fluid.of(`cfc:${metal}`, 50)).id(`cider:heating/${metal}_slab`)
         tfc.heating(`cfc:metal/block/${metal}_stairs`, mPoint).resultFluid(Fluid.of(`cfc:${metal}`, 100)).id(`cider:heating/${metal}_stairs`)
 
-        event.shaped(`8x cfc:metal/block/${metal}`, [' S ', 'SWS', ' S '], {S: `cfc:metal/sheet/${metal}`, W: 'minecraft:planks'})
+        event.shaped(`8x cfc:metal/block/${metal}`, [' S ', 'SWS', ' S '], {S: `cfc:metal/sheet/${metal}`, W: 'minecraft:planks'}).id(`cider:crafting/${metal}_block`)
+
+        tfc.chisel(`cfc:metal/block/${metal}_slab`, 'slab').extraDrop(`cfc:metal/block/${metal}_slab`).id(`cider:chisel/${metal}_slab`)
+        tfc.chisel(`cfc:metal/block/${metal}_stairs`, 'stairs').id(`cider:chisel/${metal}_stairs`)
     }
 
     tfc.blast_furnace('cfc:aluminium', 'cfc:powder/cryolite', Fluid.of('cfc:alumina', 100))
@@ -153,6 +180,17 @@ const registerCiderRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
     tfc.heating('cfc:ore/poor_bauxite', 1535)
         .resultFluid('cfc:alumina', 5)
         .id('cider:heating/metal/bauxite_small')
+
+    tfc.heating('cfc:ceramic/unfired_candle_mold', 1535)
+        .resultItem('cfc:ceramic/candle_mold')
+    tfc.heating('cfc:ceramic/unfired_rod_mold', 1535)
+        .resultItem('cfc:ceramic/rod_mold')
+    tfc.heating('cfc:ceramic/unfired_fire_rod_mold', 1535)
+        .resultItem('cfc:ceramic/fire_rod_mold')
+    tfc.heating('cfc:ceramic/unfired_spindle_head_rod_mold', 1535)
+        .resultItem('cfc:ceramic/spindle_head_mold')
+
+    tfc.casting('cfc:metal/spindle_head/brass', 'cfc:ceramic/spindle_head_mold', Fluid.of('tfc:metal/brass', 100))
 
     for (let [type, amount] of Object.entries(oreData)) {
         tfc.heating(`cfc:ore/${type}_lead`, 327.5).resultFluid(Fluid.of('cfc:lead', amount)).id(`cider:heating/lead_${type}`)

@@ -84,6 +84,12 @@ let oreData = {
     'normal': 25, 
     'rich': 35
 }
+let oreGrades = {
+    'small': 1, 
+    'poor': 3, 
+    'normal': 5, 
+    'rich': 7
+}
 
 const disabledItems = [
     /astikorcarts:.*/,

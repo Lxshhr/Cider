@@ -49,7 +49,12 @@ function toArray(ingredient, count) {
     }
     return ingredientArray;
 }
-function toArrayNotRotten(ingredient, count) {
+function toArrayEI(ingredient, count, extraIngredient) {
+    let ingredientArray = toArray(ingredient, count)
+    ingredientArray.push(extraIngredient)
+    return ingredientArray;
+}
+function toArrayNR(ingredient, count) {
     if (count == 1) return ingredient
     let ingredientArray = []
     for (let i = 0; i < count; i++) {
@@ -57,7 +62,7 @@ function toArrayNotRotten(ingredient, count) {
     }
     return ingredientArray;
 }
-function toArrayExtraIngredient(ingredient, count, extraIngredient) {
+function toArrayNREI(ingredient, count, extraIngredient) {
     let ingredientArray = toArrayNotRotten(ingredient, count)
     ingredientArray.push(extraIngredient)
     return ingredientArray;
