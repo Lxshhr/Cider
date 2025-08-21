@@ -16,14 +16,26 @@ const registerTFCRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
 
     event.remove({id: 'tfc:fire_clay_knapping/brick'})
 
-    event.shaped('tfc:dead_torch', [' S ', ' T '], {S: 'tfc:straw', T:'minecraft:stick'}).id('cider:crafting/dead_torch')
     event.shapeless('tfc:thatch', ['9x tfc:straw']).id('tfc:crafting/thatch').id('cider:crafting/thatch')
+    event.shaped('tfc:dead_torch', [' S ', ' T '], {S: 'tfc:straw', T:'minecraft:stick'}).id('cider:crafting/dead_torch')
     event.shaped('tfc:bloomery', ['XYX', 'Y Y', 'XYX'], {X: '#forge:sheets/any_bronze', Y: '#forge:double_sheets/any_bronze'}).id('tfc:crafting/bloomery')
     event.shaped('minecraft:clock', [' L ', 'MCM'], {L: 'tfc:lens', M: 'tfc:brass_mechanisms', C: 'cfc:unfinished_clock'}).id('tfc:crafting/vanilla/clock')
     event.shaped('minecraft:white_bed', ['CCC', 'LLL', 'L L'], {C: '#tfc:high_quality_cloth', L: '#tfc:lumber'}).id('cider:crafting/white_bed')
 
+    global.tfcRockCatergories.forEach(category => {
+        event.shaped(`tfc:stone/hoe/${category}`, ['HP', 'S '], {H: `tfc:stone/hoe_head/${category}`, P: 'cfc:plant_string', S: 'minecraft:stick'}).id(`tfc:crafting/stone/hoe_${category}`)
+        event.shaped(`tfc:stone/axe/${category}`, ['HP', 'S '], {H: `tfc:stone/axe_head/${category}`, P: 'cfc:plant_string', S: 'minecraft:stick'}).id(`tfc:crafting/stone/axe_${category}`)
+        event.shaped(`tfc:stone/shovel/${category}`, ['HP', 'S '], {H: `tfc:stone/shovel_head/${category}`, P: 'cfc:plant_string', S: 'minecraft:stick'}).id(`tfc:crafting/stone/shovel_${category}`)
+        event.shaped(`tfc:stone/javelin/${category}`, ['HP', 'S '], {H: `tfc:stone/javelin_head/${category}`, P: 'cfc:plant_string', S: 'minecraft:stick'}).id(`tfc:crafting/stone/javelin_${category}`)
+        event.shaped(`tfc:stone/hammer/${category}`, ['HP', 'S '], {H: `tfc:stone/hammer_head/${category}`, P: 'cfc:plant_string', S: 'minecraft:stick'}).id(`tfc:crafting/stone/hammer_${category}`)
+    })
+
+    global.tfcWoodTypes.forEach(wood => {
+        event.shaped(`tfc:wood/chest/${wood}`, ['WWW', 'WNW', 'WWW'], {W: `tfc:wood/lumber/${wood}`, N: 'cfc:nails_and_hinges'})
+    })
+
     hides.forEach(([size, amount, output]) => {
-        tfc.barrel_sealed(14000 * output)
+        tfc.barrel_sealed(16000 * output)
             .inputs(`tfc:${size}_raw_hide`, TFC.fluidStackIngredient('tfc:limewater', amount))
             .outputItem(`tfc:${size}_soaked_hide`)
             .id(`tfc:barrel/${size}_soaked_hide`)
@@ -31,7 +43,7 @@ const registerTFCRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
             .inputs(`tfc:${size}_scraped_hide`, TFC.fluidStackIngredient('minecraft:water', amount))
             .outputItem(`tfc:${size}_prepared_hide`)
             .id(`tfc:barrel/${size}_prepared_hide`)
-        tfc.barrel_sealed(16000 * output)
+        tfc.barrel_sealed(20000 * output)
             .inputs(`tfc:${size}_prepared_hide`, TFC.fluidStackIngredient('tfc:tannin', amount))
             .outputItem(`${output}x minecraft:leather`)
             .id(`tfc:barrel/${size}_leather`)

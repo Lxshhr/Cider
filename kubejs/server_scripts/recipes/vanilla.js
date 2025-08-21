@@ -4,6 +4,7 @@ const registerVanillaRecipes = (/** @type {Internal.RecipesEventJS} */ event) =>
     event.remove({id: /minecraft:dye_.*_wool/})
     event.remove({id: /minecraft:dye_.*bed/})
     event.remove({id: /minecraft:.*_terracotta/})
+    event.remove({id: 'minecraft:stick'})
 
     event.shapeless('minecraft:clock', ['cfc:metal/unfinished_clock', 'tfc:lens', 'tfc:brass_mechanisms', 'tfc:brass_mechanisms', 'tfc:glue']).id('cider:crafting/clock_from_unfinished')
     event.shaped('minecraft:spyglass', [' L ', 'BU ', ' S '], {L: 'tfc:lens', B: 'tfc:brass_mechanisms', U: 'cfc:metal/unfinished_spyglass', S: 'sns:leather_strip'}).id('cider:crafting/spyglass_from_unfinished')
@@ -22,13 +23,13 @@ const registerVanillaRecipes = (/** @type {Internal.RecipesEventJS} */ event) =>
     tfc.chisel('minecraft:brick_stairs', 'minecraft:bricks', 'stair').id('cider:chisel/brick_stairs')
 
     global.dyes.forEach(color => {
-        event.shaped(`4x minecraft:${color}_carpet`, ['WWS'], {W: `minecraft:${color}_wool`, S: '#tfc:shears'})
+        event.shaped(`4x minecraft:${color}_carpet`, ['WWS'], {W: `minecraft:${color}_wool`, S: '#tfc:shears'}).id(`cider:crafting/${color}_carpet`)
     })
 
     tfc.heating('minecraft:clock', 930)
         .resultFluid(Fluid.of('tfc:metal/brass', 200))
-        .id('minecraft:heating/metal/clock')
+        .id('cider:heating/metal/clock')
     tfc.heating('minecraft:spyglass', 930)
         .resultFluid(Fluid.of('tfc:metal/brass', 200))
-        .id('minecraft:heating/metal/spyglass')
+        .id('cider:heating/metal/spyglass')
 }

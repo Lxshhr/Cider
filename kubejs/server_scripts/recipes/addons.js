@@ -9,10 +9,15 @@ const registerAddonRecipes = (/** @type {Internal.RecipesEventJS} */event) => {
     event.shaped('sns:quiver', [' ST', 'L T', 'NSY'], {S: 'cfc:leather_sheet', T: 'sns:leather_strip', L: 'minecraft:leather', Y: '#forge:string', N: 'tfc:bone_needle'}).damageIngredient('tfc:bone_needle').id('cider:crafting/quiver')
     event.shaped('sns:reinforced_fiber', ['STS'], {S: '#forge:string', T: '#forge:fiber'}).id('sns:crafting/reinforced_fiber')
 
+    tfc.anvil('sns:buckle', '#forge:ingots/wrought_iron', anvilRuleHelper(['punch_last', 'bend_any', 'hit_second_last'])).tier(3).id('sns:anvil/steel_buckle')
+    tfc.anvil('sns:buckle', '#forge:ingots/steel', anvilRuleHelper(['punch_last', 'bend_any', 'hit_second_last'])).tier(3).id('sns:anvil/iron_buckle')
+
+    for (let [metal, tier] of Object.defineProperties(tfcMetalTiers)) {
+        tfc.anvil(`sns:metal/horseshoe/${metal}`, `#forge:ingots/${metal}`, anvilRuleHelper(['bend_third_last', 'bend_second_last', 'upset_last'])).tier(tier)
+    }
 
     // Hot or nor
     event.remove({id: 'tfchotornot:heating/wood_tongs_torch'})
-
 
     //Chalk 
     event.remove({mod: 'chalk'})
@@ -29,6 +34,7 @@ const registerAddonRecipes = (/** @type {Internal.RecipesEventJS} */event) => {
     
     // Comforts
     event.remove({mod: 'comforts'})
+
     // Universal Dye Recipes
     global.dyes.forEach(color => {
         if(color != 'white') {

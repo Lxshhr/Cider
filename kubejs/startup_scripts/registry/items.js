@@ -24,6 +24,7 @@ const registerItems = (/** @type {Registry.Item} */ event) => {
     event.create('cfc:flax_fiber')
     event.create('cfc:flax').maxStackSize(32)
 
+    event.create('cfc:nails_and_hinges')
     event.create('cfc:metal/iron_frame')
     event.create('cfc:metal/aluminium_frame')
     event.create('cfc:metal/unfinished_clock')

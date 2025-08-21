@@ -60,6 +60,30 @@ let tMetalExtraData = {
     'blue_steel': [924, 1232],
 }
 
+let tfcMetalTiers = {
+    'copper': 1,
+    'bronze' : 2,
+    'black_bronze' : 2,
+    'bismuth_bronze' : 2,
+    'wrought_iron' : 3,
+    'steel' : 4,
+    'black_steel' : 5,
+    'blue_steel' : 6,
+    'red_steel' : 6,
+    'bismuth' : 1,
+    'zinc' : 1,
+    'silver' : 1,
+    'gold' : 1,
+    'brass' : 1,
+    'nickel' : 1,
+    'tin' : 1,
+}
+let ciderMetalTiers = {
+    'lead' : 2,
+    'alumina' : 2,
+    'aluminium' : 3,
+}
+
 let powderData = {
     'tfc:powder/bismuthinite': 2.857,
     'tfc:powder/cassiterite': 2.857,
@@ -103,11 +127,13 @@ const disabledItems = [
     'firmaciv:sextant',
     'firmalife:tirage_mixture',
     'firmalife:seed_ball',
+    'firmalife:food/pickled_egg',
     /tfc:ceramic\/(:?saw|chisel|scythe).*_mold/,
     /tfc:wood\/(?:sewing).*/,
     /afc:wood\/(?:sewing).*/,
     /tfcscraping:ceramic\/.*/,
     /tfc:food\/.*(:?bear).*/,
+    'tfc:cake',
     /cold_sweat:(:?holgin|goar|chameleon|soul).*/,
     /tfchotornot:.*\/(:?zinc|gold|silver|sterling_silver|tin|rose_gold|nickel)/,
     'tfchotornot:tongs/bismuth',

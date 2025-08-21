@@ -39,6 +39,9 @@ const registerCiderRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
     tfc.quern('4x cfc:powder/quartz', 'cfc:gem/clear_quartz').id('cider:quern/quartz_powder_clear_gem')
     tfc.quern('4x cfc:powder/quartz', 'cfc:ore/clear_quartz').id('cider:quern/quartz_powder_clear_ore')
     tfc.quern('4x cfc:powder/borax', 'tfc:ore/borax').id('cider:quern/borax_powder')
+    tfc.quern('4x cfc:powder/cryolite', 'tfc:ore/cryolite').id('cider:quern/cryolite_powder')
+    tfc.quern('4x cfc:powder/cinnabar', 'tfc:ore/cinnabar').id('cider:quern/cinnabar_powder_ore')
+    tfc.quern('4x cfc:powder/cinnabar', 'cfc:gem/cinnabar').id('cider:quern/cinnabar_powder_gem')
 
     for(let [ore, grade] of Object.entries(oreGrades)) {
         tfc.quern(`${grade}x cfc:powder/lead`, `cfc:ore/${ore}_lead`)
@@ -141,6 +144,8 @@ const registerCiderRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
     tfc.anvil('cfc:metal/iron_frame', '#forge:double_sheets/wrought_iron', anvilRuleHelper(['hit_last', 'hit_second_last', 'punch_third_last'])).id('cider:anvil/iron_frame')
     tfc.anvil('cfc:metal/aluminium_frame', '#forge:sheets/aluminium', anvilRuleHelper(['hit_last', 'hit_second_last', 'punch_third_last'])).id('cider:anvil/aluminium_frame')
     tfc.anvil('cfc:metal/spindle_head/brass', '#forge:ingots/brass', anvilRuleHelper(['bend_any', 'hit_last', 'punch_third_last'])).id('cider:anvil/brass_spindle_head')
+    tfc.anvil('8x cfc:nails_and_hinges', 'cfc:sheets_used_for_nails_hinges', ['hit_any', 'hit_any', 'hit_any'])
+    tfc.anvil('16x cfc:nails_and_hinges', 'cfc:double_sheets_used_for_nails_hinges', ['hit_any', 'hit_any', 'hit_any'])
 
     for (let [metal, mPoint] of Object.entries(metalItems)) {
         tfc.casting(`cfc:metal/ingot/${metal}`, 'tfc:ceramic/ingot_mold', Fluid.of(`cfc:${metal}`, 100), 0.10).id(`cider:casting/${metal}_ingot`)
@@ -175,11 +180,13 @@ const registerCiderRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
         .id('cider:heating/metal/unfinished_spyglass')
 
     tfc.heating('cfc:powder/bauxite', 1535)
-        .resultFluid('cfc:alumina')
+        .resultFluid(Fluid.of('cfc:alumina', 5))
         .id('cider:heating/metal/bauxite_powder')
     tfc.heating('cfc:ore/poor_bauxite', 1535)
-        .resultFluid('cfc:alumina', 5)
+        .resultFluid(Fluid.of('cfc:alumina', 5))
         .id('cider:heating/metal/bauxite_small')
+    tfc.heating('cfc:nails_and_hinges', 1535)
+        .resultFluid(Fluid.of('tfc:metal/unknown', 25))
 
     tfc.heating('cfc:ceramic/unfired_candle_mold', 1535)
         .resultItem('cfc:ceramic/candle_mold')
@@ -189,6 +196,7 @@ const registerCiderRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
         .resultItem('cfc:ceramic/fire_rod_mold')
     tfc.heating('cfc:ceramic/unfired_spindle_head_rod_mold', 1535)
         .resultItem('cfc:ceramic/spindle_head_mold')
+    
 
     tfc.casting('cfc:metal/spindle_head/brass', 'cfc:ceramic/spindle_head_mold', Fluid.of('tfc:metal/brass', 100))
 
