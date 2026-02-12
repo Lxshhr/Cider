@@ -1,0 +1,7 @@
+[general]
+	#Should the exp bar be hidden?
+	hideBar = true
+	#Items that when held show the xp bar, when hideBar is true.
+	showBarItems = []
+	#Blocks that when hovered over show the xp bar, when hideBar is true.
+	showBarBlocks = []

@@ -1,0 +1,40 @@
+
+
+# Folders
+.mixin.out
+.probe
+.vscode
+coremods
+crash-reports
+data
+defaultconfigs
+downloads
+dynamic-data-pack-cache
+dynamic-resource-pack-cache
+local
+logs
+mods
+moonlight-global-datapacks
+patchouli_books
+saves
+resourcepacks
+screenshots
+server-resource-packs
+shaderpacks
+texturepacks
+xaero
+
+# Files
+icon.png
+options.txt
+pakku.jar
+patchouli_data.json
+usercache.json
+usernamecache.json
+command_history.txt
+emi.json
+
+# Config
+config/xaeropatreon.txt
+config/sodium-fingerprint.json
+config/fml.toml

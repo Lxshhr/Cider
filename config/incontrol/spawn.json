@@ -1,0 +1,25 @@
+[
+  {
+    "mob": [
+      "minecraft:pillager", 
+      "minecraft:vindicator", 
+      "minecraft:ravager", 
+      "minecraft:wandering_trader", 
+      "minecraft:trader_llama", 
+      "minecraft:copper_golem", 
+      "minecraft:witch", 
+      "minecraft:villager"
+    ],
+    "when": "onjoin",
+    "result": "deny"
+  },
+  {
+    "mob": [
+      "minecraft:enderman", 
+      "minecraft:creeper", 
+      "minecraft:slime"
+    ],
+    "when": "onjoin",
+    "result": "deny"
+  }
+]

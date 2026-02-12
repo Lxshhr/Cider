@@ -1,0 +1,31 @@
+{
+    "filters": [
+        {
+            "category": "minecraft:smelting"
+        },
+        {
+            "category": "minecraft:blasting"
+        },
+        {
+            "category": "minecraft:stonecutting"
+        },
+        {
+            "category": "emi:anvil_repairing"
+        }, 
+        {
+            "category": "emi:grinding"
+        }, 
+        {
+            "category": "minecraft:brewing"
+        }, 
+        {
+            "category": "emi:fuel"
+        }, 
+        {
+            "category": "emi:composting"
+        }, 
+        {
+            "category": "emi:world_interaction"
+        }
+    ]
+}
