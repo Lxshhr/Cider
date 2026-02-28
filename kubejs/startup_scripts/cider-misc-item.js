@@ -10,7 +10,13 @@ StartupEvents.registry('item', event => {
     event.create('cinnabar_gem')
     event.create('borax_powder')
     event.create('chromite_powder')
+    event.create('seed_paste')
+    event.create('unfinished_saddle')
+    event.create('flint_arrow_tip')
 
     event.create('peat_kindling')
         .maxStackSize(32)
+
+    event.create('ceramic_plate')
+        .maxStackSize(16)
 })

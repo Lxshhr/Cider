@@ -37,12 +37,12 @@
 	exhaustedThreshold = 400.0
 	#
 	# Mass threshold (in kg) at which the player pulling a cart becomes overburdened. Higher values allow heavier cargo before overburdening.
-	# Default: 800.0
+	# Default: 1000.0
 	# Range: 0.0 ~ 1.7976931348623157E308
 	overburdenedThreshold = 1000.0
 	#
 	# Mass threshold (in kg) at which the player pulling a cart becomes pinned and immobilized. Higher values allow heavier cargo before being pinned.
-	# Default: 1400.0
+	# Default: 2000.0
 	# Range: 0.0 ~ 1.7976931348623157E308
 	pinnedThreshold = 2000.0
 	#

@@ -1,0 +1,20 @@
+{
+    "block.firmalife.vat": "Stainless Steel Vat",
+    "block.firmalife.wool_string": "Wool Yarn",
+
+    "item.firmalife.spoon": "Wooden Spoon",
+    "item.firmalife.hematitic_wine_bottle": "Wine Bottle",
+    "item.firmalife.olivine_wine_bottle": "Wine Bottle",
+    "item.firmalife.volcanic_wine_bottle": "Wine Bottle",
+    "item.firmalife.empty_hematitic_wine_bottle": "Empty Wine Bottle",
+    "item.firmalife.empty_olivine_wine_bottle": "Empty Wine Bottle",
+    "item.firmalife.empty_volcanic_wine_bottle": "Empty Wine Bottle",
+    "item.firmalife.jar.fig": "Jar of Fig Jam",
+    "item.firmalife.jar.fig_unsealed": "Jar of Fig Jam",
+    "item.firmalife.jar.pineapple": "Jar of Pineapple Jam",
+    "item.firmalife.jar.pineapple_unsealed": "Jar of Pineapple Jam",
+    "item.firmalife.jar.red_grapes": "Jar of Red Grapes Jam",
+    "item.firmalife.jar.red_grapes_unsealed": "Jar of Red Grapes Jam",
+    "item.firmalife.jar.white_grapes": "Jar of White Grapes Jam",
+    "item.firmalife.jar.white_grapes_unsealed": "Jar of White Grapes Jam"
+}

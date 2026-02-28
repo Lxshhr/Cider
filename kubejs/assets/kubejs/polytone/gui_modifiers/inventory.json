@@ -4,13 +4,13 @@
   "slot_modifiers": [
     {
       "slots": 45,
-      "x_offset": -50,
+      "x_offset": -18,
       "y_offset": 0
     }
   ],
   "special_offsets": {
     "player": {
-      "x_offset": 2,
+      "x_offset": -2,
       "y_offset": 0
     }
   },

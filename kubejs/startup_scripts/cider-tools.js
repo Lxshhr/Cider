@@ -28,4 +28,7 @@ StartupEvents.registry('item', event => {
     event.create('brass_spindle_head')
     event.create('brass_spindle')
         .maxDamage(560)
+
+    event.create('welding_iron', 'kubejs:sword')
+        .maxDamage(600)
 })
