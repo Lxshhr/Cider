@@ -55,7 +55,6 @@
   "item.tfc.food.bear": "Raw Bush Meat",
   "item.tfc.food.cooked_bear": "Cooked Bush Meat",
   "item.tfc.powder.lime": "Quick Lime",
-  "item.tfc.powder.flux": "Lime",
   "item.tfc.bucket.limewater": "Slaked Lime Bucket",
 
   "block.tfc.fire_clay_block": "Fire Clay",
@@ -63,8 +62,8 @@
   "block.tfc.thatch": "Straw Thatch", 
   "block.tfc.dead_wall_torch": "Unlit Torch",
   "block.tfc.dead_torch": "Unlit Torch", 
-  "block.tfc.crucible": "Fire Clay Crucible", 
   "block.tfc.reinforced_fire_bricks": "Reinforced Fire Clay Bricks", 
+  
   "block.tfc.fluid.limewater": "Slaked Lime",
   "fluid.tfc.limewater": "Slaked Lime"
 }

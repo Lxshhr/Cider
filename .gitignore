@@ -4,6 +4,7 @@
 .mixin.out
 .probe
 .vscode
+.sable
 coremods
 crash-reports
 data
@@ -33,6 +34,7 @@ usercache.json
 usernamecache.json
 command_history.txt
 emi.json
+.qmenu_opened.marker
 
 # Config
 config/xaeropatreon.txt

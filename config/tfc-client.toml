@@ -22,7 +22,7 @@
 	enableExperienceBar = false
 	#
 	# Enables squids inking your screen.
-	enableInkSplatter = false
+	enableInkSplatter = true
 	#
 	# Enables 'screen particles' that spawn on the screen when knapping rocks.
 	enableScreenParticles = true
@@ -101,7 +101,7 @@
 	showHoeOverlaysOnlyWhenShifting = false
 	#
 	# If true, mods like Jade that add info when hovering on a block will add the hoe's overlay info to the tooltip, even when not holding a hoe.
-	showHoeOverlaysInInfoMods = false
+	showHoeOverlaysInInfoMods = true
 	#
 	# If familiarity is displayed as a percent rather than a heart
 	displayFamiliarityAsPercent = false

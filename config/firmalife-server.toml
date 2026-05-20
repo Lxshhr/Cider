@@ -46,7 +46,7 @@
 	ovenCureTemperature = 600
 	#
 	# If true, ovens will hurt the player if they touch it without a peel in hand.
-	ovenRequirePeel = true
+	ovenRequirePeel = false
 	#
 	# The chance for fuel burning in an oven to drop an ash block into an ashtray.
 	# Default: 0.5

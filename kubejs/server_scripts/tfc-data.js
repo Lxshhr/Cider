@@ -8,26 +8,8 @@ TFCEvents.data(event => {
         consumeAfterComplete: true
     }, 'kubejs:flint')
 
-    event.knappingType({
-        inputItem: Ingredient.of('minecraft:clay_ball', 10),
-        clickSound: 'tfc:item.knapping.clay',
-        icon: 'minecraft:clay_ball',
-        spawnsParticles: false, 
-        consumeAfterComplete: true
-    }, 'kubejs:clay_10')
-
-    event.knappingType({
-        inputItem: Ingredient.of("tfc:fire_clay", 10),
-        clickSound: 'tfc:item.knapping.clay',
-        icon: 'minecraft:clay_ball',
-        spawnsParticles: false, 
-        consumeAfterComplete: true
-    }, 'kubejs:clay_10')
-
-
-    event.fuel({ingredient: 'kubejs:peat_kindling',duration: 625, temperature: 600}, 'kubejs:peat')
+    event.fuel({ingredient: 'kubejs:peat_kindling', duration: 625, temperature: 600}, 'kubejs:peat')
     
-
     event.heat({ingredient: 'kubejs:unfinished_clock', heatCapacity: 5.714})
     event.heat({ingredient: 'kubejs:unfinished_spyglass', heatCapacity: 5.714})
     event.heat({ingredient: 'kubejs:brass_spindle_head', heatCapacity: 2.857})

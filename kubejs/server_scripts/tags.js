@@ -15,8 +15,8 @@ ServerEvents.tags('item', event => {
     ])
     event.add('tfc:produces_tallow', [
         'tfc:blubber', 
-        'kubejs:animal_fat']
-    )
+        'kubejs:animal_fat'
+    ])
     event.add('tfc:is_five_clay', [
         'tfc:ceramic/unfired_pan', 
         'tfc:ceramic/unfired_spindle_head', 
@@ -79,14 +79,14 @@ ServerEvents.tags('item', event => {
         'kubejs:bismuth_bronze_foil', 
     ])
     event.add('c:sheets/all_bronze', [
-        "tfc:metal/sheet/bronze", 
-        "tfc:metal/sheet/bismuth_bronze", 
-        "tfc:metal/sheet/black_bronze"
+        'tfc:metal/sheet/bronze', 
+        'tfc:metal/sheet/bismuth_bronze', 
+        'tfc:metal/sheet/black_bronze'
     ])
     event.add('c:double_sheets/all_bronze', [
-        "tfc:metal/double_sheet/bronze", 
-        "tfc:metal/double_sheet/bismuth_bronze", 
-        "tfc:metal/double_sheet/black_bronze"
+        'tfc:metal/double_sheet/bronze', 
+        'tfc:metal/double_sheet/bismuth_bronze', 
+        'tfc:metal/double_sheet/black_bronze'
     ])
 
     event.remove('firmalife:foods/washable', [
@@ -100,8 +100,8 @@ ServerEvents.tags('item', event => {
 
 ServerEvents.tags('fluid', event => {
     event.add('tfc:oils', [
-        "tfc:olive_oil",
-        "tfc:canola_oil",
-        "kubejs:seed_oil",
+        'tfc:olive_oil',
+        'tfc:canola_oil',
+        'kubejs:seed_oil',
     ])
 })

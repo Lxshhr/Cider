@@ -17,19 +17,19 @@ ChalkBoxGlowingEnabled = true
 ChalkBoxAmountPerGlowingItem = 8
 #If enabled, Chalks (and Chalk Boxes) will generate in Dungeons, Abandoned Mineshafts, Villages (Planes and Savanna), Cartographer village houses
 #Default: true
-GenerateChalkInLootChests = true
+GenerateChalkInLootChests = false
 
 #Enable/disable symbols and location of the advancement that will unlock that symbol. (Empty = available from the start)
 [Symbols]
 	CheckEnabled = true
 	CheckUnlockAdvancement = ""
 	PickaxeEnabled = true
-	PickaxeUnlockAdvancement = "minecraft:story/iron_tools"
+	PickaxeUnlockAdvancement = ""
 	SkullEnabled = true
-	SkullUnlockAdvancement = "chalk:adventure/bound_by_bone"
+	SkullUnlockAdvancement = ""
 	HeartEnabled = true
-	HeartUnlockAdvancement = "minecraft:husbandry/tame_an_animal"
+	HeartUnlockAdvancement = ""
 	HouseEnabled = true
-	HouseUnlockAdvancement = "chalk:adventure/home_is_where_the_bed_is"
+	HouseUnlockAdvancement = ""
 	CrossEnabled = true
 	CrossUnlockAdvancement = ""

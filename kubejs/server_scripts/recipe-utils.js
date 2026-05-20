@@ -1,17 +1,17 @@
 function toArray(ingredient, count) {
-    if (count == 1) return ingredient
     let ingredientArray = []
     for (let i = 0; i < count; i++) {
         ingredientArray.push(ingredient)
     }
     return ingredientArray;
 }
+
 function toArrayEI(ingredient, count, extraIngredient) {
+    if (count > 4) {count = 4}
     let ingredientArray = toArray(ingredient, count)
     ingredientArray.push(extraIngredient)
     return ingredientArray;
 }
-
 
 // Logs all the items in the game
 // console.log(Ingredient.all.itemIds)
