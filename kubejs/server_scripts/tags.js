@@ -2,7 +2,7 @@ ServerEvents.tags('item', event => {
     event.add('c:tools/spindles', ['tfc:spindle', 'kubejs:brass_spindle'])
 
     event.add('tfc:usable_on_tool_rack', [
-        
+        'c:tools/spindles'
     ])
 
     event.add('tfc:can_be_lit_on_torch', [
@@ -17,28 +17,7 @@ ServerEvents.tags('item', event => {
         'tfc:blubber', 
         'kubejs:animal_fat'
     ])
-    event.add('tfc:is_five_clay', [
-        'tfc:ceramic/unfired_pan', 
-        'tfc:ceramic/unfired_spindle_head', 
-        'tfc:ceramic/unfired_pot', 
-        'tfc:ceramic/unfired_vessel', 
-        'tfc:ceramic/unfired_large_vessel', 
-        'tfc:ceramic/unfired_jug', 
-        'tfc:ceramic/unfired_pickaxe_head_mold', 
-        'tfc:ceramic/unfired_propick_head_mold', 
-        'tfc:ceramic/unfired_axe_head_mold', 
-        'tfc:ceramic/unfired_shovel_head_mold', 
-        'tfc:ceramic/unfired_hoe_head_mold', 
-        'tfc:ceramic/unfired_chisel_head_mold', 
-        'tfc:ceramic/unfired_hammer_head_mold', 
-        'tfc:ceramic/unfired_javelin_head_mold', 
-        'tfc:ceramic/unfired_sword_head_mold', 
-        'tfc:ceramic/unfired_knife_head_mold', 
-        'tfc:ceramic/unfired_blowpipe', 
-        'firmalife:clay_oven_bottom', 
-        'firmalife:clay_oven_top', 
-        'firmalife:clay_oven_chimney', 
-    ])
+    
     event.add('tfc:magnetite_pieces', [
         'tfc:ore/small_magnetite',
         'tfc:ore/poor_magnetite',
@@ -73,6 +52,30 @@ ServerEvents.tags('item', event => {
         'tfc:rock/chiseled/schist',
         'tfc:rock/chiseled/gneiss'
     ])
+    event.add('tfc:chiseled_bricks', [
+        'minecraf:brick', 
+        'tfc:brick/granite',
+        'tfc:brick/diorite',
+        'tfc:brick/andesite',
+        'tfc:brick/dacite',
+        'tfc:brick/chert',
+        'tfc:brick/chalk',
+        'tfc:brick/marble',
+        'tfc:brick/tuff',
+        'tfc:brick/basalt',
+        'tfc:brick/gabbro',
+        'tfc:brick/shale',
+        'tfc:brick/claystone',
+        'tfc:brick/limestone',
+        'tfc:brick/conglomerate',
+        'tfc:brick/dolomite',
+        'tfc:brick/rhyolite',
+        'tfc:brick/quartzite',
+        'tfc:brick/slate',
+        'tfc:brick/phyllite',
+        'tfc:brick/schist',
+        'tfc:brick/gneiss'
+    ])
     event.add('c:foils/all_bronze', [
         'kubejs:bronze_foil', 
         'kubejs:black_bronze_foil', 
@@ -89,6 +92,22 @@ ServerEvents.tags('item', event => {
         'tfc:metal/double_sheet/black_bronze'
     ])
 
+    event.add('tfc:any_cloth', [
+        'tfc:burlap_cloth', 
+        'tfc:silk_cloth',
+        'tfc:wool_cloth'
+    ])
+
+    event.add('c:needles', [
+        'tfc:bone_needle'
+    ])
+
+    event.add('c:inks', 
+        'minecraft:ink_sac'
+    )
+
+
+
     event.remove('firmalife:foods/washable', [
         'firmalife:food/stinky_soup'
     ])
@@ -102,6 +121,5 @@ ServerEvents.tags('fluid', event => {
     event.add('tfc:oils', [
         'tfc:olive_oil',
         'tfc:canola_oil',
-        'kubejs:seed_oil',
     ])
 })

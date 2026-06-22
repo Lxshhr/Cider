@@ -15,19 +15,21 @@ ServerEvents.recipes(event => {
     event.shapeless('minecraft:crafting_table', ['#tfc:workbenches', '#c:tools/saw']).damageIngredient('#c:tools/saw')
     event.shapeless('labels:label', ['minecraft:paper', '#c:tools/knife']).damageIngredient('#c:tools/knife')
     event.shapeless('2x tfc:fire_clay', ['minecraft:clay_ball', 'tfc:powder/graphite', 'tfc:powder/graphite', 'tfc:powder/graphite', 'tfc:powder/graphite', 'tfc:powder/kaolinite', 'tfc:powder/kaolinite', 'tfc:powder/kaolinite', 'tfc:powder/kaolinite'])
-    event.shapeless('supplementaries:ash_brick', ['tfc:powder/wood_ash', 'minecraft:brick', 'tfc:mortar'])
-    event.shapeless('kubejs:tool_handle', ['sewingkit:leather_strip', 'minecraft:stick'])
-    event.shapeless('minecraft:stripped_bamboo_block', ["tfc:golden_bamboo_block", '#minecraft:axes']).damageIngredient('#minecraft:axes')
+    event.shapeless('minecraft:stripped_bamboo_block', ['tfc:golden_bamboo_block', '#minecraft:axes']).damageIngredient('#minecraft:axes')
+    // event.shapeless('minecraft:map', ['minecraft:paper', '#c:compasses'])
+    event.shapeless('tfc:dead_torch', ['tfc:straw', 'minecraft:stick'])
+    event.shapeless('2x minecraft:stick', ['#tfc:twigs'])
+    event.shapeless('minecraft:target', ['tfc:thatch', '#tfc:any_cloth', 'minecraft:redstone'])
+    event.shapeless('minecraft:book', ['#c:leathers', 'minecraft:paper', 'minecraft:paper', 'minecraft:paper', '#c:strings', '#c:needles']).damageIngredient('#c:needles')
+    event.shapeless('minecraft:book', ['sewingkit:leather_sheet', 'minecraft:paper', 'minecraft:paper', 'minecraft:paper', '#c:strings', '#c:needles']).damageIngredient('#c:needles')
+    event.shapeless('minecraft:writable_book', ['minecraft:book', '#c:inks', 'minecraft:feather'])
+    event.shapeless('minecraft:lever', ['#tfc:chiseled_bricks', 'minecraft:stick'])
 
-    // event.shapeless('minecraft:map', [], {})
-
-    event.shaped('tfc:dead_torch', [' S ', ' T '], {S: 'tfc:straw', T:'minecraft:stick'})
     event.shaped('minecraft:clock', [' L ', 'MCM'], {L: 'tfc:lens', M: 'tfc:brass_mechanisms', C: 'kubejs:unfinished_clock'})
     event.shaped('minecraft:spyglass', [' L ', 'BU ', ' S '], {L: 'tfc:lens', B: 'tfc:brass_mechanisms', U: 'kubejs:unfinished_spyglass', S: 'sewingkit:leather_strip'})
     event.shaped('2x minecraft:scaffolding', ['SCS', 'S S', 'S S'], {S: 'minecraft:stick', C: '#c:strings'})
     event.shaped('64x minecraft:rail', ['RSR', 'RSR', 'RSR'], {R: '#c:rods/steel', S: 'minecraft:stick'})
     event.shaped('minecraft:white_bed', ['CCC', 'LLL', 'L L'], {C: '#tfc:high_quality_cloth', L: '#tfc:lumber'})
-    event.shaped('minecraft:redstone_lamp', [' R ', 'RLR', ' R '], {R: 'minecraft:redstone', L: 'tfc:lamp_glass'})
     event.shaped('2x minecraft:item_frame', [' S ', 'SLS', ' S '], {S: '#tfc:lumber', L: 'sewingkit:leather_sheet'})
     event.shaped('4x minecraft:item_frame', [' S ', 'SLS', ' S '], {S: '#tfc:lumber', L: 'minecraft:leather'})
     event.shaped('minecraft:painting', [' S ', 'SPS', ' S '], {S: 'minecraft:stick', P: 'minecraft:paper'})
@@ -44,27 +46,36 @@ ServerEvents.recipes(event => {
     event.shaped('minecraft:piston', ['LLL', 'BMB', 'BRB'], {L: '#tfc:lumber', B: '#minecraft:stone_bricks', M: '#tfc:mechanisms', R: 'minecraft:redstone'})
     event.shaped('tfc:steel_pump', ['PWM', ' P '], {P: 'tfc:steel_pipe', W: 'tfc:metal/rod/brass', M: '#tfc:mechanisms'})
     event.shaped('tfc:crankshaft', ['AMB', ' SR'], {A: '#tfc:axles', M: '#tfc:mechainsms', B: 'tfc:metal/rod/brass', S: '#c:sheets/brass', R: 'tfc:metal/rod/steel'})
-    event.shaped('kubejs:chiseled_ash_bricks', ['S', 'S'], {S: 'supplementaries:ash_bricks_slab'})
-    event.shaped('kubejs:chiseled_bricks', ['S', 'S'], {S: 'minecraft:brick_slab'})
-    event.shaped('kubejs:chiseled_rustic_bricks', ['S', 'S'], {S: 'firmalife:rustic_brick_slab'})
-    event.shaped('kubejs:chiseled_tile_bricks', ['S', 'S'], {S: 'firmalife:tile_brick_slab'})
     event.shaped('minecraft:saddle', ['LFL', 'SNS'], {L: 'sewingkit:leather_sheet', F: 'kubejs:unfinished_saddle', S: '#forge:string', N: 'tfc:bone_needle'}).damageIngredient('tfc:bone_needle')
     event.shaped('16x minecraft:powered_rail', ['ISI', 'BRB', 'ISI'], {I: '#c:rods/wrought_iron', S: 'minecraft:stick', B: '#c:rods/brass', R: 'minecraft:redstone'})
     event.shaped('minecraft:minecart', ['C C', 'BCB'], {C: '#c:sheets/wrought_iron', B: '#c:rods/brass'})
+    event.shaped('firmalife:solar_drier', ['XVX', 'LLL', 'TTT'], {X: 'tfc:metal/rod/wrought_iron', V: 'minecraft:glass_pane', L: 'firmalife:fruit_leaf', T: 'firmalife:treated_lumber'})
+    event.shaped('firmalife:solar_drier', ['XVX', ' L ', 'TTT'], {X: 'tfc:metal/rod/wrought_iron', V: 'minecraft:glass_pane', L: 'firmalife:drying_mat', T: 'firmalife:treated_lumber'})
+    event.shaped('firmalife:vat', ['X X', 'VXV'], {X: 'firmalife:metal/sheet/stainless_steel', V: "tfc:metal/rod/brass"})
+    event.shaped('minecraft:brush', ['F', 'R', 'S'], {F: 'minecraft:feather', R: 'tfc:metal/rod/copper', S: '#c:rods/wooden'})
+    event.shaped('minecraft:hopper', ['SCS', ' S '], {S: 'tfc:metal/sheet/brass', C: '#c:chests'})
+    event.shaped('minecraft:recovery_compass', [' R ', 'BCB', ' R '], {R: 'minecraft:redstone', B: 'tfc:metal/rod/brass', C: '#c:compasses'})
     
+    // event.shaped('minecraft:bamboo_door', [], {})
+    // event.shaped('minecraft:bamboo_trapdoor', [], {})
+    // event.shaped('minecraft:heavy_weighted_pressure_plate', [], {})
+    // event.shaped('minecraft:light_weighted_pressure_plate', [], {})
     // event.shaped('dummmmmmy:target_dummy', [], {})
     // event.shaped('minecraft:sculk_sensor', [], {})
     // event.shaped('minecraft:fletching_table', [], {})
     // event.shaped('minecraft:loom', [], {})
     // event.shaped('minecraft:jukebox', [], {})
     // event.shaped('minecraft:golden_bell', [], {})
-    // event.shaped('minecraft:target', [], {})
-    // event.shaped('minecraft:lever', [], {})
     // event.shaped('minecraft:calibrated_sculk_sensor', [], {})
     // event.shaped('minecraft:crafter', [], {})
-    // event.shaped('minecraft:brush', [], {})
+    // event.shaped('minecraft:chainmail_helmet', [], {})
+    // event.shaped('minecraft:chainmail_chestplate', [], {})
+    // event.shaped('minecraft:chainmail_leggings', [], {})
+    // event.shaped('minecraft:chainmail_boots', [], {})
 
-    // Heads, Disks, 
+    // Heads, Disks, Concrete Powders, Concrete
+
+    // Sewing - Leather chestplate, leggings, boots, helmet, horse armor, saddle
 
     tfc.advanced_shaped_crafting(TFC.isp.of('kubejs:brass_spindle').copyForgingBonus(),  ['X', 'S'], {X: 'kubejs:brass_spindle_head', S: 'minecraft:stick'})
 
@@ -72,16 +83,18 @@ ServerEvents.recipes(event => {
         event.shaped(result, ['XX', 'XX'], {X: input})
     }
     twoByTwo('tfc:peat', 'kubejs:peat_kindling')
+    // twoByTwo('farmersdelight:canvas', 'tfc:straw')
 
     function threeByThree(result, input) {
         event.shaped(result, ['XXX', 'XXX', 'XXX'], {X: input})
     }
+    threeByThree('tfc:thatch', 'tfc:straw')
+    threeByThree('minecraft:slime_block', 'tfc:glue')
 
     function brickRecipe(result, input, cat) {
         event.shaped(result, ['XXX', 'XCX', 'XXX'], {X: input, C: cat})
     }
     brickRecipe('2x minecraft:bricks', 'minecraft:brick', 'tfc:mortar')
-    brickRecipe('2x supplementaries:ash_bricks', 'supplementaries:ash_brick', 'tfc:mortar')
     brickRecipe('minecraft:lodestone', '#minecraft:chiseled_bricks', '#tfc:magnetite_pieces')
     brickRecipe('2x tfc:alabaster/bricks', 'tfc:alabaster_brick', 'tfc:mortar')
     brickRecipe('2x firmalife:tile_bricks', 'firmalife:tile_brick', 'tfc:mortar')
@@ -90,7 +103,6 @@ ServerEvents.recipes(event => {
     function stairCrafting(result, input) {
         event.shaped(result, ['XV', 'XX'], {X: input, V: '#c:tools/chisel'}).damageIngredient('#c:tools/chisel', 3)
     }
-    stairCrafting('3x supplementaries:ash_bricks_stairs', 'supplementaries:ash_bricks')
     stairCrafting('3x minecraft:brick_stairs', 'minecraft:bricks')
     stairCrafting('3x minecraft:bamboo_stairs', 'minecraft:stripped_bamboo_block')
     stairCrafting('3x minecraft:bamboo_mosaic_stairs', 'minecraft:bamboo_mosaic')
@@ -98,21 +110,18 @@ ServerEvents.recipes(event => {
     function slabCrafting(result, input) {
         event.shaped(result, ['XXV'], {X: input, V: '#c:tools/chisel'}).damageIngredient('#c:tools/chisel', 2)
     }
-    slabCrafting('4x supplementaries:ash_bricks_slab',  'supplementaries:ash_bricks')
     slabCrafting('4x minecraft:brick_slab',  'minecraft:bricks')
-    slabCrafting('4x supplementaries:checker_slab',  'supplementaries:checker_block')
     slabCrafting('4x minecraft:bamboo_slab', 'minecraft:stripped_bamboo_block')
     slabCrafting('4x minecraft:bamboo_mosaic_slab', 'minecraft:bamboo_mosaic')
 
     function wallCrafting(result, input) {
         event.shaped(result, ['V  ', 'XXX'], {X: input, V: '#c:tools/chisel'}).damageIngredient('#c:tools/chisel', 3)
     }
-    wallCrafting('3x supplementaries:ash_bricks_wall', 'supplementaries:ash_bricks')
     wallCrafting('3x minecraft:brick_wall', 'minecraft:bricks')
 
     tfcRockTypes.forEach(rock => {
         brickRecipe(`2x tfc:rock/bricks/${rock}`, `tfc:brick/${rock}`, 'tfc:mortar')
-        brickRecipe(`2x tfc:rock/hardened/${rock}`, `tfc:rock/loose/${rock}`, 'tfc:mortar')
+        // brickRecipe(`2x tfc:rock/hardened/${rock}`, `tfc:rock/loose/${rock}`, 'tfc:mortar')
         brickRecipe(`2x tfc:rock/cobble/${rock}`, `tfc:rock/loose/${rock}`, 'minecraft:clay_ball')
 
         stairCrafting(`3x tfc:rock/raw/${rock}_stairs`, `tfc:rock/raw/${rock}`)
@@ -177,11 +186,12 @@ ServerEvents.recipes(event => {
     }
 
     chiselSlab('minecraft:brick_slab', 'minecraft:bricks')
-    chiselSlab('supplementaries:ash_bricks_slab', 'supplementaries:ash_bricks')
-    chiselSlab('supplementaries:checker_slab', 'supplementaries:checker_block')
+    chiselSlab('minecraft:bamboo_slab', 'minecraft:striped_bamboo_block')
+    chiselSlab('minecraft:bamboo_mosaic_slab', 'minecraft:bamboo_mosaic')
 
     chiselStair('minecraft:brick_stairs', 'minecraft:bricks')
-    chiselStair('supplementaries:ash_bricks_stairs', 'supplementaries:ash_bricks')
+    chiselStair('minecraft:bamboo_stairs', 'minecraft:striped_bamboo_block')
+    chiselStair('minecraft:bamboo_mosaic_stairs', 'minecraft:bamboo_mosaic')
 
     colors.forEach(color => {
         stairCrafting(`4x tfc:alabaster/bricks/${color}_stairs`, `tfc:alabaster/bricks/${color}`)
@@ -200,7 +210,6 @@ ServerEvents.recipes(event => {
         }
     })
 
-    tfc.quern('2x kubejs:seed_paste', '#c:seeds')
     tfc.quern('8x minecraft:redstone', 'kubejs:cinnabar_gem')
     tfc.quern('2x kubejs:chromite_powder', 'firmalife:ore/small_chromite')
     tfc.quern('3x kubejs:chromite_powder', 'firmalife:ore/poor_chromite')
@@ -223,12 +232,7 @@ ServerEvents.recipes(event => {
             .outputItem(`${output}x minecraft:leather`)
     })
 
-    tfc.barrel_instant(Fluid.of('kubejs:seed_oil_water', 250))
-        .inputItem('tfc:jute_net')
-        .outputItem('tfc:dirty_jute_net')
-        .outputFluid(Fluid.of('kubejs:seed_oil', 50))
-
-    tfc.barrel_sealed(Fluid.of("tfc:lye", 25), 1000)
+    tfc.barrel_sealed(Fluid.of('tfc:lye', 25), 1000)
         .inputItem('#chalk:colored_chalks')
         .outputItem('chalk:white_chalk')
 
@@ -237,11 +241,9 @@ ServerEvents.recipes(event => {
             .fluidOutput(Fluid.of('tfc:tallow', 200 * i))
         tfc.pot(toArray('tfc:olive_paste', i), Fluid.of('minecraft:water', 200 * i), 480 * i, 600)
             .fluidOutput(Fluid.of('tfc:olive_oil_water', 200 * i))
-        tfc.pot(toArray('kubejs:seed_paste', i), Fluid.of('minecraft:water', 200 * i), 480 * i, 600)
-            .fluidOutput(Fluid.of('kubejs:seed_oil_water', 200 * i))
 
         if (i != 1) {
-            tfc.pot(toArrayEI("tfc:food/beet", i, "tfc:powder/salt"), Fluid.of('minecraft:water', 200 * i), 480 * i, 600)
+            tfc.pot(toArrayEI('tfc:food/beet', i, 'tfc:powder/salt'), Fluid.of('minecraft:water', 200 * i), 480 * i, 600)
                 .itemOutput(toArray('minecraft:sugar', i))
         }
     }

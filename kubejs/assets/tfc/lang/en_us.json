@@ -65,5 +65,8 @@
   "block.tfc.reinforced_fire_bricks": "Reinforced Fire Clay Bricks", 
   
   "block.tfc.fluid.limewater": "Slaked Lime",
-  "fluid.tfc.limewater": "Slaked Lime"
+  "fluid.tfc.limewater": "Slaked Lime",
+
+  "emi.category.tfc.pumpkin_knapping": "Pumpkin Knapping",
+  "emi.category.tfc.flint_knapping": "Flint Knapping"
 }

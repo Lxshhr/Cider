@@ -35,6 +35,7 @@ usernamecache.json
 command_history.txt
 emi.json
 .qmenu_opened.marker
+tsconfig.json
 
 # Config
 config/xaeropatreon.txt

@@ -11,8 +11,6 @@
 	# Default: 0
 	# Range: 0 ~ 64
 	pity_activation_map_count = 9
-	#If active, when Supplementaries is installed, the atlas will need to be filled with slice maps to be able to create new sliced maps
-	requires_slice_maps = false
 	#If 'true', Atlases will be able to store Empty Maps and auto-fill them as you explore.
 	enable_empty_map_entry_and_fill = true
 	#Locations of where an atlas will be scanned for. By default only hotbar will be scanned

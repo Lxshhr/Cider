@@ -80,7 +80,6 @@ ServerEvents.tags('item', event => {
         'minecraft:zombie_horse_spawn_egg', 
         'minecraft:zombie_villager_spawn_egg', 
         'minecraft:zombified_piglin_spawn_egg',
-        'supplementaries:plunderer_spawn_egg',
 
         // Templates
         /minecraft:.*smithing_template/,
@@ -184,6 +183,10 @@ ServerEvents.tags('item', event => {
         'tfc:bucket/whiskey', 
         'tfc:bucket/white_dye', 
         'tfc:bucket/yellow_dye',
+
+        'tfc:pure_nitrogen',
+        'tfc:pure_potassium',
+        'tfc:pure_phosphorus',
 
         // Unused Ores
         'firmalife:ore/poor_chromite/andesite',

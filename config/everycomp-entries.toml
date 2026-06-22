@@ -1,9 +1,6 @@
 #Disables certain types. Note that all these configs, like in any other mod, only hide stuff from tabs and disable their recipes
 [types]
 
-		[types.cake.tfc]
-			cake = true
-
 		[types.wood_type.tfc]
 			acacia = true
 			ash = true
@@ -29,11 +26,19 @@
 #Disables specific entries
 [entries]
 
+		[entries.wood_type.valhelsia_structures]
+			bundled_stripped_posts = true
+			stripped_post = false
+			cut_post = false
+			bundled_posts = true
+			post = false
+			cut_stripped_post = false
+
 		[entries.wood_type.another_furniture]
-			drawer = false
-			shutter = false
 			table = true
 			flower_box = true
 			shelf = true
+			drawer = false
+			shutter = false
 			bench = true
 			chair = true

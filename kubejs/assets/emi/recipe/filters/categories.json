@@ -25,7 +25,13 @@
             "category": "emi:composting"
         }, 
         {
-            "category": "emi:world_interaction"
+            "category": "farmersdelight:cooking"
+        }, 
+        {
+            "category": "minecraft:campfire_cooking"
+        }, 
+        {
+            "category": "minecraft:smoking"
         }
     ]
 }

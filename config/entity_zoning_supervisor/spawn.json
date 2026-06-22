@@ -1,1 +1,84 @@
-[]
+[
+    {
+		"entity": "fowlplay:blue_jay",
+		"min_count": 1,
+		"max_count": 3,
+		"weight": 3
+	},
+	{
+		"entity": "fowlplay:cardinal",
+		"min_count": 1,
+		"max_count": 3,
+		"weight": 3
+	},
+	{
+		"entity": "fowlplay:chickadee",
+		"min_count": 1,
+		"max_count": 4,
+		"weight": 4
+	},
+	{
+		"entity": "fowlplay:crow",
+		"min_count": 1,
+		"max_count": 4,
+		"weight": 4
+	},
+	{
+		"entity": "fowlplay:goose",
+		"biomes": [
+			"tfc:river",
+			"tfc:lake",
+			"tfc:mountain_lake",
+			"tfc:plateau_lake",
+			"tfc:shore",
+			"tfc:tidal_flats"
+		],
+		"min_count": 2,
+		"max_count": 6,
+		"weight": 3
+	},
+	{
+		"entity": "fowlplay:gull",
+		"biomes": [
+			"tfc:shore",
+			"tfc:rocky_shores",
+			"tfc:coastal_dunes",
+			"tfc:tidal_flats",
+			"tfc:embayments",
+			"tfc:ice_sheet_shore"
+		],
+		"min_count": 2,
+		"max_count": 6,
+		"weight": 4
+	},
+	{
+		"entity": "fowlplay:hawk",
+		"min_count": 1,
+		"max_count": 2,
+		"weight": 2
+	},
+	{
+		"entity": "fowlplay:pigeon",
+		"min_count": 2,
+		"max_count": 6,
+		"weight": 4
+	},
+	{
+		"entity": "fowlplay:raven",
+		"min_count": 1,
+		"max_count": 3,
+		"weight": 3
+	},
+	{
+		"entity": "fowlplay:robin",
+		"min_count": 1,
+		"max_count": 4,
+		"weight": 4
+	},
+	{
+		"entity": "fowlplay:sparrow",
+		"min_count": 2,
+		"max_count": 6,
+		"weight": 4
+	}
+]

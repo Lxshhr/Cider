@@ -1,1 +1,360 @@
-[]
+[
+    {
+		"entity": "minecraft:creeper",
+		"overwrite_mod_predicate": true,
+		"predicates": [
+			{
+				"type": "ez_supervisor:never"
+			}
+		]
+	},
+    {
+		"entity": "minecraft:ravager",
+		"overwrite_mod_predicate": true,
+		"predicates": [
+			{
+				"type": "ez_supervisor:never"
+			}
+		]
+	},
+    {
+		"entity": "minecraft:pillager",
+		"overwrite_mod_predicate": true,
+		"predicates": [
+			{
+				"type": "ez_supervisor:never"
+			}
+		]
+	},
+    {
+		"entity": "minecraft:vindicator",
+		"overwrite_mod_predicate": true,
+		"predicates": [
+			{
+				"type": "ez_supervisor:never"
+			}
+		]
+	},
+    {
+		"entity": "minecraft:iron_golem",
+		"overwrite_mod_predicate": true,
+		"predicates": [
+			{
+				"type": "ez_supervisor:never"
+			}
+		]
+	},
+    {
+		"entity": "minecraft:trader_llama",
+		"overwrite_mod_predicate": true,
+		"predicates": [
+			{
+				"type": "ez_supervisor:never"
+			}
+		]
+	},
+    {
+		"entity": "minecraft:wandering_trader",
+		"overwrite_mod_predicate": true,
+		"predicates": [
+			{
+				"type": "ez_supervisor:never"
+			}
+		]
+	},
+    {
+		"entity": "minecraft:witch",
+		"overwrite_mod_predicate": true,
+		"predicates": [
+			{
+				"type": "ez_supervisor:never"
+			}
+		]
+	},
+    {
+		"entity": "minecraft:slime",
+		"overwrite_mod_predicate": true,
+		"predicates": [
+			{
+				"type": "ez_supervisor:never"
+			}
+		]
+	},
+    {
+		"entity": "minecraft:enderman",
+		"overwrite_mod_predicate": true,
+		"predicates": [
+			{
+				"type": "ez_supervisor:never"
+			}
+		]
+	},
+    {
+		"entity": "fowlplay:blue_jay",
+		"overwrite_mod_predicate": true,
+		"predicates": [
+			{
+				"type": "tfc:season",
+				"season": ["spring", "summer", "fall"]
+			},
+			{
+				"type": "tfc:climate",
+				"climate": {
+					"min_temperature": -12,
+					"max_temperature": 22,
+					"min_groundwater": 150,
+					"min_forest": 2,
+					"max_forest": 4
+				}
+			},
+			{
+				"type": "ez_supervisor:solid_ground"
+			},
+			{
+				"type": "ez_supervisor:see_sky",
+				"can_see": true
+			}
+		]
+	},
+	{
+		"entity": "fowlplay:cardinal",
+		"overwrite_mod_predicate": true,
+		"predicates": [
+			{
+				"type": "tfc:climate",
+				"climate": {
+					"min_temperature": -5,
+					"max_temperature": 28,
+					"min_groundwater": 130,
+					"min_forest": 2,
+					"max_forest": 4
+				}
+			},
+			{
+				"type": "ez_supervisor:solid_ground"
+			},
+			{
+				"type": "ez_supervisor:see_sky",
+				"can_see": true
+			}
+		]
+	},
+	{
+		"entity": "fowlplay:chickadee",
+		"overwrite_mod_predicate": true,
+		"predicates": [
+			{
+				"type": "tfc:climate",
+				"climate": {
+					"min_temperature": -20,
+					"max_temperature": 20,
+					"min_groundwater": 100,
+					"min_forest": 2,
+					"max_forest": 4
+				}
+			},
+			{
+				"type": "ez_supervisor:solid_ground"
+			},
+			{
+				"type": "ez_supervisor:see_sky",
+				"can_see": true
+			}
+		]
+	},
+	{
+		"entity": "fowlplay:crow",
+		"overwrite_mod_predicate": true,
+		"predicates": [
+			{
+				"type": "tfc:climate",
+				"climate": {
+					"min_temperature": -15,
+					"max_temperature": 30,
+					"min_groundwater": 80,
+					"min_forest": 1,
+					"max_forest": 4
+				}
+			},
+			{
+				"type": "ez_supervisor:solid_ground"
+			},
+			{
+				"type": "ez_supervisor:see_sky",
+				"can_see": true
+			}
+		]
+	},
+	{
+		"entity": "fowlplay:goose",
+		"overwrite_mod_predicate": true,
+		"predicates": [
+			{
+				"type": "tfc:season",
+				"season": ["spring", "summer", "fall"]
+			},
+			{
+				"type": "tfc:climate",
+				"climate": {
+					"min_temperature": -20,
+					"max_temperature": 20,
+					"min_groundwater": 100,
+					"min_forest": 0,
+					"max_forest": 1
+				}
+			},
+			{
+				"type": "ez_supervisor:solid_ground"
+			},
+			{
+				"type": "ez_supervisor:see_sky",
+				"can_see": true
+			}
+		]
+	},
+	{
+		"entity": "fowlplay:gull",
+		"overwrite_mod_predicate": true,
+		"predicates": [
+			{
+				"type": "tfc:climate",
+				"climate": {
+					"min_temperature": -25,
+					"max_temperature": 30,
+					"min_forest": 0,
+					"max_forest": 1
+				}
+			},
+			{
+				"type": "ez_supervisor:solid_ground"
+			},
+			{
+				"type": "ez_supervisor:see_sky",
+				"can_see": true
+			}
+		]
+	},
+	{
+		"entity": "fowlplay:hawk",
+		"overwrite_mod_predicate": true,
+		"predicates": [
+			{
+				"type": "tfc:season",
+				"season": ["spring", "summer", "fall"]
+			},
+			{
+				"type": "tfc:climate",
+				"climate": {
+					"min_temperature": -15,
+					"max_temperature": 35,
+					"min_groundwater": 80,
+					"min_forest": 1,
+					"max_forest": 3
+				}
+			},
+			{
+				"type": "ez_supervisor:solid_ground"
+			},
+			{
+				"type": "ez_supervisor:see_sky",
+				"can_see": true
+			}
+		]
+	},
+	{
+		"entity": "fowlplay:pigeon",
+		"overwrite_mod_predicate": true,
+		"predicates": [
+			{
+				"type": "tfc:climate",
+				"climate": {
+					"min_temperature": -10,
+					"max_temperature": 35,
+					"min_groundwater": 50,
+					"min_forest": 1,
+					"max_forest": 2
+				}
+			},
+			{
+				"type": "ez_supervisor:solid_ground"
+			},
+			{
+				"type": "ez_supervisor:see_sky",
+				"can_see": true
+			}
+		]
+	},
+	{
+		"entity": "fowlplay:raven",
+		"overwrite_mod_predicate": true,
+		"predicates": [
+			{
+				"type": "tfc:climate",
+				"climate": {
+					"min_temperature": -25,
+					"max_temperature": 20,
+					"min_groundwater": 80,
+					"min_forest": 1,
+					"max_forest": 3
+				}
+			},
+			{
+				"type": "ez_supervisor:solid_ground"
+			},
+			{
+				"type": "ez_supervisor:see_sky",
+				"can_see": true
+			}
+		]
+	},
+	{
+		"entity": "fowlplay:robin",
+		"overwrite_mod_predicate": true,
+		"predicates": [
+			{
+				"type": "tfc:season",
+				"season": ["spring", "summer", "fall"]
+			},
+			{
+				"type": "tfc:climate",
+				"climate": {
+					"min_temperature": -10,
+					"max_temperature": 25,
+					"min_groundwater": 120,
+					"min_forest": 2,
+					"max_forest": 4
+				}
+			},
+			{
+				"type": "ez_supervisor:solid_ground"
+			},
+			{
+				"type": "ez_supervisor:see_sky",
+				"can_see": true
+			}
+		]
+	},
+	{
+		"entity": "fowlplay:sparrow",
+		"overwrite_mod_predicate": true,
+		"predicates": [
+			{
+				"type": "tfc:climate",
+				"climate": {
+					"min_temperature": -15,
+					"max_temperature": 30,
+					"min_groundwater": 60,
+					"min_forest": 1,
+					"max_forest": 3
+				}
+			},
+			{
+				"type": "ez_supervisor:solid_ground"
+			},
+			{
+				"type": "ez_supervisor:see_sky",
+				"can_see": true
+			}
+		]
+	}
+]
