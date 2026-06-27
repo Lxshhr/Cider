@@ -1,0 +1,10 @@
+{
+    "name": "Cider",
+    "version": "1.0.0",
+    "description": "A Vanilla TFC Modpack",
+    "author": "Lxshh",
+    "overrides": [
+        "config",
+        "kubejs"
+    ]
+}
