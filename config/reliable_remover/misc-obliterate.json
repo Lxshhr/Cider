@@ -1,0 +1,10 @@
+[
+    {
+        "action": "remove",
+        "items": [
+            "moonlight:spawn_box",
+             
+            "horseman:copper_horn"
+        ]
+    }
+]
