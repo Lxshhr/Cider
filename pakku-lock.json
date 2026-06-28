@@ -1471,6 +1471,45 @@
             ]
         },
         {
+            "pakku_id": "8ZMrYvbW8l3m8jKA",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "kubejs-tfc"
+            },
+            "name": {
+                "curseforge": "KubeJS TFC"
+            },
+            "id": {
+                "curseforge": "841001"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "kubejs_tfc-1.21.1-2.0.1.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/8297/296/kubejs_tfc-1.21.1-2.0.1.jar",
+                    "id": "8297296",
+                    "parent_id": "841001",
+                    "hashes": {
+                        "sha1": "050767300bfda4b7cc508f0fdd6795269d8073bc",
+                        "md5": "56192570aa886384a7418e05b28702c4"
+                    },
+                    "required_dependencies": [
+                        "302973",
+                        "238086"
+                    ],
+                    "size": 712371,
+                    "date_published": "2026-06-22T00:39:43.197Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "0nDMJ8v6VnW0ApNW",
             "type": "MOD",
             "slug": {

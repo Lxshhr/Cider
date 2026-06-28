@@ -7,6 +7,7 @@
 .vscode
 .sable
 .github
+.cache
 /cache
 coremods
 crash-reports

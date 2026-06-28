@@ -1,7 +1,7 @@
 /**
  * Derived from TFC's KubejsTFC thread, Thanks Redeix.
  */
-function ingredientStackInputParser(inputArray) {
+function parseIngredients(inputArray) {
     let formattedInputs = [];
 
     // If inputArray is a string, wrap it in an array to prevent errors. If null, return empty.
@@ -26,17 +26,19 @@ function ingredientStackInputParser(inputArray) {
 
         // Loop through the count of each item and push to the new array with ingredient handler.
         for (let i = 0; i < count; i++) {
-            // If it is a food item add the notRotten condition.
-            if (TFC.misc.hasFood(item)) {
-                formattedInputs.push(TFC.ingredient.notRotten(item));
-            } else {
-                formattedInputs.push(item);
-            }
-        };
+            formattedInputs.push(item);
+        }
     });
 
     return formattedInputs;
 };
+
+function parseFoodIngredients(inputArray) {
+    return parseIngredients(inputArray).map(item => 
+        TFC.ingredient.and(item, TFC.ingredient.notRotten())
+    );
+}
+
 
 /**
  * Gets all the Item IDs from the game.
