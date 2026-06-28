@@ -1,0 +1,11 @@
+{
+  "type": "map_atlases:crafting_atlas",
+  "ingredients": [
+    {
+      "tag": "tfc:sticky_stuff"
+    },
+    {
+      "item": "minecraft:book"
+    }
+  ]
+}

@@ -56,7 +56,7 @@ function getItemIds(namespaces) {
 
     return itemIds.filter(id => namespaces.includes(id.split(':')[0]));
 }
-// console.log(JSON.stringify(getItemIds(["minecraft"])))
+// console.log(JSON.stringify(getItemIds(["chalk", "map_atlases", "tfccanes", "precisionprospecting"])))
 
 
 /**
@@ -83,6 +83,6 @@ function getRecipeIds(event, namespaces) {
 }
 
 ServerEvents.recipes(event => {
-    // const all = getRecipeIds(event, ["minecraft", "tfc"]);
+    // const all = getRecipeIds(event, ["chalk", "map_atlases", "tfccanes", "precisionprospecting"]);
     // console.log(JSON.stringify(all));
 })

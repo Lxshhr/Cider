@@ -4,7 +4,14 @@
         "items": [
             "moonlight:spawn_box",
              
-            "horseman:copper_horn"
+            "horseman:copper_horn", 
+
+            "precisionprospecting:ceramic/mineral_prospector_head_mold", 
+            "precisionprospecting:ceramic/prospector_drill_head_mold", 
+            "precisionprospecting:ceramic/prospector_hammer_head_mold", 
+            "precisionprospecting:ceramic/unfired_mineral_prospector_head_mold", 
+            "precisionprospecting:ceramic/unfired_prospector_drill_head_mold", 
+            "precisionprospecting:ceramic/unfired_prospector_hammer_head_mold" 
         ]
     }
 ]

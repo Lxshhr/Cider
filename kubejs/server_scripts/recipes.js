@@ -165,6 +165,11 @@ ServerEvents.recipes(event => {
         wallCrafting(`4x tfc:alabaster/bricks/${color}_wall`, `tfc:alabaster/bricks/${color}`);
         wallCrafting(`4x tfc:alabaster/polished/${color}_wall`, `tfc:alabaster/polished/${color}`);
 
+        if(color != 'white') {
+            tfc.barrel_sealed(Fluid.of(`tfc:${color}_dye`, 25), 1000)
+                .inputItem('chalk:white_chalk')
+                .outputItem(`chalk:${color}_chalk`);
+        }
     })
 
     tfc.loom('minecraft:white_wool', '2x tfc:wool_cloth', 4, 'minecraft:block/white_wool');
@@ -182,6 +187,10 @@ ServerEvents.recipes(event => {
             .inputItem(`tfc:${size}_prepared_hide`)
             .outputItem(`${output}x minecraft:leather`);
     })
+
+    tfc.barrel_sealed(Fluid.of('tfc:lye', 25), 1000)
+        .inputItem('#chalk:colored_chalks')
+        .outputItem('chalk:white_chalk');
 
     for (let i = 1; i <= 5; i++) {
         tfc.pot(parseFoodIngredients(`${i}x #tfc:produces_tallow`), Fluid.of('minecraft:water', 200 * i), 480 * i, 600)
@@ -208,5 +217,9 @@ ServerEvents.recipes(event => {
     })
 
     tfc.heating('tfc:dead_torch', 60).resultItem('tfc:torch');
+
+    tfc.knapping('chalk:white_chalk', 'tfc:rock', ['XXX', 'XXX', 'XXX', 'XXX', 'XXX',])
+        .defaultOn(false)
+        .ingredient('#tfc:rock/loose_chalk');
 
 })
