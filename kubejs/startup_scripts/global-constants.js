@@ -101,6 +101,16 @@ global.TIERED_TFC_METALS = [
     ['red_steel', 0.35, 1540]
 ]
 
+global.WEATHERING_TFC_METALS = [
+    ['bronze', 0.35, 950],
+    ['brass', 0.35, 930],
+    ['copper', 0.35, 1080],
+    ['silver', 0.48, 961],
+    ['sterling_silver', 0.35, 950],
+    ['wrought_iron', 0.35, 1535],
+    ['steel', 0.35, 1540],
+]
+
 global.GRAIN_TYPES = [
     'wheat',
     'barley',
