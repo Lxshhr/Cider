@@ -6,6 +6,13 @@ ServerEvents.tags('item', event => {
         'minecraft:lava_bucket',
         'minecraft:milk_bucket',
 
+        // AFC Buckets
+        'afc:bucket/birch_sap', 
+        'afc:bucket/birch_syrup', 
+        'afc:bucket/latex', 
+        'afc:bucket/maple_sap', 
+        'afc:bucket/maple_syrup', 
+
         // Creative TFC stuff
         'tfc:creative_motor',
         'tfc:pure_nitrogen',

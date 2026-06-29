@@ -52,6 +52,42 @@
             ]
         },
         {
+            "pakku_id": "EV5eS9GThv5w7Omv",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "achievements-optimizer"
+            },
+            "name": {
+                "curseforge": "Achievements Optimizer"
+            },
+            "id": {
+                "curseforge": "912788"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "AchievementOptimizer-neoforge-1.21.1-2.1.0.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/6897/792/AchievementOptimizer-neoforge-1.21.1-2.1.0.jar",
+                    "id": "6897792",
+                    "parent_id": "912788",
+                    "hashes": {
+                        "sha1": "691c4686c52c8740cba6beff392cbc3fbface5b0",
+                        "md5": "a51dacb919ef4c94cb105de0f7d563c0"
+                    },
+                    "required_dependencies": [],
+                    "size": 16156,
+                    "date_published": "2025-08-17T20:18:30.110Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "GPaO80FqFSF4B8Yg",
             "type": "MOD",
             "slug": {
@@ -158,6 +194,44 @@
                     "required_dependencies": [],
                     "size": 50425,
                     "date_published": "2024-08-26T15:08:51.890Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "Z4zMWKyQ8jK4e9fX",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "arborfirmacraft"
+            },
+            "name": {
+                "curseforge": "ArborFirmaCraft"
+            },
+            "id": {
+                "curseforge": "877545"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "afc-2.1.0-1.21.1.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/8337/732/afc-2.1.0-1.21.1.jar",
+                    "id": "8337732",
+                    "parent_id": "877545",
+                    "hashes": {
+                        "sha1": "cc7c22266ab309fb3977570e27a65bebac75d97c",
+                        "md5": "b2b0948131ef756eccf7bbe301848718"
+                    },
+                    "required_dependencies": [
+                        "302973"
+                    ],
+                    "size": 6427499,
+                    "date_published": "2026-06-28T23:51:30.187Z"
                 }
             ]
         },
@@ -523,6 +597,43 @@
                     "required_dependencies": [],
                     "size": 357489,
                     "date_published": "2025-12-29T20:17:48.730Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "GTgVnnhHFe6MG2KS",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "chalk"
+            },
+            "name": {
+                "curseforge": "Chalk"
+            },
+            "id": {
+                "curseforge": "533748"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "chalk-1.6.12.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/8191/901/chalk-1.6.12.jar",
+                    "id": "8191901",
+                    "parent_id": "533748",
+                    "hashes": {
+                        "sha1": "d732fbad51790698a91330533cc1e79cb26f66bb",
+                        "md5": "bec9e416e3966dd02f779d1433086db0"
+                    },
+                    "required_dependencies": [],
+                    "size": 338917,
+                    "date_published": "2026-06-03T16:09:07.097Z"
                 }
             ]
         },
@@ -1277,6 +1388,44 @@
             ]
         },
         {
+            "pakku_id": "0ZDQa3RHfTQM00YX",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "firmanutrition"
+            },
+            "name": {
+                "curseforge": "FirmaNutrition"
+            },
+            "id": {
+                "curseforge": "1360893"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "firmanutrition-1.1.1.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/7191/382/firmanutrition-1.1.1.jar",
+                    "id": "7191382",
+                    "parent_id": "1360893",
+                    "hashes": {
+                        "sha1": "8e0d9747dff135df5a5d5e73abb9699ab77eb815",
+                        "md5": "d66386e4403e9ab229cd2fbf24cf0398"
+                    },
+                    "required_dependencies": [
+                        "302973"
+                    ],
+                    "size": 19446,
+                    "date_published": "2025-11-06T07:08:24.013Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "F4uyvsD1LGcFKQ6q",
             "type": "MOD",
             "slug": {
@@ -1425,6 +1574,44 @@
                     "required_dependencies": [],
                     "size": 368598,
                     "date_published": "2026-01-27T21:12:04.863Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "W5Srt37Amy2ZcWpm",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "jammies-tfc"
+            },
+            "name": {
+                "curseforge": "Jammies TFC"
+            },
+            "id": {
+                "curseforge": "1372643"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "jammies-1.21.1-1.0.3.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/8180/52/jammies-1.21.1-1.0.3.jar",
+                    "id": "8180052",
+                    "parent_id": "1372643",
+                    "hashes": {
+                        "sha1": "aafb9f0c1bd54d7981429e1017018277aedce447",
+                        "md5": "dc7379eb9dbc5dcdb548e363a5d562d9"
+                    },
+                    "required_dependencies": [
+                        "302973"
+                    ],
+                    "size": 127976,
+                    "date_published": "2026-06-01T12:13:52.433Z"
                 }
             ]
         },
@@ -2211,6 +2398,42 @@
             ]
         },
         {
+            "pakku_id": "tXcBry2y6gUiph8G",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "precision-prospecting"
+            },
+            "name": {
+                "curseforge": "Precision Prospecting"
+            },
+            "id": {
+                "curseforge": "700638"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "precisionprospecting-1.21.1-2.0.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/7020/720/precisionprospecting-1.21.1-2.0.jar",
+                    "id": "7020720",
+                    "parent_id": "700638",
+                    "hashes": {
+                        "sha1": "8103cfc618b100e5288229879f809c3a20ce1f83",
+                        "md5": "aa85474fbc4a3d440fca8e9436064e06"
+                    },
+                    "required_dependencies": [],
+                    "size": 377938,
+                    "date_published": "2025-09-21T22:14:28.323Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "j6fUI7YZWtYqFCKh",
             "type": "MOD",
             "slug": {
@@ -2700,7 +2923,45 @@
             ]
         },
         {
-            "pakku_id": "IBliwcdcvlyaTt6t",
+            "pakku_id": "gLJw3TFYzbXMJ6cb",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "tfc-canes"
+            },
+            "name": {
+                "curseforge": "TFC Canes"
+            },
+            "id": {
+                "curseforge": "920202"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "TFC Canes-1.21.1-3.0.0.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/7255/647/TFC Canes-1.21.1-3.0.0.jar",
+                    "id": "7255647",
+                    "parent_id": "920202",
+                    "hashes": {
+                        "sha1": "526be222d051eaf59a3aaf882950f1318618c166",
+                        "md5": "7d91fdfa3e011898d8b7f316bf74740a"
+                    },
+                    "required_dependencies": [
+                        "302973"
+                    ],
+                    "size": 24695,
+                    "date_published": "2025-11-23T23:53:07.877Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "YobYKabhCzZVsuAe",
             "type": "MOD",
             "slug": {
                 "curseforge": "terrafirmacraft"
@@ -2714,7 +2975,7 @@
             "files": [
                 {
                     "type": "curseforge",
-                    "file_name": "TerraFirmaCraft-NeoForge-1.21.1-4.2.2.jar",
+                    "file_name": "TerraFirmaCraft-NeoForge-1.21.1-4.2.4.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -2722,18 +2983,18 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/8319/710/TerraFirmaCraft-NeoForge-1.21.1-4.2.2.jar",
-                    "id": "8319710",
+                    "url": "https://edge.forgecdn.net/files/8333/98/TerraFirmaCraft-NeoForge-1.21.1-4.2.4.jar",
+                    "id": "8333098",
                     "parent_id": "302973",
                     "hashes": {
-                        "sha1": "171ec1025a6cd10888150500d6bc53c345c1d85a",
-                        "md5": "3bf5b53864e82d6d8452cc7fbb992882"
+                        "sha1": "f82ba8961a7ebf1533956fcab93b105519c6a6e3",
+                        "md5": "ce4a2eade18a97bfeed11a85a9f1a652"
                     },
                     "required_dependencies": [
                         "306770"
                     ],
-                    "size": 64905053,
-                    "date_published": "2026-06-25T18:45:01.843Z"
+                    "size": 65024990,
+                    "date_published": "2026-06-28T05:33:24.220Z"
                 }
             ]
         },
@@ -2838,6 +3099,43 @@
                     ],
                     "size": 12178702,
                     "date_published": "2026-01-13T05:11:22.603Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "gDZFIPKOCho7p1Yr",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "world-play-time"
+            },
+            "name": {
+                "curseforge": "World Play Time"
+            },
+            "id": {
+                "curseforge": "968891"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "worldplaytime-1.2.2-1.21-NEOFORGE.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/5430/837/worldplaytime-1.2.2-1.21-NEOFORGE.jar",
+                    "id": "5430837",
+                    "parent_id": "968891",
+                    "hashes": {
+                        "sha1": "1ee93dce6193ebeab41944e97d1f07e5d729bd96",
+                        "md5": "92c8b10fa6bac135171a192b1061dcd0"
+                    },
+                    "required_dependencies": [],
+                    "size": 80646,
+                    "date_published": "2024-06-15T11:08:35.090Z"
                 }
             ]
         },

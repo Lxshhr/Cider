@@ -21,6 +21,23 @@ global.TFC_WOOD_TYPES = [
     'willow'
 ]
 
+global.AFC_WOOD_TYPES = [
+    'baobab', 
+    'eucalyptus', 
+    'mahogany', 
+    'hevea',
+    'tualang',
+    'teak',
+    'cypress',
+    'fig',
+    'ironwood',
+    'ipe', 
+    'araucaria', 
+    'beech', 
+    'ginkgo', 
+    'mahoe'
+]
+
 global.TFC_ROCK_TYPES = [
     'granite',
     'diorite',

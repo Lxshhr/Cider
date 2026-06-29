@@ -89,7 +89,6 @@ ServerEvents.recipes(event => {
     }
 
     global.TFC_WOOD_TYPES.forEach(wood => {
-        event.shaped(`2x tfc:wood/pressure_plate/${wood}`, ['XXS'], {X: `tfc:wood/lumber/${wood}`, S: '#c:tools/saw'}).damageIngredient('#c:tools/saw');
         stairCrafting(`4x tfc:wood/planks/${wood}_stairs`, `tfc:wood/planks/${wood}`);
         slabCrafting(`4x tfc:wood/planks/${wood}_slab`, `tfc:wood/planks/${wood}`);
         
@@ -101,6 +100,19 @@ ServerEvents.recipes(event => {
         event.shaped(`tfc:wood/shelf/${wood}`, ['LLL', 'S S'], {L: `tfc:wood/lumber/${wood}`, S: '#c:rods/wooden'});
         event.shapeless(`tfc:wood/button/${wood}`, [`tfc:wood/lumber/${wood}`, '#c:tools/saw']).damageIngredient('#c:tools/saw'); 
         // Scribling Table, Bladed Axle
+    })
+
+    global.AFC_WOOD_TYPES.forEach(wood => {
+        stairCrafting(`4x afc:wood/planks/${wood}_stairs`, `afc:wood/planks/${wood}`);
+        slabCrafting(`4x afc:wood/planks/${wood}_slab`, `afc:wood/planks/${wood}`);
+        
+        event.shaped(`afc:wood/clutch/${wood}`, ['RLH', 'LAL', 'RLS'], {L: `afc:wood/lumber/${wood}`, R: 'minecraft:redstone', A: `afc:wood/axle/${wood}`, H: '#c:tools/hammer', S: '#tfc:sticky_stuff'}).damageIngredient('#c:tools/hammer');
+        event.shaped(`2x afc:wood/gear_box/${wood}`, ['SL ', 'LML', ' LS'], {L: `afc:wood/lumber/${wood}`, M: '#tfc:mechanism', S: '#tfc:sticky_stuff'});
+        event.shapeless(`2x afc:wood/axle/${wood}`, [`afc:wood/stripped_log/${wood}`, '#c:tools/saw', '#tfc:sticky_stuff']).damageIngredient('#c:tools/saw');
+        event.shaped(`afc:wood/encased_axle/${wood}`, [' LS', 'LML', ' LS'], {L: `afc:wood/lumber/${wood}`, M: `afc:wood/axle/${wood}`, S: '#tfc:stick_stuff'});
+
+        event.shaped(`afc:wood/shelf/${wood}`, ['LLL', 'S S'], {L: `afc:wood/lumber/${wood}`, S: '#c:rods/wooden'});
+        event.shapeless(`afc:wood/button/${wood}`, [`afc:wood/lumber/${wood}`, '#c:tools/saw']).damageIngredient('#c:tools/saw');
     })
 
     global.TFC_ROCK_TYPES.forEach(rock => {
@@ -215,6 +227,8 @@ ServerEvents.recipes(event => {
         tfc.heating(`tfc:metal/chain/${metal}`, temp).fluidOutput(Fluid.of(`tfc:metal/${metal}`, 10));
         tfc.heating(`tfc:metal/anvil/${metal}`, temp).fluidOutput(Fluid.of(`tfc:metal/${metal}`, 1000));
     })
+
+    tfc.anvil('afc:tree_tap', '#c:sheets/copper', ['hit_last', 'upset_second_last', 'upset_third_last'])
 
     tfc.heating('tfc:dead_torch', 60).resultItem('tfc:torch');
 
