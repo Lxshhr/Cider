@@ -34,6 +34,7 @@ ServerEvents.recipes(event => {
     event.shaped(`tfc:firebox`, ['XVX', 'V V', 'XVX'], {X: '#c:sheets/cast_iron', V: '#tfc:double_sheets/any_bronze'});
     event.shaped('2x tfc:fire_brick_shelf', ['SSS', 'LCL'], {L: 'tfc:fire_bricks', S: '#c:rods/cast_iron', C: 'tfc:fire_clay'});
     event.shaped('tfc:rustic_windmill_blade', ['B B', 'BWB'], {B: 'tfc:burlap_cloth', W: 'tfc:windmill_blade/white'});
+    event.shaped('valhelsia_structures:white_sleeping_bag', ['XXX', 'SLN'], {X: '#tfc:high_quality_cloth', S: '#c:strings', L: '#c:leathers', N: '#c:tools/needles'}).damageIngredient('#c:tools/needles');
 
     tfc.advanced_shaped_crafting('tfc:steel_rope_anchor', ['SH', 'SG'], {S: '#c:rods/steel', H: '#c:tools/hammer', G: '#c:rods/brass'}).remainder(TFC.isp.copyInputStack().damageInput()).inputColumn(1);
 
@@ -181,6 +182,10 @@ ServerEvents.recipes(event => {
             tfc.barrel_sealed(Fluid.of(`tfc:${color}_dye`, 25), 1000)
                 .inputItem('chalk:white_chalk')
                 .outputItem(`chalk:${color}_chalk`);
+            
+            tfc.barrel_sealed(Fluid.of(`tfc:${color}_dye`, 25), 1000)
+                .inputItem('valhelsia_structures:white_sleeping_bag')
+                .outputItem(`valhelsia_structures:${color}_sleeping_bag`);
         }
     })
 

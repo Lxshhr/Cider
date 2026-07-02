@@ -2961,6 +2961,82 @@
             ]
         },
         {
+            "pakku_id": "JktGkAkk8pY4Af2P",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "tfc-vessel-tooltip"
+            },
+            "name": {
+                "curseforge": "TFC Vessel Tooltip"
+            },
+            "id": {
+                "curseforge": "952386"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "TFCVesselTooltip-NeoForge-1.21.1-2.0.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/7041/417/TFCVesselTooltip-NeoForge-1.21.1-2.0.jar",
+                    "id": "7041417",
+                    "parent_id": "952386",
+                    "hashes": {
+                        "sha1": "07acdddabf558c693f2bee2073676cf8575ab9f0",
+                        "md5": "3eb4c845ab5ae4108657b0c8ce252821"
+                    },
+                    "required_dependencies": [
+                        "302973"
+                    ],
+                    "size": 5983,
+                    "date_published": "2025-09-28T07:36:10.680Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "6fmvwQqp01GdZuMw",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "water-flasks"
+            },
+            "name": {
+                "curseforge": "TFC Water Flasks"
+            },
+            "id": {
+                "curseforge": "354353"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "Waterflasks-1.21.1-4.0.1-beta.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "beta",
+                    "url": "https://edge.forgecdn.net/files/8264/81/Waterflasks-1.21.1-4.0.1-beta.jar",
+                    "id": "8264081",
+                    "parent_id": "354353",
+                    "hashes": {
+                        "sha1": "85ea401430e2db4bdd9f136a8576f29429c7f99b",
+                        "md5": "1f6ad5b15eb98e51af1bfb66c800b987"
+                    },
+                    "required_dependencies": [
+                        "302973"
+                    ],
+                    "size": 939816,
+                    "date_published": "2026-06-17T06:32:48.860Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "YobYKabhCzZVsuAe",
             "type": "MOD",
             "slug": {
@@ -3064,6 +3140,78 @@
                     "required_dependencies": [],
                     "size": 72754,
                     "date_published": "2026-06-06T02:57:55.947Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "g5YoZLnp9soMwdaH",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "valhelsia-core"
+            },
+            "name": {
+                "curseforge": "Valhelsia Core"
+            },
+            "id": {
+                "curseforge": "416935"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "valhelsia_core-neoforge-1.21.1-1.1.5.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/6296/775/valhelsia_core-neoforge-1.21.1-1.1.5.jar",
+                    "id": "6296775",
+                    "parent_id": "416935",
+                    "hashes": {
+                        "sha1": "e7498e89bd7347c6d0f4411f55bd312490dfe814",
+                        "md5": "fa4e50fc4d817c0f9de04d1e8d2418d4"
+                    },
+                    "required_dependencies": [],
+                    "size": 181277,
+                    "date_published": "2025-03-12T17:29:00.170Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "m8oRVAxtxfRPd4kR",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "valhelsia-structures"
+            },
+            "name": {
+                "curseforge": "Valhelsia Structures"
+            },
+            "id": {
+                "curseforge": "347488"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "valhelsia_structures-neoforge-1.21.1-1.1.2.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/6814/480/valhelsia_structures-neoforge-1.21.1-1.1.2.jar",
+                    "id": "6814480",
+                    "parent_id": "347488",
+                    "hashes": {
+                        "sha1": "415a94a1400ea57d60f61f86de21b67af0225a69",
+                        "md5": "c3d7888e781136184a0a085861322266"
+                    },
+                    "required_dependencies": [],
+                    "size": 2338805,
+                    "date_published": "2025-07-26T17:46:57.480Z"
                 }
             ]
         },

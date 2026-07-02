@@ -39,7 +39,6 @@ function parseFoodIngredients(inputArray) {
     );
 }
 
-
 /**
  * Gets all the Item IDs from the game.
  */
@@ -56,7 +55,7 @@ function getItemIds(namespaces) {
 
     return itemIds.filter(id => namespaces.includes(id.split(':')[0]));
 }
-// console.log(JSON.stringify(getItemIds(["afc"])))
+// console.log(JSON.stringify(getItemIds(["valhelsia_structures", "waterflasks"])))
 
 
 /**
@@ -83,6 +82,6 @@ function getRecipeIds(event, namespaces) {
 }
 
 ServerEvents.recipes(event => {
-    const all = getRecipeIds(event, ["afc"]);
-    console.log(JSON.stringify(all));
+    // const all = getRecipeIds(event, ["valhelsia_structures", "waterflasks"]);
+    // console.log(JSON.stringify(all));
 })
