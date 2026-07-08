@@ -19,7 +19,7 @@ global.TFC_WOOD_TYPES = [
     'sycamore',
     'white_cedar',
     'willow'
-]
+];
 
 global.AFC_WOOD_TYPES = [
     'baobab', 
@@ -36,7 +36,7 @@ global.AFC_WOOD_TYPES = [
     'beech', 
     'ginkgo', 
     'mahoe'
-]
+];
 
 global.TFC_ROCK_TYPES = [
     'granite',
@@ -59,7 +59,14 @@ global.TFC_ROCK_TYPES = [
     'schist',
     'gneiss',
     'marble',
-]
+];
+
+global.TFC_ROCK_CATEGORIES = [
+    'igneous_extrusive', 
+    'igneous_intrusive', 
+    'metamorphic', 
+    'sedimentary'
+];
 
 global.TFC_DIRT_TYPES = [
     'entisol',
@@ -70,7 +77,7 @@ global.TFC_DIRT_TYPES = [
     'podzol',
     'alfisol',
     'mollisol',
-]
+];
 
 global.TFC_SAND_COLORS = [
     'brown', 
@@ -79,7 +86,7 @@ global.TFC_SAND_COLORS = [
     'yellow', 
     'green', 
     'pink', 
-]
+];
 
 /**
  * [Metal, HeatResistance, MeltingTemp]
@@ -104,7 +111,7 @@ global.TFC_METALS = [
     ['black_steel', 0.35, 1485],
     ['blue_steel', 0.35, 1540],
     ['red_steel', 0.35, 1540]
-]
+];
 
 global.TIERED_TFC_METALS = [
     ['copper', 0.35, 1080],
@@ -116,7 +123,7 @@ global.TIERED_TFC_METALS = [
     ['black_steel', 0.35, 1485],
     ['blue_steel', 0.35, 1540],
     ['red_steel', 0.35, 1540]
-]
+];
 
 global.WEATHERING_TFC_METALS = [
     ['bronze', 0.35, 950],
@@ -126,7 +133,7 @@ global.WEATHERING_TFC_METALS = [
     ['sterling_silver', 0.35, 950],
     ['wrought_iron', 0.35, 1535],
     ['steel', 0.35, 1540],
-]
+];
 
 global.GRAIN_TYPES = [
     'wheat',
@@ -136,7 +143,7 @@ global.GRAIN_TYPES = [
     'corn',
     'maize',
     'rice',
-]
+];
 
 global.COLORS = [
     'white',
@@ -155,4 +162,4 @@ global.COLORS = [
     'green',
     'red',
     'black'
-]
+];

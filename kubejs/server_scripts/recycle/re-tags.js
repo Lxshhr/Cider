@@ -16,9 +16,33 @@ ServerEvents.tags("item", event => {
         'tfc:ceramic/unfired_chisel_head_mold', 
         'tfc:ceramic/unfired_hammer_head_mold', 
         'tfc:ceramic/unfired_javelin_head_mold', 
-        'tfc:ceramic/unfired_sword_head_mold', 
-        'tfc:ceramic/unfired_knife_head_mold', 
+        'tfc:ceramic/unfired_sword_blade_mold', 
+        'tfc:ceramic/unfired_knife_blade_mold', 
         'tfc:ceramic/unfired_blowpipe', 
+    ]);
+
+    event.add('cider:costs_one_clay', [
+        'tfc:ceramic/unfired_bowl', 
+        'tfc:ceramic/unfired_brick'
+    ]);
+
+    event.add('cider:costs_two_clay', [
+        'tfc:ceramic/unfired_flower_pot', 
+        'tfc:ceramic/unfired_ingot_mold'
+    ]);
+
+    event.add('cider:costs_five_fire_clay', [
+        'tfc:ceramic/unfired_crucible', 
+        'tfc:ceramic/unfired_mold_table'
+    ]);
+
+    event.add('cider:costs_one_fire_clay', [
+        'tfc:ceramic/unfired_channel', 
+        'tfc:ceramic/unfired_fire_brick'
+    ]);
+
+    event.add('cider:costs_two_fire_clay', [
+        'tfc:ceramic/unfired_fire_ingot_mold'
     ]);
 
     global.TIERED_TFC_METALS.forEach(([metal, i, temp]) => {

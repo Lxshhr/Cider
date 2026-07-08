@@ -49,3 +49,6 @@ kubejs/package.json
 config/xaeropatreon.txt
 config/sodium-fingerprint.json
 config/fml.toml
+config/connector.json
+config/axiom
+config/fabric

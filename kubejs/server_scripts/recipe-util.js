@@ -33,6 +33,9 @@ function parseIngredients(inputArray) {
     return formattedInputs;
 };
 
+/** 
+ * 
+ */
 function parseFoodIngredients(inputArray) {
     return parseIngredients(inputArray).map(item => 
         TFC.ingredient.and(item, TFC.ingredient.notRotten())
@@ -55,7 +58,7 @@ function getItemIds(namespaces) {
 
     return itemIds.filter(id => namespaces.includes(id.split(':')[0]));
 }
-// console.log(JSON.stringify(getItemIds(["valhelsia_structures", "waterflasks"])))
+// console.log(JSON.stringify(getItemIds(["valhelsia_structures", "waterflasks"])));
 
 
 /**
@@ -82,6 +85,6 @@ function getRecipeIds(event, namespaces) {
 }
 
 ServerEvents.recipes(event => {
-    // const all = getRecipeIds(event, ["valhelsia_structures", "waterflasks"]);
+    // const all = getRecipeIds(event, ["afc", "tfc"]);
     // console.log(JSON.stringify(all));
 })

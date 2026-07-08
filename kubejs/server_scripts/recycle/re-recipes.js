@@ -4,6 +4,12 @@ ServerEvents.recipes(event => {
     let tieredWeatheringMetals = ['wrought_iron', 'steel', 'copper', 'bronze'];
 
     event.shapeless('5x minecraft:clay_ball', ['#cider:costs_five_clay']);
+    event.shapeless('2x minecraft:clay_ball', ['#cider:costs_two_clay']);
+    event.shapeless('minecraft:clay_ball', ['#cider:costs_one_clay']);
+
+    event.shapeless('5x tfc:fire_clay', ['#cider:costs_five_fire_clay']);
+    event.shapeless('2x tfc:fire_clay', ['#cider:costs_two_fire_clay']);
+    event.shapeless('tfc:fire_clay', ['#cider:costs_one_fire_clay']);
 
     global.TIERED_TFC_METALS.forEach(([metal, i, temp]) => {
         tfc.heating(`#cider:${metal}_tool_heads`, temp)
