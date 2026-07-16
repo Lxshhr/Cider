@@ -52,3 +52,4 @@ config/fml.toml
 config/connector.json
 config/axiom
 config/fabric
+config/openloader/packs/resources
