@@ -1,6 +1,6 @@
 ["Jam Tooltip Display"]
 	#Show tooltips on Jams
-	enableTooltips = true
+	enableTooltips = false
 	#Show tooltips on Jams only when the player holds SHIFT
 	shiftToolTips = false
 	#The tooltip display style: 

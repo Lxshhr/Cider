@@ -5,7 +5,7 @@ halve_sweeping_damage = true
 #Increase snowball and egg stack size from 16 to 64, and potion stack size from 1 to 16 (only for potions of the same type of course).
 #Default Value: true
 #Requires Restart: Game
-increase_stack_size = true
+increase_stack_size = false
 
 [attributes]
 	#Makes it so that swords, hoes, and tridents have an increased reach when attacking.
