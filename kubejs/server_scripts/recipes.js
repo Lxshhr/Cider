@@ -14,6 +14,7 @@ ServerEvents.recipes(event => {
     event.shapeless('minecraft:bamboo_block', ['tfc:golden_bamboo_block', '#minecraft:axes']).damageIngredient('#minecraft:axes');
     event.shapeless('tfc:spindle', ['tfc:ceramic/spindle_head', 'minecraft:stick']);
     event.shapeless('tfc:sandpaper', ['minecraft:paper', 'tfc:powder/flux', '#tfc:sticky_stuff', '#minecraft:sand', '#tfc:gem_powders']);
+    event.shapeless('2x minecraft:fire_charge', ['tfc:powder/sulfur', 'tfc:powder/graphite', 'tfc:powder/charcoal']);
 
     event.shaped('2x minecraft:scaffolding', ['SCS', 'S S', 'S S'], {S: 'minecraft:stick', C: '#c:strings'});
     event.shaped('minecraft:white_bed', ['CCC', 'LLL', 'L L'], {C: '#tfc:high_quality_cloth', L: '#tfc:lumber'});
@@ -37,7 +38,6 @@ ServerEvents.recipes(event => {
     event.shaped(`tfc:firebox`, ['XVX', 'V V', 'XVX'], {X: '#c:sheets/cast_iron', V: '#tfc:double_sheets/any_bronze'});
     event.shaped('2x tfc:fire_brick_shelf', ['SSS', 'LCL'], {L: 'tfc:fire_bricks', S: '#c:rods/cast_iron', C: 'tfc:fire_clay'});
     event.shaped('tfc:rustic_windmill_blade', ['B B', 'BWB'], {B: 'tfc:burlap_cloth', W: 'tfc:windmill_blade/white'});
-    event.shaped('valhelsia_structures:white_sleeping_bag', ['XXX', 'S N'], {X: '#tfc:high_quality_cloth', S: '#c:strings', N: '#c:tools/needles'}).damageIngredient('#c:tools/needles');
     event.shaped('chalk:chalk_box', ['XVX', ' X '], {X: 'minecraft:paper', V: '#tfc:sticky_stuff'});
     event.shaped('minecraft:cartography_table', ['P I', 'SSS', 'W W'], {P: 'minecraft:paper', I: '#c:inks', S: '#minecraft:wooden_slabs', W: '#minecraft:planks'});
     event.shaped('minecraft:fletching_table', ['FF ', 'SSS', 'W W'], {F: 'minecraft:flint', S: '#minecraft:wooden_slabs', W: '#minecraft:planks'});
@@ -46,37 +46,57 @@ ServerEvents.recipes(event => {
     event.shaped('16x minecraft:powered_rail', ['X X', 'XSX', 'XRX'], {X: '#c:rods/brass', S: 'minecraft:stick', R: 'minecraft:redstone'});
     event.shaped('minecraft:piston', ['XXX', 'SRS', 'SMS'], {X: '#tfc:lumber', S: '#c:bricks', R: 'minecraft:redstone', M: '#tfc:mechanism'});
 
-    // Heavy/Light Pressure Plates
-    // Jukebox
-    // Bell
-    // Repeater
-    // Comparator
-    // Calibrated Sculk Sensor
-    // Sculk Sensor
-    // Daylight Detector
-    // Dropper
-    // Dispenser
-    // Crafter
-    // Observer
-    // Minecart Furnace
-    // Flint and Steel
-    // FireCharge
-    // Clock
-    // Spyglass
-    // EmptyMap
-    // Saddle
-    // Leather Armor
-    // Bow
-    // CrossBow
-    // Arrow
-    // Banner Patterns - Flower, Creeper, Skull, Mojang, Globe, Piglin, Flow, Guster
 
-
-    // Power Loom
-    // Trip hammer
-    // Aggregate
-    // Raw Plasters
-    // Steel Pipe
+    // TODO: Missing Recipes
+    /**
+     * minecraft:stripped_bamboo_block
+     * minecraft:tinted_glass - use any gem powders
+     * minecraft:sculk_sensor
+     * minecraft:calibrated_sculk_sensor
+     * minecraft:jukebox
+     * minecraft:repeater
+     * minecraft:comparator
+     * minecraft:heavy_weighted_pressure_plate
+     * minecraft:light_weighted_pressure_plate
+     * minecraft:daylight_detector
+     * minecraft:daylight_detector
+     * minecraft:sticky_piston
+     * minecraft:dispenser
+     * minecraft:dropper
+     * minecraft:crafter
+     * minecraft:observer
+     * minecraft:observer
+     * minecraft:furnace_minecart
+     * minecraft:compass
+     * minecraft:clock
+     * minecraft:spyglass
+     * minecraft:saddle
+     * minecraft:shield
+     * minecraft:leather_helmet
+     * minecraft:leather_chestplate
+     * minecraft:leather_leggings
+     * minecraft:leather_boots
+     * minecraft:leather_horse_armor
+     * minecraft:bow
+     * minecraft:crossbow
+     * minecraft:flint
+     * minecraft:bowl
+     * minecraft:flower_banner_pattern
+     * minecraft:creeper_banner_pattern
+     * minecraft:skull_banner_pattern
+     * minecraft:mojang_banner_pattern
+     * minecraft:globe_banner_pattern
+     * minecraft:piglin_banner_pattern
+     * minecraft:flow_banner_pattern
+     * minecraft:guster_banner_pattern
+     * 
+     * afc:maple_sugar
+     * afc:birch_sugar
+     * 
+     * tfc:basket
+     * tfc:firestarter
+     * 
+     */
 
     function twoByTwo(result, input) {
         event.shaped(result, ['XX', 'XX'], {X: input});
@@ -102,14 +122,14 @@ ServerEvents.recipes(event => {
     stairCrafting('3x minecraft:brick_stairs', 'minecraft:bricks')
 
     function slabCrafting(result, input) {
-        event.shaped(result, ['XXV'], {X: input, V: '#c:tools/chisel'}).damageIngredient('#c:tools/chisel', 2);
+        event.shaped(result, ['VX'], {X: input, V: '#c:tools/chisel'}).damageIngredient('#c:tools/chisel', 2);
     }
-    slabCrafting('4x minecraft:brick_slab',  'minecraft:bricks');
+    slabCrafting('2x minecraft:brick_slab',  'minecraft:bricks');
 
     function wallCrafting(result, input) {
-        event.shaped(result, ['V  ', 'XXX'], {X: input, V: '#c:tools/chisel'}).damageIngredient('#c:tools/chisel', 3);
+        event.shaped(result, ['V ', 'XX'], {X: input, V: '#c:tools/chisel'}).damageIngredient('#c:tools/chisel', 3);
     }
-    wallCrafting('3x minecraft:brick_wall', 'minecraft:bricks');
+    wallCrafting('2x minecraft:brick_wall', 'minecraft:bricks');
 
     function chiselSlab(result, input) {
         tfc.chisel(result, input, 'tfc:slab').extraDrop(result);
@@ -127,7 +147,7 @@ ServerEvents.recipes(event => {
 
     global.TFC_WOOD_TYPES.forEach(wood => {
         stairCrafting(`4x tfc:wood/planks/${wood}_stairs`, `tfc:wood/planks/${wood}`);
-        slabCrafting(`4x tfc:wood/planks/${wood}_slab`, `tfc:wood/planks/${wood}`);
+        slabCrafting(`2x tfc:wood/planks/${wood}_slab`, `tfc:wood/planks/${wood}`);
         
         event.shaped(`tfc:wood/clutch/${wood}`, ['RLH', 'LAL', 'RLS'], {L: `tfc:wood/lumber/${wood}`, R: 'minecraft:redstone', A: `tfc:wood/axle/${wood}`, H: '#c:tools/hammer', S: '#tfc:sticky_stuff'}).damageIngredient('#c:tools/hammer');
         event.shaped(`2x tfc:wood/gear_box/${wood}`, ['SL ', 'LML', ' LS'], {L: `tfc:wood/lumber/${wood}`, M: '#tfc:mechanism', S: '#tfc:sticky_stuff'});
@@ -141,7 +161,7 @@ ServerEvents.recipes(event => {
 
     global.AFC_WOOD_TYPES.forEach(wood => {
         stairCrafting(`4x afc:wood/planks/${wood}_stairs`, `afc:wood/planks/${wood}`);
-        slabCrafting(`4x afc:wood/planks/${wood}_slab`, `afc:wood/planks/${wood}`);
+        slabCrafting(`2x afc:wood/planks/${wood}_slab`, `afc:wood/planks/${wood}`);
         
         event.shaped(`afc:wood/clutch/${wood}`, ['RLH', 'LAL', 'RLS'], {L: `afc:wood/lumber/${wood}`, R: 'minecraft:redstone', A: `afc:wood/axle/${wood}`, H: '#c:tools/hammer', S: '#tfc:sticky_stuff'}).damageIngredient('#c:tools/hammer');
         event.shaped(`2x afc:wood/gear_box/${wood}`, ['SL ', 'LML', ' LS'], {L: `afc:wood/lumber/${wood}`, M: '#tfc:mechanism', S: '#tfc:sticky_stuff'});
@@ -167,13 +187,13 @@ ServerEvents.recipes(event => {
         stairCrafting(`3x tfc:rock/mossy_bricks/${rock}_stairs`, `tfc:rock/mossy_bricks/${rock}`);
         stairCrafting(`3x tfc:rock/cracked_bricks/${rock}_stairs`, `tfc:rock/cracked_bricks/${rock}`);
 
-        slabCrafting(`4x tfc:rock/raw/${rock}_slab`, `tfc:rock/raw/${rock}`);
-        slabCrafting(`4x tfc:rock/bricks/${rock}_slab`, `tfc:rock/bricks/${rock}`);
-        slabCrafting(`4x tfc:rock/cobble/${rock}_slab`, `tfc:rock/cobble/${rock}`);
-        slabCrafting(`4x tfc:rock/smooth/${rock}_slab`, `tfc:rock/smooth/${rock}`);
-        slabCrafting(`4x tfc:rock/mossy_cobble/${rock}_slab`, `tfc:rock/mossy_cobble/${rock}`);
-        slabCrafting(`4x tfc:rock/mossy_bricks/${rock}_slab`, `tfc:rock/mossy_bricks/${rock}`);
-        slabCrafting(`4x tfc:rock/cracked_bricks/${rock}_slab`, `tfc:rock/cracked_bricks/${rock}`);
+        slabCrafting(`2x tfc:rock/raw/${rock}_slab`, `tfc:rock/raw/${rock}`);
+        slabCrafting(`2x tfc:rock/bricks/${rock}_slab`, `tfc:rock/bricks/${rock}`);
+        slabCrafting(`2x tfc:rock/cobble/${rock}_slab`, `tfc:rock/cobble/${rock}`);
+        slabCrafting(`2x tfc:rock/smooth/${rock}_slab`, `tfc:rock/smooth/${rock}`);
+        slabCrafting(`2x tfc:rock/mossy_cobble/${rock}_slab`, `tfc:rock/mossy_cobble/${rock}`);
+        slabCrafting(`2x tfc:rock/mossy_bricks/${rock}_slab`, `tfc:rock/mossy_bricks/${rock}`);
+        slabCrafting(`2x tfc:rock/cracked_bricks/${rock}_slab`, `tfc:rock/cracked_bricks/${rock}`);
 
         wallCrafting(`3x tfc:rock/raw/${rock}_wall`, `tfc:rock/raw/${rock}`);
         wallCrafting(`3x tfc:rock/bricks/${rock}_wall`, `tfc:rock/bricks/${rock}`);
@@ -196,9 +216,9 @@ ServerEvents.recipes(event => {
         stairCrafting(`4x tfc:smooth_sandstone/${color}_stairs`, `tfc:smooth_sandstone/${color}`);
         stairCrafting(`4x tfc:cut_sandstone/${color}_stairs`, `tfc:cut_sandstone/${color}`);
 
-        slabCrafting(`4x tfc:raw_sandstone/${color}_slab`, `tfc:raw_sandstone/${color}`);
-        slabCrafting(`4x tfc:smooth_sandstone/${color}_slab`, `tfc:smooth_sandstone/${color}`);
-        slabCrafting(`4x tfc:cut_sandstone/${color}_slab`, `tfc:cut_sandstone/${color}`);
+        slabCrafting(`2x tfc:raw_sandstone/${color}_slab`, `tfc:raw_sandstone/${color}`);
+        slabCrafting(`2x tfc:smooth_sandstone/${color}_slab`, `tfc:smooth_sandstone/${color}`);
+        slabCrafting(`2x tfc:cut_sandstone/${color}_slab`, `tfc:cut_sandstone/${color}`);
 
         wallCrafting(`4x tfc:raw_sandstone/${color}_wall`, `tfc:raw_sandstone/${color}`);
         wallCrafting(`4x tfc:smooth_sandstone/${color}_wall`, `tfc:smooth_sandstone/${color}`);
@@ -221,15 +241,14 @@ ServerEvents.recipes(event => {
         stairCrafting(`4x tfc:alabaster/bricks/${color}_stairs`, `tfc:alabaster/bricks/${color}`);
         stairCrafting(`4x tfc:alabaster/polished/${color}_stairs`, `tfc:alabaster/polished/${color}`);
 
-        slabCrafting(`4x tfc:alabaster/bricks/${color}_slab`, `tfc:alabaster/bricks/${color}`);
-        slabCrafting(`4x tfc:alabaster/polished/${color}_slab`, `tfc:alabaster/polished/${color}`);
+        slabCrafting(`2x tfc:alabaster/bricks/${color}_slab`, `tfc:alabaster/bricks/${color}`);
+        slabCrafting(`2x tfc:alabaster/polished/${color}_slab`, `tfc:alabaster/polished/${color}`);
 
         wallCrafting(`4x tfc:alabaster/bricks/${color}_wall`, `tfc:alabaster/bricks/${color}`);
         wallCrafting(`4x tfc:alabaster/polished/${color}_wall`, `tfc:alabaster/polished/${color}`);
 
         if(color != 'white') {
             barrelDye(`chalk:${color}_chalk`, 'chalk:white_chalk', color);
-            barrelDye(`valhelsia_structures:${color}_sleeping_bag`, "valhelsia_structures:white_sleeping_bag", color);
         }
 
         barrelDye(`minecraft:${color}_terracotta`, 'tfc:hardened_clay', color);
@@ -257,7 +276,6 @@ ServerEvents.recipes(event => {
     })
 
     barrelBleach('chalk:white_chalk', '#chalk:colored_chalks');
-    barrelBleach('valhelsia_structures:white_sleeping_bag', '#cider:sleeping_bags');
     barrelBleach('tfc:hardened_clay', '#minecraft:terracotta');
     
     for (let i = 1; i <= 5; i++) {
@@ -323,11 +341,14 @@ ServerEvents.recipes(event => {
     })
 
     tfc.anvil('afc:tree_tap', '#c:sheets/copper', ['hit_last', 'upset_second_last', 'upset_third_last']);
+    tfc.anvil('minecraft:bell', '#c:sheets/gold', ['bend_last', 'bend_second_last', 'hit_third_last']);
+    tfc.anvil('tfc:bronze_bell', '#c:sheets/bronze', ['bend_last', 'bend_second_last', 'hit_third_last']);
+    tfc.anvil('tfc:brass_bell', '#c:sheets/brass', ['bend_last', 'bend_second_last', 'hit_third_last']);
 
     tfc.heating('tfc:dead_torch', 60).resultItem('tfc:torch');
     tfc.heating('minecraft:clay', 1399).resultItem('tfc:hardened_clay');
 
-    tfc.knapping('chalk:white_chalk', 'tfc:rock', ['XXX', 'XXX', 'XXX', 'XXX', 'XXX',])
+    tfc.knapping('chalk:white_chalk', 'tfc:rock', ['XXX', 'XXX', 'XXX', 'XXX', 'XXX'])
         .defaultOn(false)
         .ingredient('#tfc:rock/loose_chalk');
 })

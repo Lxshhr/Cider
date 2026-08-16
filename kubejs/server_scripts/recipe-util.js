@@ -1,5 +1,5 @@
 /**
- * Derived from TFC's KubejsTFC thread, Thanks Redeix.
+ * Derived from TFC's KubejsTFC thread, Thanks Redeix and TFC :pray:.
  */
 function parseIngredients(inputArray) {
     let formattedInputs = [];
@@ -58,14 +58,13 @@ function getItemIds(namespaces) {
 
     return itemIds.filter(id => namespaces.includes(id.split(':')[0]));
 }
-// console.log(JSON.stringify(getItemIds(["valhelsia_structures", "waterflasks"])));
+// console.log(JSON.stringify(getItemIds(["firmalife"])));
 
 
 /**
  * Gets all recipe IDs from the game.
  */
 function getRecipeIds(event, namespaces) {
-    // Normalise namespaces into an array, or null if no filter wanted
     if (typeof namespaces === 'string') {
         namespaces = [namespaces];
     }
@@ -85,6 +84,6 @@ function getRecipeIds(event, namespaces) {
 }
 
 ServerEvents.recipes(event => {
-    // const all = getRecipeIds(event, ["afc", "tfc"]);
+    // const all = getRecipeIds(event, ["firmalife"]);
     // console.log(JSON.stringify(all));
 })

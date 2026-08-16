@@ -105,7 +105,6 @@ ServerEvents.tags('item', event => {
     global.COLORS.forEach(color => {
         if (color != 'white') {
             event.add('chalk:colored_chalks', `chalk:${color}_chalk`)
-            event.add('cider:sleeping_bags', `valhesia_structures:${color}_sleeping_bag`)
         }
         event.add(`minecraft:colored_terracotta`, `minecraft:${color}_terracotta`)
     });
