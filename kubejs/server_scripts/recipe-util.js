@@ -58,7 +58,7 @@ function getItemIds(namespaces) {
 
     return itemIds.filter(id => namespaces.includes(id.split(':')[0]));
 }
-console.log(JSON.stringify(getItemIds(["firmalife", "thermia", "hotornot"])));
+// console.log(JSON.stringify(getItemIds(["firmalife", "refield", "tfchotornot", "tfc_hammer_time", "thermia", "afc"])));
 
 
 /**
@@ -84,6 +84,6 @@ function getRecipeIds(event, namespaces) {
 }
 
 ServerEvents.recipes(event => {
-    const all = getRecipeIds(event, ["firmalife", "thermia", "hotornot"]);
-    console.log(JSON.stringify(all));
+    // const all = getRecipeIds(event, ["firmalife", "refield", "tfchotornot", "tfc_hammer_time", "thermia", "afc"]);
+    // console.log(JSON.stringify(all));
 })

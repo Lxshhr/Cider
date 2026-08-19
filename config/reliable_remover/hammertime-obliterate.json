@@ -1,0 +1,11 @@
+[
+    {
+        "action": "remove",
+        "items": [
+            "tfc_hammer_time:ceramic/excavator_head_mold",
+            "tfc_hammer_time:ceramic/sledgehammer_head_mold",
+            "tfc_hammer_time:ceramic/unfired_excavator_head_mold",
+            "tfc_hammer_time:ceramic/unfired_sledgehammer_head_mold"
+        ]
+    }
+]

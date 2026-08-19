@@ -45,7 +45,7 @@ ServerEvents.recipes(event => {
     event.shaped('tfc:steel_rope_anchor', ['SH', 'SG'], {S: '#c:rods/steel', H: '#c:tools/hammer', G: '#c:rods/brass'}).damageIngredient('#c:tools/hammer');
     event.shaped('16x minecraft:powered_rail', ['X X', 'XSX', 'XRX'], {X: '#c:rods/brass', S: 'minecraft:stick', R: 'minecraft:redstone'});
     event.shaped('minecraft:piston', ['XXX', 'SRS', 'SMS'], {X: '#tfc:lumber', S: '#c:bricks', R: 'minecraft:redstone', M: '#tfc:mechanism'});
-
+    event.shaped('tfchotornot:tongs/wood', ['V ', 'SV'], {V: 'minecraft:stick', S: 'tfc:straw'});
 
     // TODO: Missing Recipes
     /**
@@ -64,7 +64,6 @@ ServerEvents.recipes(event => {
      * minecraft:dispenser
      * minecraft:dropper
      * minecraft:crafter
-     * minecraft:observer
      * minecraft:observer
      * minecraft:furnace_minecart
      * minecraft:compass
@@ -92,9 +91,6 @@ ServerEvents.recipes(event => {
      * 
      * afc:maple_sugar
      * afc:birch_sugar
-     * 
-     * tfc:basket
-     * tfc:firestarter
      * 
      */
 

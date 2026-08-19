@@ -598,6 +598,79 @@
             ]
         },
         {
+            "pakku_id": "DQtFevFPEHP6S8j1",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "bookshelf"
+            },
+            "name": {
+                "curseforge": "Bookshelf"
+            },
+            "id": {
+                "curseforge": "228525"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "bookshelf-neoforge-1.21.1-21.1.81.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/7606/240/bookshelf-neoforge-1.21.1-21.1.81.jar",
+                    "id": "7606240",
+                    "parent_id": "228525",
+                    "hashes": {
+                        "sha1": "efc4cda6da4dd879f24d057ed0a6413764c9ba40",
+                        "md5": "9f627fe031221159d74a491e279f773a"
+                    },
+                    "required_dependencies": [],
+                    "size": 328813,
+                    "date_published": "2026-02-10T22:44:17.770Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "8HteFPfLkrhuzwQw",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "break-my-fall"
+            },
+            "name": {
+                "curseforge": "Break My Fall"
+            },
+            "id": {
+                "curseforge": "895113"
+            },
+            "redistributable": false,
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "break_my_fall-neoforge-1.21.1-1.0.2.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/8412/817/break_my_fall-neoforge-1.21.1-1.0.2.jar",
+                    "id": "8412817",
+                    "parent_id": "895113",
+                    "hashes": {
+                        "sha1": "da2b0d928e43957eca675d9fff085e69df44b69b",
+                        "md5": "5d4faa1c490c922586fe835528d2c63c"
+                    },
+                    "required_dependencies": [],
+                    "size": 1700697,
+                    "date_published": "2026-07-11T14:38:26.633Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "iyPEFe1Z7TkCTkhR",
             "type": "MOD",
             "slug": {
@@ -1118,6 +1191,48 @@
             ]
         },
         {
+            "pakku_id": "jBXuHTnZl170rnIP",
+            "pakku_links": [
+                "KqM7k4APFptP8AVI"
+            ],
+            "type": "MOD",
+            "slug": {
+                "curseforge": "death-knell"
+            },
+            "name": {
+                "curseforge": "Death Knell"
+            },
+            "id": {
+                "curseforge": "538316"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "deathknell-neoforge-1.21.1-21.1.2.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/7132/107/deathknell-neoforge-1.21.1-21.1.2.jar",
+                    "id": "7132107",
+                    "parent_id": "538316",
+                    "hashes": {
+                        "sha1": "959167605e4182f1da8ea7a66b5994e30ddab4d8",
+                        "md5": "dca7b7a9a67427683c6119130f4cee41"
+                    },
+                    "required_dependencies": [
+                        "228525",
+                        "1023259"
+                    ],
+                    "size": 26406,
+                    "date_published": "2025-10-21T06:29:30.113Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "QjIWEi0oUFwwblaQ",
             "type": "MOD",
             "slug": {
@@ -1223,6 +1338,42 @@
                     "required_dependencies": [],
                     "size": 44586,
                     "date_published": "2026-03-25T23:48:42.197Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "dgnH4McgktNLmD9e",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "fancy-toasts"
+            },
+            "name": {
+                "curseforge": "Fancy Toasts | Better Advancements"
+            },
+            "id": {
+                "curseforge": "1326436"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "fancytoasts-neoforge-1.21.1-1.4.7.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/7985/488/fancytoasts-neoforge-1.21.1-1.4.7.jar",
+                    "id": "7985488",
+                    "parent_id": "1326436",
+                    "hashes": {
+                        "sha1": "f484d2aa960475fddd2c15a276c3328ea8feb62e",
+                        "md5": "0b5867735a45decfe20764533d9d74ee"
+                    },
+                    "required_dependencies": [],
+                    "size": 372782,
+                    "date_published": "2026-04-26T01:01:04.800Z"
                 }
             ]
         },
@@ -1697,6 +1848,43 @@
             ]
         },
         {
+            "pakku_id": "2093eJrYSjeS3nct",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "konkrete"
+            },
+            "name": {
+                "curseforge": "Konkrete"
+            },
+            "id": {
+                "curseforge": "410295"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "konkrete_neoforge_1.9.9_MC_1.21.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/5453/385/konkrete_neoforge_1.9.9_MC_1.21.jar",
+                    "id": "5453385",
+                    "parent_id": "410295",
+                    "hashes": {
+                        "sha1": "97771eb287d5ac7fe667d1df9493d5e54c8ca1fa",
+                        "md5": "6e77d08299ea1ec7756a299263bc469b"
+                    },
+                    "required_dependencies": [],
+                    "size": 618842,
+                    "date_published": "2024-06-21T07:53:27.010Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "WPrM50CU3kfxJSLO",
             "pakku_links": [
                 "88YVfdDRfXLk03UO"
@@ -1947,6 +2135,44 @@
                     ],
                     "size": 247689,
                     "date_published": "2026-04-29T10:52:53.330Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "G2jv5200KFbPQAcN",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "melody"
+            },
+            "name": {
+                "curseforge": "Melody"
+            },
+            "id": {
+                "curseforge": "938643"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "melody_neoforge_1.0.10_MC_1.21.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.4",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/5453/382/melody_neoforge_1.0.10_MC_1.21.jar",
+                    "id": "5453382",
+                    "parent_id": "938643",
+                    "hashes": {
+                        "sha1": "e83052a92c4ca0016bcfe7f0207273983dc84698",
+                        "md5": "875f4a68f2cd7ee2cc135904653c93d4"
+                    },
+                    "required_dependencies": [],
+                    "size": 36096,
+                    "date_published": "2024-06-21T07:52:59.533Z"
                 }
             ]
         },
@@ -2508,6 +2734,42 @@
                     "required_dependencies": [],
                     "size": 7096988,
                     "date_published": "2025-11-23T09:44:26.090Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "KqM7k4APFptP8AVI",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "prickle"
+            },
+            "name": {
+                "curseforge": "Prickle"
+            },
+            "id": {
+                "curseforge": "1023259"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "prickle-neoforge-1.21.1-21.1.11.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/6961/457/prickle-neoforge-1.21.1-21.1.11.jar",
+                    "id": "6961457",
+                    "parent_id": "1023259",
+                    "hashes": {
+                        "sha1": "5174059ecf97340a0de5ef211b938de26c4eaa36",
+                        "md5": "533c154fb306cd8043564ee1533873ce"
+                    },
+                    "required_dependencies": [],
+                    "size": 84812,
+                    "date_published": "2025-09-04T03:19:33.637Z"
                 }
             ]
         },
@@ -3236,7 +3498,7 @@
             ]
         },
         {
-            "pakku_id": "HWl4AIA5HNcbKu7G",
+            "pakku_id": "FiR4ZwOddsDSFBe7",
             "type": "MOD",
             "slug": {
                 "curseforge": "terrafirmacraft"
@@ -3250,7 +3512,7 @@
             "files": [
                 {
                     "type": "curseforge",
-                    "file_name": "TerraFirmaCraft-NeoForge-1.21.1-4.2.7.jar",
+                    "file_name": "TerraFirmaCraft-NeoForge-1.21.1-4.2.8.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -3258,18 +3520,18 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/8566/530/TerraFirmaCraft-NeoForge-1.21.1-4.2.7.jar",
-                    "id": "8566530",
+                    "url": "https://edge.forgecdn.net/files/8666/972/TerraFirmaCraft-NeoForge-1.21.1-4.2.8.jar",
+                    "id": "8666972",
                     "parent_id": "302973",
                     "hashes": {
-                        "sha1": "de5824bbba770914d24ac06585b088a4f0640bf3",
-                        "md5": "96e315d467a4d5749552194e3526f287"
+                        "sha1": "aff8713c181fa4b190f3b018216998530c734a12",
+                        "md5": "47bcc153e95561ccf23d4945da2eb0e3"
                     },
                     "required_dependencies": [
                         "306770"
                     ],
-                    "size": 65278650,
-                    "date_published": "2026-08-03T02:21:08.703Z"
+                    "size": 65342409,
+                    "date_published": "2026-08-17T01:17:03.907Z"
                 }
             ]
         },

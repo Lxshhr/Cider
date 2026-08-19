@@ -1,0 +1,15 @@
+[
+    {
+        "action": "remove",
+        "items": [
+            "tfchotornot:tong_part/bismuth", 
+            "tfchotornot:tong_part/nickel", 
+            "tfchotornot:tong_part/tin", 
+            "tfchotornot:tong_part/zinc", 
+            "tfchotornot:tongs/bismuth", 
+            "tfchotornot:tongs/nickel", 
+            "tfchotornot:tongs/tin", 
+            "tfchotornot:tongs/zinc"
+        ]
+    }
+]

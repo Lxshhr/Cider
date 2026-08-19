@@ -192,19 +192,7 @@
             "minecraft:dye_cyan_bed",
             "minecraft:blue_stained_glass_pane",
             "minecraft:campfire",
-            "minecraft:black_stained_glass", 
-
-            "tfc:crafting/jar/pumpkin_chunks_unsealed",
-            "kubastfca:food/jar/veggie_open",
-            "kubastfca:food/jar/mix_open",
-            "kubastfca:food/jar/meat_open",
-            "firmalife:crafting/jar/white_grapes_unsealed",
-            "firmalife:crafting/unjarring_food/raw_honey",
-            "firmalife:crafting/jar/pineapple_unsealed",
-            "firmalife:crafting/empty_jar_with_stainless_steel_lid",
-            "firmalife:crafting/jar/red_grapes_unsealed",
-            "firmalife:crafting/jarring_food/raw_honey",
-            "firmalife:crafting/jar/fig_unsealed"
+            "minecraft:black_stained_glass"
         ]
     }
 ]

@@ -2,26 +2,6 @@
     {
         "action": "remove_recipe", 
         "id" :[
-            "map_atlases:remove_atlas",
-
-            "chalk:chalk_box",
-            "chalk:chalk_from_black_dye",
-            "chalk:chalk_from_blue_dye",
-            "chalk:chalk_from_brown_dye",
-            "chalk:chalk_from_cyan_dye",
-            "chalk:chalk_from_gray_dye",
-            "chalk:chalk_from_green_dye",
-            "chalk:chalk_from_light_blue_dye",
-            "chalk:chalk_from_light_gray_dye",
-            "chalk:chalk_from_lime_dye",
-            "chalk:chalk_from_magenta_dye",
-            "chalk:chalk_from_orange_dye",
-            "chalk:chalk_from_pink_dye",
-            "chalk:chalk_from_purple_dye",
-            "chalk:chalk_from_red_dye",
-            "chalk:chalk_from_white_dye",
-            "chalk:chalk_from_yellow_dye",
-
             "precisionprospecting:casting/bismuth_bronze_mineral_prospector_head",
             "precisionprospecting:casting/bismuth_bronze_prospector_drill_head",
             "precisionprospecting:casting/bismuth_bronze_prospector_hammer_head",
