@@ -68,7 +68,7 @@
 	#Entities that CAN be picked up (useWhitelistEntities must be true)
 	allowedEntities = ["tfc:grouse", "tfc:chicken", "tfc:duck", "tfc:quail", "tfc:rabbit", "tfc:turkey", "tfc:isopod", "tfc:lobster", "tfc:frog", "tfc:penguin", "tfc:turtle", "tfc:horseshoe_crab", "tfc:crayfish", "tfc:grouse", "tfc:pheasant", "tfc:peafowl", "tfc:rat", "tfc:cod", "tfc:tropical_fish", "tfc:lemming", "tfc:mongoose", "tfc:jerboa"]
 	#Blocks that CAN be picked up (useWhitelistBlocks must be true)
-	allowedBlocks = ["tfc:wood/chest/*", "tfc:wood/trapped_chest/*"]
+	allowedBlocks = ["tfc:wood/chest/*", "tfc:wood/trapped_chest/*", "afc:wood/chest/*", "afc:wood/trapped_chest/*", "tfc:wood/crate/*", "afc:wood/crate/*"]
 	#Entities that CAN have other entities stacked on top of them (useWhitelistStacking must be true)
 	allowedStacking = []
 

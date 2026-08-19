@@ -62,7 +62,7 @@
 	#Settings for Grass
 	["Break My Fall Config"."Grass Settings"]
 		#Should Grass Break When fallen on? Mod Default : true (Affects Blocks From #break_my_fall:grass Tag)
-		"Grass Break On Fall" = true
+		"Grass Break On Fall" = false
 		#Required Fall Distance for Grass to break on fall if Grass Break On Fall = true, Jumping of 1 block = 2.1
 		# Default: 2.2
 		# Range: 0.0 ~ 256.0
@@ -98,7 +98,7 @@
 	#Settings for Flowers
 	["Break My Fall Config"."Flowers Settings"]
 		#Should Small flowers Break When fallen on? Mod Default : true (Affects Blocks From #minecraft:small_flowers Tag)
-		"Small Flowers Break On Fall" = true
+		"Small Flowers Break On Fall" = false
 		#Required Fall Distance for Small Flowers to break on fall if Small Flowers Break On Fall = true, Jumping of 1 block = 2.1
 		# Default: 2.2
 		# Range: 0.0 ~ 256.0

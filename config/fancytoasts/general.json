@@ -1,7 +1,7 @@
 {
   "isJadeHiding": true,
   "isBossBarHiding": true,
-  "isAetherEnabled": true,
+  "isAetherEnabled": false,
   "areSoundsEnabled": true,
   "taskVolume": 1.0,
   "goalVolume": 1.0,

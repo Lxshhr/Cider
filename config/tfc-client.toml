@@ -19,7 +19,7 @@
 	enableThirstBar = true
 	#
 	# Allows the vanilla XP bar to render.
-	enableExperienceBar = false
+	enableExperienceBar = true
 	#
 	# Enables squids inking your screen.
 	enableInkSplatter = true
