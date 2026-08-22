@@ -1,4 +1,8 @@
 {
     "tag.item.curios.back": "Back",
-    "tag.item.curios.hands": "Hands"
+    "tag.item.curios.body": "Body", 
+    "tag.item.curios.feet": "Feet", 
+    "tag.item.curios.cape": "Cape", 
+    "tag.item.curios.head": "Head", 
+    "tag.item.curios.legs": "Legs" 
 }
