@@ -1,0 +1,62 @@
+{
+    "minecraft:crafting": {
+        "order": 10
+    }, 
+    "tfc:barrel": {
+        "order": 20
+    }, 
+    "tfc:quern": {
+        "order": 30
+    },
+    "tfc:pot": {
+        "order": 40
+    },  
+    "tfc:chisel": {
+        "order": 50
+    },
+    "tfc:rock_knapping": {
+        "order": 60
+    }, 
+    "tfc:clay_knapping": {
+        "order": 61
+    },
+    "tfc:fire_clay_knapping": {
+        "order": 62
+    }, 
+    "tfc:leather_knapping": {
+        "order": 63
+    },
+    "tfc:goat_horn_knapping": {
+        "order": 64
+    }, 
+    "tfc:alloying": {
+        "order": 70
+    }, 
+    "tfc:casting": {
+        "order": 80
+    }, 
+    "tfc:bloomery": {
+        "order": 90
+    },
+    "tfc:blast_furnace": {
+        "order": 100
+    },
+    "tfc:anvil": {
+        "order": 110
+    }, 
+    "tfc:welding": {
+        "order": 120
+    },
+    "tfc:heating": {
+        "order": 130
+    },  
+    "tfc:glassworking": {
+        "order": 140
+    }, 
+    "tfc:loom": {
+        "order": 150
+    },
+    "emi:tag": {
+        "order": 160
+    }
+}
