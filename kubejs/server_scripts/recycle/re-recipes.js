@@ -12,16 +12,22 @@ ServerEvents.recipes(event => {
     event.shapeless('tfc:fire_clay', ['#cider:costs_one_fire_clay']);
 
     global.TIERED_TFC_METALS.forEach(([metal, i, temp]) => {
-        tfc.heating(`#cider:${metal}_tool_heads`, temp)
+        tfc.heating(`#cider:${metal}/small_items`, temp)
             .fluidOutput(Fluid.of(`tfc:metal/${metal}`, 100));
-        tfc.heating(`#cider:${metal}_tools`, temp)
+        tfc.heating(`#cider:${metal}/small_items_d`, temp)
             .fluidOutput(Fluid.of(`tfc:metal/${metal}`, 100))
             .useDurability();
 
-        tfc.heating(`#cider:${metal}_weapon_blades`, temp)
+        tfc.heating(`#cider:${metal}/medium_items`, temp)
             .fluidOutput(Fluid.of(`tfc:metal/${metal}`, 200));
-        tfc.heating(`#cider:${metal}_weapons`, temp)
+        tfc.heating(`#cider:${metal}/medium_items_d`, temp)
             .fluidOutput(Fluid.of(`tfc:metal/${metal}`, 200))
+            .useDurability();
+
+        tfc.heating(`#cider:${metal}/large_items`, temp)
+            .fluidOutput(Fluid.of(`tfc:metal/${metal}`, 400));
+        tfc.heating(`#cider:${metal}/large_items_d`, temp)
+            .fluidOutput(Fluid.of(`tfc:metal/${metal}`, 400))
             .useDurability();
     });
 

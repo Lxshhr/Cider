@@ -19,6 +19,9 @@ ServerEvents.tags("item", event => {
         'tfc:ceramic/unfired_sword_blade_mold', 
         'tfc:ceramic/unfired_knife_blade_mold', 
         'tfc:ceramic/unfired_blowpipe', 
+        'firmalife:clay_oven_bottom', 
+        'firmalife:clay_oven_top', 
+        'firmalife:clay_oven_chimney', 
     ]);
 
     event.add('cider:costs_one_clay', [
@@ -45,8 +48,9 @@ ServerEvents.tags("item", event => {
         'tfc:ceramic/unfired_fire_ingot_mold'
     ]);
 
+    // Metal 
     global.TIERED_TFC_METALS.forEach(([metal, i, temp]) => {
-        event.add(`cider:${metal}_tool_heads`, [
+        event.add(`cider:${metal}/small_items`, [
             `tfc:metal/axe_head/${metal}`,  
             `tfc:metal/shovel_head/${metal}`,  
             `tfc:metal/hammer_head/${metal}`,  
@@ -60,7 +64,7 @@ ServerEvents.tags("item", event => {
             `tfc:metal/saw_blade/${metal}`
         ]);
 
-        event.add(`cider:${metal}_tools`, [
+        event.add(`cider:${metal}/small_items_d`, [
             `tfc:metal/axe/${metal}`,  
             `tfc:metal/shovel/${metal}`,  
             `tfc:metal/hammer/${metal}`,  
@@ -74,14 +78,30 @@ ServerEvents.tags("item", event => {
             `tfc:metal/saw/${metal}`
         ]);
 
-        event.add(`cider:${metal}_weapon_blades`, [
+        event.add(`cider:${metal}/medium_items`, [
             `tfc:metal/mace_head/${metal}`, 
-            `tfc:metal/sword_blade/${metal}` 
+            `tfc:metal/sword_blade/${metal}`,
+            `tfc_hammer_time:metal/excavator_head/${metal}`, 
+            `tfc_hammer_time:metal/sledgehammer_head/${metal}`, 
+            `precisionprospecting:metal/prospector_hammer_head/${metal}`, 
+            `precisionprospecting:metal/mineral_prospector_head/${metal}`
         ]);
 
-        event.add(`cider:${metal}_weapons`, [
+        event.add(`cider:${metal}/medium_items_d`, [
             `tfc:metal/mace/${metal}`, 
-            `tfc:metal/sword/${metal}` 
+            `tfc:metal/sword/${metal}`,
+            `tfc_hammer_time:metal/excavator/${metal}`, 
+            `tfc_hammer_time:metal/sledgehammer/${metal}`,
+            `precisionprospecting:metal/prospector_hammer/${metal}`, 
+            `precisionprospecting:metal/mineral_prospector/${metal}`
+        ]);
+
+        event.add(`cider:${metal}/large_items`, [
+            `precisionprospecting:metal/prospector_drill_head/${metal}`
+        ]);
+
+        event.add(`cider:${metal}/large_items_d`, [
+            `precisionprospecting:metal/prospector_drill/${metal}`
         ]);
     });
 

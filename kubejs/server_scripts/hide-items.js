@@ -1,10 +1,18 @@
 ServerEvents.tags('item', event => {
     event.add('c:hidden_from_recipe_viewers', [
+        // Unused So Far
+        'minecraft:spawner', 
+        'minecraft:trial_spawner',
+        'minecraft:trial_key', 
+        'minecraft:vault', 
+        'minecraft:wind_charge', 
+
         // Minecraft stuff
         'minecraft:bucket',
         'minecraft:water_bucket',
         'minecraft:lava_bucket',
         'minecraft:milk_bucket',
+        'minecraft:powder_snow_bucket',
 
         // AFC Buckets
         'afc:bucket/birch_sap', 
@@ -108,6 +116,7 @@ ServerEvents.tags('item', event => {
         'tfc:bucket/yellow_dye', 
 
         // Firmalife Buckets
+        "firmalife:bucket/chocolate",
         "firmalife:bucket/coconut_milk",
         "firmalife:bucket/cream",
         "firmalife:bucket/curdled_goat_milk",
@@ -992,5 +1001,19 @@ ServerEvents.tags('item', event => {
         'firmalife:ore/rich_chromite/rhyolite', 
         'firmalife:ore/rich_chromite/shale', 
         'firmalife:ore/rich_chromite/tuff', 
+    ])
+})
+
+ServerEvents.tags('fluid', event => {
+    event.add('c:hidden_from_recipe_viewers', [
+        'firmalife:red_wine', 
+        'firmalife:white_wine', 
+        'firmalife:rose_wine', 
+        'firmalife:sparkling_wine', 
+        'firmalife:dessert_wine',
+        'firmalife:coconut_milk',
+        'firmalife:pina_colada',
+
+        'afc:latex', 
     ])
 })

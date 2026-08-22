@@ -5,13 +5,12 @@ ServerEvents.recipes(event => {
     event.shapeless('2x tfc:fire_clay', ['minecraft:clay_ball', '4x tfc:powder/kaolinite', '4x tfc:powder/graphite']);
     event.shapeless('tfc:dead_torch', ['tfc:straw', 'minecraft:stick']);
     event.shapeless('2x minecraft:stick', ['#tfc:twigs']);
-    event.shapeless('minecraft:target', ['tfc:thatch', '#c:cloths', 'minecraft:redstone']);
     event.shapeless('minecraft:book', ['#c:leathers', '3x minecraft:paper', '#c:strings', '#c:tools/needles']).damageIngredient('#c:tools/needles');
     event.shapeless('minecraft:writable_book', ['minecraft:book', '#c:inks', 'minecraft:feather']);
     event.shapeless('minecraft:lever', ['#tfc:chiseled_bricks', 'minecraft:stick']);
     event.shapeless('9x tfc:straw', ['tfc:thatch']);
     event.shapeless('2x tfc:soot', ['tfc:powder/charcoal', 'tfc:powder/wood_ash', '#tfc:sticky_stuff']);
-    event.shapeless('minecraft:bamboo_block', ['tfc:golden_bamboo_block', '#minecraft:axes']).damageIngredient('#minecraft:axes');
+    event.shapeless('minecraft:stripped_bamboo_block', ['#minecraft:bamboo_logs', '#minecraft:axes']).damageIngredient('#minecraft:axes');
     event.shapeless('tfc:spindle', ['tfc:ceramic/spindle_head', 'minecraft:stick']);
     event.shapeless('tfc:sandpaper', ['minecraft:paper', 'tfc:powder/flux', '#tfc:sticky_stuff', '#minecraft:sand', '#tfc:gem_powders']);
     event.shapeless('2x minecraft:fire_charge', ['tfc:powder/sulfur', 'tfc:powder/graphite', 'tfc:powder/charcoal']);
@@ -31,44 +30,40 @@ ServerEvents.recipes(event => {
     event.shaped('minecraft:brush', ['F', 'R', 'S'], {F: 'minecraft:feather', R: 'tfc:metal/rod/copper', S: '#c:rods/wooden'});
     event.shaped('minecraft:hopper', ['SCS', ' S '], {S: 'tfc:metal/sheet/brass', C: '#c:chests'});
     event.shaped('minecraft:recovery_compass', ['RBR', 'BCB', 'RBR'], {R: 'minecraft:redstone', B: 'tfc:metal/rod/brass', C: '#c:compasses'});
+    event.shaped('minecraft:compass', ['S', 'R', 'V'], {S: 'tfc:lens', R: 'minecraft:redstone', V: "#c:bowls"});
     event.shaped('tfc:blast_furnace', ['XVX', 'VCV', 'XVX'], {X: '#c:sheets/wrought_iron', V: '#c:double_sheets/wrought_iron', C: 'tfc:crucible'});
     event.shaped('tfc:blast_furnace', ['XVX', 'VCV', 'XVX'], {X: '#c:sheets/steel', V: '#c:double_sheets/steel', C: 'tfc:crucible'});
     event.shaped('16x minecraft:ladder', ['X X', 'XXX', 'X X'], {X: '#tfc:lumber'});
-    event.shaped('8x tfc:wattle', ['XV', 'X '], {X: '#minecraft:logs', V: '#minecraft:axes'});
     event.shaped(`tfc:firebox`, ['XVX', 'V V', 'XVX'], {X: '#c:sheets/cast_iron', V: '#tfc:double_sheets/any_bronze'});
     event.shaped('2x tfc:fire_brick_shelf', ['SSS', 'LCL'], {L: 'tfc:fire_bricks', S: '#c:rods/cast_iron', C: 'tfc:fire_clay'});
     event.shaped('tfc:rustic_windmill_blade', ['B B', 'BWB'], {B: 'tfc:burlap_cloth', W: 'tfc:windmill_blade/white'});
     event.shaped('chalk:chalk_box', ['XVX', ' X '], {X: 'minecraft:paper', V: '#tfc:sticky_stuff'});
-    event.shaped('minecraft:cartography_table', ['P I', 'SSS', 'W W'], {P: 'minecraft:paper', I: '#c:inks', S: '#minecraft:wooden_slabs', W: '#minecraft:planks'});
-    event.shaped('minecraft:fletching_table', ['FF ', 'SSS', 'W W'], {F: 'minecraft:flint', S: '#minecraft:wooden_slabs', W: '#minecraft:planks'});
-    event.shaped('minecraft:loom', ['SSS', 'WPW', 'LLL'], {S: '#minecraft:wooden_slabs', W: '#c:strings', L: '#tfc:lumber', P: '#tfc:looms'});
     event.shaped('tfc:steel_rope_anchor', ['SH', 'SG'], {S: '#c:rods/steel', H: '#c:tools/hammer', G: '#c:rods/brass'}).damageIngredient('#c:tools/hammer');
     event.shaped('16x minecraft:powered_rail', ['X X', 'XSX', 'XRX'], {X: '#c:rods/brass', S: 'minecraft:stick', R: 'minecraft:redstone'});
     event.shaped('minecraft:piston', ['XXX', 'SRS', 'SMS'], {X: '#tfc:lumber', S: '#c:bricks', R: 'minecraft:redstone', M: '#tfc:mechanism'});
-    event.shaped('tfchotornot:tongs/wood', ['V ', 'SV'], {V: 'minecraft:stick', S: 'tfc:straw'});
+    event.shaped('3x minecraft:lead', [' SS', ' SS', 'S  '], {S: '#c:strings'});
+    event.shaped('minecraft:clock', ['HL ', 'MBM', ' R '], {L: 'tfc:lens', H: '#c:tools/hammer', M: '#tfc:mechanism', B: '#c:sheets/brass', R: 'minecraft:redstone'}).damageIngredient('#c:tools/hammer');
+    event.shaped('minecraft:spyglass', [' L ', 'MSM', ' L '], {L: 'tfc:lens', M: '#tfc:mechanism', S: '#c:sheets/brass'});
 
     // TODO: Missing Recipes
     /**
-     * minecraft:stripped_bamboo_block
-     * minecraft:tinted_glass - use any gem powders
-     * minecraft:sculk_sensor
-     * minecraft:calibrated_sculk_sensor
-     * minecraft:jukebox
-     * minecraft:repeater
-     * minecraft:comparator
      * minecraft:heavy_weighted_pressure_plate
      * minecraft:light_weighted_pressure_plate
-     * minecraft:daylight_detector
-     * minecraft:daylight_detector
-     * minecraft:sticky_piston
-     * minecraft:dispenser
-     * minecraft:dropper
-     * minecraft:crafter
-     * minecraft:observer
+     * minecraft:sculk_sensor, 
+     * minecraft:redstone_torch, 
+     * minecraft:redstone_lamp, 
+     * minecraft:fletching_table, 
+     * minecraft:jukebox, 
+     * minecreft:repeater
+     * minecreft:comparator
+     * minecreft:target
+     * minecreft:calibrated_sculk_sensor 
+     * minecreft:daylight_detector
+     * minecreft:dispenser
+     * minecreft:dropper
+     * minecreft:crafter
+     * minecreft:observer
      * minecraft:furnace_minecart
-     * minecraft:compass
-     * minecraft:clock
-     * minecraft:spyglass
      * minecraft:saddle
      * minecraft:shield
      * minecraft:leather_helmet
@@ -76,10 +71,10 @@ ServerEvents.recipes(event => {
      * minecraft:leather_leggings
      * minecraft:leather_boots
      * minecraft:leather_horse_armor
-     * minecraft:bow
      * minecraft:crossbow
-     * minecraft:flint
+     * minecraft:arrow
      * minecraft:bowl
+     * 
      * minecraft:flower_banner_pattern
      * minecraft:creeper_banner_pattern
      * minecraft:skull_banner_pattern
@@ -88,10 +83,7 @@ ServerEvents.recipes(event => {
      * minecraft:piglin_banner_pattern
      * minecraft:flow_banner_pattern
      * minecraft:guster_banner_pattern
-     * 
-     * afc:maple_sugar
-     * afc:birch_sugar
-     * 
+     * field:star_banner_pattern
      */
 
     function twoByTwo(result, input) {
@@ -247,10 +239,17 @@ ServerEvents.recipes(event => {
             barrelDye(`chalk:${color}_chalk`, 'chalk:white_chalk', color);
         }
 
-        barrelDye(`minecraft:${color}_terracotta`, 'tfc:hardened_clay', color);
+        tfc.barrel_sealed(Fluid.of(`tfc:${color}_dye`, 25), 1000)
+            .inputItem('tfc:hardened_clay')
+            .outputItem(`minecraft:${color}_terracotta`)
+            .id(`tfc:barrel/${color}_terracotta`)
+
+        tfc.barrel_instant(Fluid.of('minecraft:water', 20))
+            .inputItem(`minecraft:${color}_concrete_powder`)
+            .outputItem(`minecraft:${color}_concrete`);
 
         for (let i = 1; i <= 5; i++) {
-            tfc.pot(parseIngredients('#c:strings', `minecraft:${color}_dye`), Fluid.of('tfc:tallow', 40 * i), 480 * i, 600)
+            tfc.pot(parseIngredients(['#c:strings', `minecraft:${color}_dye`]), Fluid.of('tfc:tallow', 40 * i), 480 * i, 600)
                 .itemOutput(parseIngredients(`${i}x tfc:candle/${color}`));
         }
     })
@@ -260,15 +259,18 @@ ServerEvents.recipes(event => {
     leatherMaking.forEach(([size, amount, output]) => {
         tfc.barrel_sealed(Fluid.of('tfc:limewater', amount), 16000 * output)
             .inputItem(`tfc:${size}_raw_hide`)
-            .outputItem(`tfc:${size}_soaked_hide`);
+            .outputItem(`tfc:${size}_soaked_hide`)
+            .id(`tfc:barrel/${size}_soaked_hide`);
 
         tfc.barrel_sealed(Fluid.of('minecraft:water', amount), 10000 * output)
             .inputItem(`tfc:${size}_scraped_hide`)
-            .outputItem(`tfc:${size}_prepared_hide`);
+            .outputItem(`tfc:${size}_prepared_hide`)
+            .id(`tfc:barrel/${size}_prepared_hide`);
 
         tfc.barrel_sealed(Fluid.of('tfc:tannin', amount), 20000 * output)
             .inputItem(`tfc:${size}_prepared_hide`)
-            .outputItem(`${output}x minecraft:leather`);
+            .outputItem(`${output}x minecraft:leather`)
+            .id(`tfc:barrel/${size}_leather`);
     })
 
     barrelBleach('chalk:white_chalk', '#chalk:colored_chalks');
@@ -290,10 +292,10 @@ ServerEvents.recipes(event => {
         }
     }
 
-
     global.TIERED_TFC_METALS.forEach(([metal, i, temp]) => {
-        tfc.anvil(`tfc:metal/fish_hook/${metal}`, `#c:rods/${metal}`, ['draw_not_last', 'bend_any', 'hit_any']);
-        tfc.anvil(`10x tfc:metal/chain/${metal}`, `#c:ingots/${metal}`, ['draw_not_last', 'hit_any']);
+        tfc.anvil(`tfc:metal/fish_hook/${metal}`, `#c:rods/${metal}`, ['bend_any', 'hit_any', 'draw_not_last']);
+        tfc.anvil(`10x tfc:metal/chain/${metal}`, `#c:ingots/${metal}`, ['hit_any', 'draw_not_last']);
+        tfc.anvil(`precisionprospecting:metal/prospector_drill_head/${metal}`, `#c:double_sheets/${metal}`, ['punch_last', 'hit_any', 'hit_any']);
 
         event.shaped(`tfc:metal/anvil/${metal}`, ['DDD', ' I ', 'III'], {D: `#c:double_ingots/${metal}`, I: `#c:ingots/${metal}`});
         event.shaped(`tfc:metal/horse_armor/${metal}`, ['HSR', 'SAS'], {S: `#c:sheets/${metal}`, R: `#c:rods/${metal}`, A: 'minecraft:leather_horse_armor', H: '#c:tools/hammer'}).damageIngredient('#c:tools/hammer');
@@ -314,6 +316,10 @@ ServerEvents.recipes(event => {
 
         prospectingMetalHeads.forEach(tool => {
             tfc.advanced_shapeless_crafting(TFC.isp.of(`precisionprospecting:metal/${tool}/${metal}`).copyForgingBonus(), [`precisionprospecting:metal/${tool}_head/${metal}`, handle], `precisionprospecting:metal/${tool}_head/${metal}`);
+        })
+
+        hammerTimeHeads.forEach(tool => {
+            tfc.advanced_shapeless_crafting(TFC.isp.of(`tfc_hammer_time:metal/${tool}/${metal}`).copyForgingBonus(), [`tfc_hammer_time:metal/${tool}_head/${metal}`, handle], `tfc_hammer_time:metal/${tool}_head/${metal}`);
         })
 
         // TODO: (Combat Update) Shield Recipes

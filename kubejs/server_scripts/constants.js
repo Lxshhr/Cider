@@ -29,6 +29,11 @@ const prospectingMetalHeads = [
     'mineral_prospector'
 ];
 
+const hammerTimeHeads = [
+    'sledgehammer', 
+    'excavator'
+]
+
 const tieredMetalHandles = {
     copper: 'minecraft:stick',
     bismuth_bronze: 'minecraft:stick',

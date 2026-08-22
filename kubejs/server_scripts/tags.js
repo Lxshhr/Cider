@@ -1,5 +1,12 @@
 ServerEvents.tags('item', event => {
-    event.add('c:tools/spindles', 'tfc:spindle');
+    event.add('c:tools/spindles', [
+        'tfc:spindle'
+    ]);
+
+    event.add('minecraft:bamboo_logs', [
+        'minecraft:bamboo_block',
+        'tfc:golden_bamboo_block'
+    ])
 
     event.add('tfc:usable_on_tool_rack', [
         'c:tools/spindles'
@@ -115,6 +122,10 @@ ServerEvents.tags('item', event => {
     
     event.remove('tfc:can_be_lit_on_torch', [
         '#tfc:twigs'
+    ]);
+
+    event.remove('firmalife:foods/washable', [
+        'firmalife:food/stinky_soup'
     ]);
 })
 

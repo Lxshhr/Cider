@@ -1,0 +1,10 @@
+[
+    {
+        "action": "remove_recipe", 
+        "id" :[
+            "thermia:crafting/straw_wide_brim_hat", 
+            "thermia:crafting/leather_wide_brim_hat", 
+            "thermia:crafting/felt_wide_brim_hat"
+        ]
+    }
+]

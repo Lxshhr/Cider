@@ -14,7 +14,7 @@
   "removeMobEquipment": true,
   "removeCnmChildren": true,
   "enableEmiRemoval": false,
-  "showEmiToast": true,
+  "showEmiToast": false,
   "showEmiChatMessages": true,
   "reloadAfterRemoval": false,
   "blacklistedItems": []
