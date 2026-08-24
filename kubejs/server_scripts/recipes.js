@@ -14,6 +14,10 @@ ServerEvents.recipes(event => {
     event.shapeless('tfc:spindle', ['tfc:ceramic/spindle_head', 'minecraft:stick']);
     event.shapeless('tfc:sandpaper', ['minecraft:paper', 'tfc:powder/flux', '#tfc:sticky_stuff', '#minecraft:sand', '#tfc:gem_powders']);
     event.shapeless('2x minecraft:fire_charge', ['tfc:powder/sulfur', 'tfc:powder/graphite', 'tfc:powder/charcoal']);
+    event.shapeless('2x minecraft:stick', ['tfc:groundcover/driftwood']);
+    event.shapeless('minecraft:heavy_weighted_pressure_plate', ['#minecraft:wooden_pressure_plates', '#c:ingots/brass']);
+    event.shapeless('minecraft:light_weighted_pressure_plate', ['#minecraft:wooden_pressure_plates', '#c:ingots/copper']);
+    event.shapeless('8x tfc:wattle', ['2x #minecraft:logs', '#minecraft:axes']).damageIngredient('#minecraft:axes');
 
     event.shaped('2x minecraft:scaffolding', ['SCS', 'S S', 'S S'], {S: 'minecraft:stick', C: '#c:strings'});
     event.shaped('minecraft:white_bed', ['CCC', 'LLL', 'L L'], {C: '#tfc:high_quality_cloth', L: '#tfc:lumber'});
@@ -35,7 +39,7 @@ ServerEvents.recipes(event => {
     event.shaped('tfc:blast_furnace', ['XVX', 'VCV', 'XVX'], {X: '#c:sheets/steel', V: '#c:double_sheets/steel', C: 'tfc:crucible'});
     event.shaped('16x minecraft:ladder', ['X X', 'XXX', 'X X'], {X: '#tfc:lumber'});
     event.shaped(`tfc:firebox`, ['XVX', 'V V', 'XVX'], {X: '#c:sheets/cast_iron', V: '#tfc:double_sheets/any_bronze'});
-    event.shaped('2x tfc:fire_brick_shelf', ['SSS', 'LCL'], {L: 'tfc:fire_bricks', S: '#c:rods/cast_iron', C: 'tfc:fire_clay'});
+    event.shaped('3x tfc:fire_brick_shelf', ['LLL', 'C C'], {L: 'tfc:fire_bricks', C: '#c:rods/cast_iron'});
     event.shaped('tfc:rustic_windmill_blade', ['B B', 'BWB'], {B: 'tfc:burlap_cloth', W: 'tfc:windmill_blade/white'});
     event.shaped('chalk:chalk_box', ['XVX', ' X '], {X: 'minecraft:paper', V: '#tfc:sticky_stuff'});
     event.shaped('tfc:steel_rope_anchor', ['SH', 'SG'], {S: '#c:rods/steel', H: '#c:tools/hammer', G: '#c:rods/brass'}).damageIngredient('#c:tools/hammer');
@@ -44,36 +48,40 @@ ServerEvents.recipes(event => {
     event.shaped('3x minecraft:lead', [' SS', ' SS', 'S  '], {S: '#c:strings'});
     event.shaped('minecraft:clock', ['HL ', 'MBM', ' R '], {L: 'tfc:lens', H: '#c:tools/hammer', M: '#tfc:mechanism', B: '#c:sheets/brass', R: 'minecraft:redstone'}).damageIngredient('#c:tools/hammer');
     event.shaped('minecraft:spyglass', [' L ', 'MSM', ' L '], {L: 'tfc:lens', M: '#tfc:mechanism', S: '#c:sheets/brass'});
+    event.shaped('2x minecraft:redstone_block', ['S', 'R', 'S'], {S: '#c:sheets/copper', R: 'minecraft:redstone'});
+    event.shaped('minecraft:jukebox', ['XXX', 'XCX', 'XXX'], {X: '#minecraft:planks', C: '#c:gems'});
+    event.shaped('tfc:bloomery', ['VNV', 'V V', 'VNV'], {N: '#c:sheets/all_bronze', V: '#c:double_sheets/all_bronze'});
+    event.shaped('tfc:composter', ['V V', 'VRV', 'VVV'], {V: '#tfc:lumber', R: '#tfc:dirt'});
+    event.shaped('minecraft:redstone_lamp', [' V ', 'VRV', ' V '], {V: 'minecraft:redstone', R: 'tfc:lamp_glass'});
+    event.shaped('minecraft:leather_helmet', ['SLN', 'L L'], {L: 'minecraft:leather', N: '#c:tools/needles', S: '#c:strings'}).damageIngredient('#c:needles');
+    event.shaped('minecraft:leather_chestplate', ['L L', 'LLL', 'SLN'], {L: 'minecraft:leather', N: '#c:tools/needles', S: '#c:strings'}).damageIngredient('#c:needles');
+    event.shaped('minecraft:leather_leggings', ['LLL', 'L L', 'S N'], {L: 'minecraft:leather', N: '#c:tools/needles', S: '#c:strings'}).damageIngredient('#c:needles');
+    event.shaped('minecraft:leather_boots', ['LSL', 'N L'], {L: 'minecraft:leather', N: '#c:tools/needles', S: '#c:strings'}).damageIngredient('#c:needles');
+    event.shaped('minecraft:saddle', ['LLL', 'S N'], {L: 'minecraft:leather', N: '#c:tools/needles', S: '#c:strings'}).damageIngredient('#c:needles');
+    event.shaped('minecraft:leather_horse_armor', ['  L', 'LLL', 'S N'], {L: 'minecraft:leather', N: '#c:tools/needles', S: '#c:strings'}).damageIngredient('#c:needles');
+    event.shaped('3x minecraft:bowl', ['LKL', ' L '], {L: '#tfc:lumber', K: '#c:tools/knife'}).damageIngredient('#c:tools/knife');
+    event.shaped('thermia:leather_wide_brim_hat', ['LLL', 'S N'], {L: "minecraft:leather", N: '#c:tools/needles', S: '#c:strings'}).damageIngredient('#c:needles');
+    event.shaped('thermia:leather_wide_brim_hat', ['LLL', 'S N'], {L: 'tfc:wool', N: '#c:tools/needles', S: '#c:strings'}).damageIngredient('#c:needles');
+    event.shaped('thermia:straw_wide_brim_hat', ['SSS', 'S S'], {S: 'tfc:straw'});
+    event.shaped('minecraft:fletching_table', ['SS', 'PP', 'PP'], {S: '#c:strings', P: '#minecraft:planks'});
+    event.shaped('2x minecraft:redstone_torch', ['S', 'T'], {S: 'minecraft:redstone', T: '#c:rods/copper'});
+    event.shaped('2x tfc:steel_pipe', ['SH'], {S: '#c:sheets/steel', H: '#c:tools/hammer'}).damageIngredient('#c:tools/hammer');
 
     // TODO: Missing Recipes
     /**
-     * minecraft:heavy_weighted_pressure_plate
-     * minecraft:light_weighted_pressure_plate
+     * minecreft:dropper
+     * minecreft:target
+     * minecraft:crossbow
      * minecraft:sculk_sensor, 
-     * minecraft:redstone_torch, 
-     * minecraft:redstone_lamp, 
-     * minecraft:fletching_table, 
-     * minecraft:jukebox, 
+     * minecreft:calibrated_sculk_sensor 
+     * minecraft:furnace_minecart
+     * minecreft:crafter
      * minecreft:repeater
      * minecreft:comparator
-     * minecreft:target
-     * minecreft:calibrated_sculk_sensor 
      * minecreft:daylight_detector
      * minecreft:dispenser
-     * minecreft:dropper
-     * minecreft:crafter
      * minecreft:observer
-     * minecraft:furnace_minecart
-     * minecraft:saddle
-     * minecraft:shield
-     * minecraft:leather_helmet
-     * minecraft:leather_chestplate
-     * minecraft:leather_leggings
-     * minecraft:leather_boots
-     * minecraft:leather_horse_armor
-     * minecraft:crossbow
      * minecraft:arrow
-     * minecraft:bowl
      * 
      * minecraft:flower_banner_pattern
      * minecraft:creeper_banner_pattern
@@ -95,6 +103,7 @@ ServerEvents.recipes(event => {
     }
     threeByThree('tfc:thatch', 'tfc:straw');
     threeByThree('minecraft:slime_block', 'tfc:glue');
+    threeByThree('minecraft:bamboo_block', 'minecraft:bamboo');
 
     function brickRecipe(result, input, cat) {
         event.shaped(result, ['XXX', 'XCX', 'XXX'], {X: input, C: cat});
@@ -226,6 +235,9 @@ ServerEvents.recipes(event => {
     }
 
     global.COLORS.forEach(color => {
+        event.shapeless(`tfc:ceramic/unfired_large_vessel/${color}`, [`minecraft:${color}_dye`, `tfc:ceramic/unfired_large_vessel`]);
+        event.shapeless(`tfc:ceramic/${color}_unfired_vessel`, [`minecraft:${color}_dye`, `tfc:ceramic/unfired_vessel`]);
+        
         stairCrafting(`4x tfc:alabaster/bricks/${color}_stairs`, `tfc:alabaster/bricks/${color}`);
         stairCrafting(`4x tfc:alabaster/polished/${color}_stairs`, `tfc:alabaster/polished/${color}`);
 
@@ -333,15 +345,14 @@ ServerEvents.recipes(event => {
     })
 
     // TODO: (Combat Update) Stone Tool Recipes
-    global.TFC_ROCK_CATEGORIES.forEach(category => {
-        event.shapeless(`tfc:stone/axe/${category}`, [`tfc:stone/axe_head/${category}`, 'minecraft:stick']);
-        event.shapeless(`tfc:stone/shovel/${category}`, [`tfc:stone/shovel_head/${category}`, 'minecraft:stick']);
-        event.shapeless(`tfc:stone/hammer/${category}`, [`tfc:stone/hammer_head/${category}`, 'minecraft:stick']);
-        event.shapeless(`tfc:stone/javelin/${category}`, [`tfc:stone/javelin_head/${category}`, 'minecraft:stick']);
-        event.shapeless(`tfc:stone/hoe/${category}`, [`tfc:stone/hoe_head/${category}`, 'minecraft:stick']);
-        event.shapeless(`tfc:stone/knife/${category}`, [`tfc:stone/knife_head/${category}`, 'minecraft:stick']);
+    basicToolTypes.forEach(tool => {
+        global.TFC_ROCK_CATEGORIES.forEach(category => {
+            event.shapeless(`tfc:stone/${tool}/${category}`, [`tfc:stone/${tool}_head/${category}`, '#tfc:stone_tool_handles']);
+        })
+        event.shapeless(`tfc:obsidian_${tool}`, [`tfc:obsidian_${tool}_head`, '#tfc:stone_tool_handles']);
     })
 
+    tfc.anvil('20x minecraft:redstone', '#c:ingots/copper', ['hit_any', 'hit_any', 'hit_any']);
     tfc.anvil('afc:tree_tap', '#c:sheets/copper', ['hit_last', 'upset_second_last', 'upset_third_last']);
     tfc.anvil('minecraft:bell', '#c:sheets/gold', ['bend_last', 'bend_second_last', 'hit_third_last']);
     tfc.anvil('tfc:bronze_bell', '#c:sheets/bronze', ['bend_last', 'bend_second_last', 'hit_third_last']);

@@ -2,10 +2,13 @@ ServerEvents.tags('item', event => {
     event.add('c:tools/spindles', [
         'tfc:spindle'
     ]);
-
     event.add('minecraft:bamboo_logs', [
         'minecraft:bamboo_block',
         'tfc:golden_bamboo_block'
+    ]);
+    event.add('tfc:stone_tool_handles', [
+        'c:rods/wooden', 
+        'minecraft:bone'
     ])
 
     event.add('tfc:usable_on_tool_rack', [

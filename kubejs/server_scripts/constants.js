@@ -45,3 +45,12 @@ const tieredMetalHandles = {
     blue_steel: 'minecraft:stick',
     red_steel: 'minecraft:stick'
 };
+
+const basicToolTypes = [
+    'axe', 
+    'hammer', 
+    'hoe', 
+    'shovel', 
+    'knife', 
+    'javelin'
+]
