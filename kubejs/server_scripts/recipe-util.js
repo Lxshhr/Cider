@@ -58,7 +58,7 @@ function getItemIds(namespaces) {
 
     return itemIds.filter(id => namespaces.includes(id.split(':')[0]));
 }
-let content_mods = ["minecraft", "tfc", "afc", "firmalife", "precisionprospecting", "field", "tfccanes", "tfc_hammer_time", "thermia", "waterflasks"];
+let content_mods = ["minecraft", "tfc", "afc", "precisionprospecting", "field", "tfccanes", "tfc_hammer_time", "thermia", "waterflasks"];
 // console.log(JSON.stringify(getItemIds(content_mods)));
 
 

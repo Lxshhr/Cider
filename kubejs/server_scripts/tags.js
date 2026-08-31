@@ -126,10 +126,6 @@ ServerEvents.tags('item', event => {
     event.remove('tfc:can_be_lit_on_torch', [
         '#tfc:twigs'
     ]);
-
-    event.remove('firmalife:foods/washable', [
-        'firmalife:food/stinky_soup'
-    ]);
 })
 
 ServerEvents.tags('fluid', event => {

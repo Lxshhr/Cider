@@ -34,7 +34,7 @@ ServerEvents.recipes(event => {
     event.shaped('minecraft:brush', ['F', 'R', 'S'], {F: 'minecraft:feather', R: 'tfc:metal/rod/copper', S: '#c:rods/wooden'});
     event.shaped('minecraft:hopper', ['SCS', ' S '], {S: 'tfc:metal/sheet/brass', C: '#c:chests'});
     event.shaped('minecraft:recovery_compass', ['RBR', 'BCB', 'RBR'], {R: 'minecraft:redstone', B: 'tfc:metal/rod/brass', C: '#c:compasses'});
-    event.shaped('minecraft:compass', ['S', 'R', 'V'], {S: 'tfc:lens', R: 'minecraft:redstone', V: "#c:bowls"});
+    event.shaped('minecraft:compass', ['S', 'R', 'V'], {S: 'tfc:lens', R: 'minecraft:redstone', V: '#c:bowls'});
     event.shaped('tfc:blast_furnace', ['XVX', 'VCV', 'XVX'], {X: '#c:sheets/wrought_iron', V: '#c:double_sheets/wrought_iron', C: 'tfc:crucible'});
     event.shaped('tfc:blast_furnace', ['XVX', 'VCV', 'XVX'], {X: '#c:sheets/steel', V: '#c:double_sheets/steel', C: 'tfc:crucible'});
     event.shaped('16x minecraft:ladder', ['X X', 'XXX', 'X X'], {X: '#tfc:lumber'});
@@ -60,7 +60,7 @@ ServerEvents.recipes(event => {
     event.shaped('minecraft:saddle', ['LLL', 'S N'], {L: 'minecraft:leather', N: '#c:tools/needles', S: '#c:strings'}).damageIngredient('#c:needles');
     event.shaped('minecraft:leather_horse_armor', ['  L', 'LLL', 'S N'], {L: 'minecraft:leather', N: '#c:tools/needles', S: '#c:strings'}).damageIngredient('#c:needles');
     event.shaped('3x minecraft:bowl', ['LKL', ' L '], {L: '#tfc:lumber', K: '#c:tools/knife'}).damageIngredient('#c:tools/knife');
-    event.shaped('thermia:leather_wide_brim_hat', ['LLL', 'S N'], {L: "minecraft:leather", N: '#c:tools/needles', S: '#c:strings'}).damageIngredient('#c:needles');
+    event.shaped('thermia:leather_wide_brim_hat', ['LLL', 'S N'], {L: 'minecraft:leather', N: '#c:tools/needles', S: '#c:strings'}).damageIngredient('#c:needles');
     event.shaped('thermia:leather_wide_brim_hat', ['LLL', 'S N'], {L: 'tfc:wool', N: '#c:tools/needles', S: '#c:strings'}).damageIngredient('#c:needles');
     event.shaped('thermia:straw_wide_brim_hat', ['SSS', 'S S'], {S: 'tfc:straw'});
     event.shaped('minecraft:fletching_table', ['SS', 'PP', 'PP'], {S: '#c:strings', P: '#minecraft:planks'});

@@ -115,28 +115,6 @@ ServerEvents.tags('item', event => {
         'tfc:bucket/white_dye', 
         'tfc:bucket/yellow_dye', 
 
-        // Firmalife Buckets
-        "firmalife:bucket/chocolate",
-        "firmalife:bucket/coconut_milk",
-        "firmalife:bucket/cream",
-        "firmalife:bucket/curdled_goat_milk",
-        "firmalife:bucket/curdled_yak_milk",
-        "firmalife:bucket/dessert_wine",
-        "firmalife:bucket/goat_milk",
-        "firmalife:bucket/mead",
-        "firmalife:bucket/metal/chromium",
-        "firmalife:bucket/metal/stainless_steel",
-        "firmalife:bucket/pina_colada",
-        "firmalife:bucket/red_wine",
-        "firmalife:bucket/rose_wine",
-        "firmalife:bucket/soybean_oil",
-        "firmalife:bucket/sparkling_wine",
-        "firmalife:bucket/sugar_water",
-        "firmalife:bucket/whey",
-        "firmalife:bucket/white_wine",
-        "firmalife:bucket/yak_milk",
-        "firmalife:bucket/yeast_starter",
-
         // Unused Ores
         'tfc:ore/amethyst/andesite', 
         'tfc:ore/amethyst/basalt', 
@@ -962,58 +940,12 @@ ServerEvents.tags('item', event => {
         'tfc:ore/rich_tetrahedrite/limestone', 
         'tfc:ore/rich_tetrahedrite/rhyolite', 
         'tfc:ore/rich_tetrahedrite/shale', 
-        'tfc:ore/rich_tetrahedrite/tuff',
-
-        // Firmalife Unused Ores
-        'firmalife:ore/poor_chromite/andesite',
-        'firmalife:ore/poor_chromite/basalt',
-        'firmalife:ore/poor_chromite/chalk',
-        'firmalife:ore/poor_chromite/chert',
-        'firmalife:ore/poor_chromite/claystone',
-        'firmalife:ore/poor_chromite/conglomerate',
-        'firmalife:ore/poor_chromite/dacite',
-        'firmalife:ore/poor_chromite/dolomite',
-        'firmalife:ore/poor_chromite/limestone',
-        'firmalife:ore/poor_chromite/rhyolite',
-        'firmalife:ore/poor_chromite/shale',
-        'firmalife:ore/poor_chromite/tuff',
-        'firmalife:ore/normal_chromite/andesite',
-        'firmalife:ore/normal_chromite/basalt',
-        'firmalife:ore/normal_chromite/chalk',
-        'firmalife:ore/normal_chromite/chert',
-        'firmalife:ore/normal_chromite/claystone',
-        'firmalife:ore/normal_chromite/conglomerate',
-        'firmalife:ore/normal_chromite/dacite',
-        'firmalife:ore/normal_chromite/dolomite',
-        'firmalife:ore/normal_chromite/limestone',
-        'firmalife:ore/normal_chromite/rhyolite',
-        'firmalife:ore/normal_chromite/shale',
-        'firmalife:ore/normal_chromite/tuff',
-        'firmalife:ore/rich_chromite/andesite', 
-        'firmalife:ore/rich_chromite/basalt', 
-        'firmalife:ore/rich_chromite/chalk', 
-        'firmalife:ore/rich_chromite/chert', 
-        'firmalife:ore/rich_chromite/claystone', 
-        'firmalife:ore/rich_chromite/conglomerate', 
-        'firmalife:ore/rich_chromite/dacite', 
-        'firmalife:ore/rich_chromite/dolomite', 
-        'firmalife:ore/rich_chromite/limestone', 
-        'firmalife:ore/rich_chromite/rhyolite', 
-        'firmalife:ore/rich_chromite/shale', 
-        'firmalife:ore/rich_chromite/tuff', 
+        'tfc:ore/rich_tetrahedrite/tuff' 
     ])
 })
 
 ServerEvents.tags('fluid', event => {
     event.add('c:hidden_from_recipe_viewers', [
-        'firmalife:red_wine', 
-        'firmalife:white_wine', 
-        'firmalife:rose_wine', 
-        'firmalife:sparkling_wine', 
-        'firmalife:dessert_wine',
-        'firmalife:coconut_milk',
-        'firmalife:pina_colada',
-
         'afc:latex', 
     ])
 })

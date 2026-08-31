@@ -30,11 +30,12 @@
     "item.minecraft.lead": "Leash",
     "item.minecraft.string": "Silk Thread",
     "item.minecraft.bowl": "Wooden Bowl",
-    "item.minecraft.bow": "Wooden Bow",
     "item.minecraft.crossbow": "Wooden Crossbow",
     "item.minecraft.arrow": "Flint Tipped Arrow", 
     "item.minecraft.redstone": "Copper Wire", 
-    "item.minecraft.compass": "Spawn Compass",
+    "item.minecraft.compass": "Compass (Spawn)",
+    "item.minecraft.leather_helmet": "Leather Hood",
+    "item.minecraft.leather_chestplate": "Leather Gambeson",
     
     "entity.minecraft.furnace_minecart": "Steam Powered Minecart", 
 
