@@ -444,6 +444,42 @@
             ]
         },
         {
+            "pakku_id": "eilAju9BjH1HjVSR",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "better-advancements"
+            },
+            "name": {
+                "curseforge": "Better Advancements"
+            },
+            "id": {
+                "curseforge": "272515"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "BetterAdvancements-NeoForge-1.21.1-0.4.3.21.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "beta",
+                    "url": "https://edge.forgecdn.net/files/5850/587/BetterAdvancements-NeoForge-1.21.1-0.4.3.21.jar",
+                    "id": "5850587",
+                    "parent_id": "272515",
+                    "hashes": {
+                        "sha1": "870521cfaa1a4cb6c830e2409e8b9e4cf179aff2",
+                        "md5": "a18430f1f7ecf6dd1849a8f240f509af"
+                    },
+                    "required_dependencies": [],
+                    "size": 98641,
+                    "date_published": "2024-10-27T11:47:51.390Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "hzxcYIls61ZWXwaa",
             "type": "MOD",
             "slug": {
@@ -516,6 +552,49 @@
                     ],
                     "size": 817032,
                     "date_published": "2026-09-07T19:51:05.333Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "8TnSXLB8VCWJvoO0",
+            "pakku_links": [
+                "59v8JkWkaPZDURfR"
+            ],
+            "type": "MOD",
+            "slug": {
+                "curseforge": "better-combat-by-daedelus"
+            },
+            "name": {
+                "curseforge": "Better Combat [Fabric & Forge]"
+            },
+            "id": {
+                "curseforge": "639842"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "bettercombat-neoforge-2.4.0+1.21.1.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/8430/183/bettercombat-neoforge-2.4.0+1.21.1.jar",
+                    "id": "8430183",
+                    "parent_id": "639842",
+                    "hashes": {
+                        "sha1": "bacbc8c86671663e9998b141c5732250c1f4d4fb",
+                        "md5": "73b115123b9d41b211c5acda16df738f"
+                    },
+                    "required_dependencies": [
+                        "348521",
+                        "658587"
+                    ],
+                    "size": 1045389,
+                    "date_published": "2026-07-14T10:59:22.547Z"
                 }
             ]
         },
@@ -1377,6 +1456,44 @@
             ]
         },
         {
+            "pakku_id": "m7TzgxccvNftMUcI",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "easy-shulker-boxes"
+            },
+            "name": {
+                "curseforge": "Easy Shulker Boxes"
+            },
+            "id": {
+                "curseforge": "594006"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "EasyShulkerBoxes-v21.1.3-1.21.1-NeoForge.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/6697/879/EasyShulkerBoxes-v21.1.3-1.21.1-NeoForge.jar",
+                    "id": "6697879",
+                    "parent_id": "594006",
+                    "hashes": {
+                        "sha1": "9491302950e20bec758f67f13ff21663ecf40986",
+                        "md5": "e79add151633e1a5c40abfb618cd786d"
+                    },
+                    "required_dependencies": [
+                        "495476"
+                    ],
+                    "size": 215920,
+                    "date_published": "2025-06-26T13:43:27.667Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "AbzLC65Fj0Xj5f3c",
             "type": "RESOURCE_PACK",
             "slug": {
@@ -1452,6 +1569,81 @@
                     "required_dependencies": [],
                     "size": 44586,
                     "date_published": "2026-03-25T23:48:42.197Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "G98ae8V2o1f5epUC",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "explosive-enhancement-reforged"
+            },
+            "name": {
+                "curseforge": "Explosive Enhancement: Reforged"
+            },
+            "id": {
+                "curseforge": "1036246"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "explosiveenhancement-neoforge-1.21.1-1.1.2.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/6520/579/explosiveenhancement-neoforge-1.21.1-1.1.2.jar",
+                    "id": "6520579",
+                    "parent_id": "1036246",
+                    "hashes": {
+                        "sha1": "fee0be3ffe494189733ceaeb7163a38b03098ea5",
+                        "md5": "2a3a5b4ab65a7103ffb3902f027c2dee"
+                    },
+                    "required_dependencies": [],
+                    "size": 86058,
+                    "date_published": "2025-05-11T20:19:01.363Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "WXfLHQHzZNngFzQG",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "falling-tree"
+            },
+            "name": {
+                "curseforge": "FallingTree"
+            },
+            "id": {
+                "curseforge": "349559"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "FallingTree-1.21.1-1.21.1.11.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "fabric",
+                        "neoforge",
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/6835/168/FallingTree-1.21.1-1.21.1.11.jar",
+                    "id": "6835168",
+                    "parent_id": "349559",
+                    "hashes": {
+                        "sha1": "626e7ec3a979dcc15d8e65c53207572c41c1b255",
+                        "md5": "7318bdea54e4c69c1c90650b30fc4bde"
+                    },
+                    "required_dependencies": [],
+                    "size": 496356,
+                    "date_published": "2025-08-01T07:44:58.427Z"
                 }
             ]
         },
@@ -3106,6 +3298,45 @@
             ]
         },
         {
+            "pakku_id": "hHMVEhH1kbDS2tMD",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "structurify"
+            },
+            "name": {
+                "curseforge": "Structurify - Structure Control"
+            },
+            "id": {
+                "curseforge": "1087551"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "structurify-neoforge-2.0.35+mc1.21.1.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/8794/973/structurify-neoforge-2.0.35+mc1.21.1.jar",
+                    "id": "8794973",
+                    "parent_id": "1087551",
+                    "hashes": {
+                        "sha1": "158b5b1d0fcdd4d931dd8ba8b35258f941343235",
+                        "md5": "37bf23246fe6f97e5b5dab3032188894"
+                    },
+                    "required_dependencies": [
+                        "667299"
+                    ],
+                    "size": 488871,
+                    "date_published": "2026-09-02T19:38:04.950Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "gLJw3TFYzbXMJ6cb",
             "type": "MOD",
             "slug": {
@@ -3293,6 +3524,44 @@
                     ],
                     "size": 939816,
                     "date_published": "2026-06-17T06:32:48.860Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "Fo2iIlXrMwlpvL0e",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "tfcgenviewer"
+            },
+            "name": {
+                "curseforge": "TFCGenViewer"
+            },
+            "id": {
+                "curseforge": "1062270"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "tfcgenviewer-1.21.1-2.1.2.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/8681/793/tfcgenviewer-1.21.1-2.1.2.jar",
+                    "id": "8681793",
+                    "parent_id": "1062270",
+                    "hashes": {
+                        "sha1": "6b998240fb04accf0b82dbf01b5557113d8af28f",
+                        "md5": "1b328bee554a652c70245a9e7fc597c5"
+                    },
+                    "required_dependencies": [
+                        "302973"
+                    ],
+                    "size": 476499,
+                    "date_published": "2026-08-19T02:41:51.127Z"
                 }
             ]
         },
@@ -3601,41 +3870,39 @@
             ]
         },
         {
-            "pakku_id": "adtoBG5Hl0zvpEdB",
+            "pakku_id": "59v8JkWkaPZDURfR",
             "type": "MOD",
             "slug": {
-                "curseforge": "project-1318792"
+                "curseforge": "playeranimator"
             },
             "name": {
-                "curseforge": "project-1318792"
+                "curseforge": "playerAnimator"
             },
             "id": {
-                "curseforge": "1318792"
+                "curseforge": "658587"
             },
             "files": [
                 {
                     "type": "curseforge",
-                    "file_name": "explosive-enhancement-neoforge-1.4.2-1.21.1.jar",
+                    "file_name": "player-animation-lib-forge-2.0.4+1.21.1.jar",
                     "mc_versions": [
-                        "1.21.1-Snapshot",
+                        "1.21",
                         "1.21.1"
                     ],
                     "loaders": [
                         "neoforge"
                     ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/8038/666/explosive-enhancement-neoforge-1.4.2-1.21.1.jar",
-                    "id": "8038666",
-                    "parent_id": "1318792",
+                    "release_type": "beta",
+                    "url": "https://edge.forgecdn.net/files/7389/814/player-animation-lib-forge-2.0.4+1.21.1.jar",
+                    "id": "7389814",
+                    "parent_id": "658587",
                     "hashes": {
-                        "sha1": "3ffe6f93d2cd756a997881098ce084a4afb80aed",
-                        "md5": "b97217418559505aba8f892071edbd21"
+                        "sha1": "05be8ddcc78532b9a5520c718edc6c971cd0057c",
+                        "md5": "ecb81c9479605db12a77bea774b88406"
                     },
-                    "required_dependencies": [
-                        "306612"
-                    ],
-                    "size": 104853,
-                    "date_published": "2026-05-04T15:59:21.390Z"
+                    "required_dependencies": [],
+                    "size": 203149,
+                    "date_published": "2025-12-28T21:00:20.250Z"
                 }
             ]
         }

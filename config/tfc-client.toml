@@ -113,7 +113,7 @@
 	showGuideBookTabInInventory = true
 	#
 	# For items like bundles, their contents inside will be rendered using Bundle Technology to show their items.
-	displayItemContentsAsImages = true
+	displayItemContentsAsImages = false
 	#
 	# If true, for items that are hot, they will show a bar on the item like a durability bar
 	displayItemHeatBars = true
