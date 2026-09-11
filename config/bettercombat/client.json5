@@ -14,7 +14,7 @@
 	"isTooltipAttackRangeReformat": true,
 	"weaponSwingSoundVolume": 100,
 	"isDebugOBBEnabled": true,
-	"swingThruGrassBlacklist": "farmersdelight",
+	"swingThruGrassBlacklist": "tfc",
 	"mineWithWeaponBlacklist": "",
 	"mineWithWeaponWhitelist": "",
 	"firstPersonAnimations": "AUTO",
