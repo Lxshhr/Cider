@@ -1,0 +1,9 @@
+[
+    {
+        "action": "remove",
+        "items": [
+            "tfcscraping:ceramic/scraping_knife_blade_mold",
+            "tfcscraping:ceramic/unfired_scraping_knife_blade_mold"
+        ]
+    }
+]
